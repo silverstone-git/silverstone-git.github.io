@@ -7,74 +7,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="penguin.png">
-    <link href="styles/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    
     <title>Aryan Sidhwani</title>
 </head>
 
 
 <!--Body part-->
 <body>
-    <hr>
-    <h1>____---Welcome to my webpage---____</h1>
 
+    
+    <ul id="navbarul">
+        <li class="navli"><a href="#about" class="navlink">About</a></li>
+        <li class="navli"><a href="#interests" class="navlink">Interests</a></li>
+        <li class="navli"><a href="#skills" class="navlink">Skills</a></li>
+        <li class="navli"><a href="#projects" class="navlink">Projects</a></li>
+        <li class="navli" style="float:right" ><a href="#contact" class="navlink">Contact</a></li>
+    </ul>
 
-    <!--My Image centered by parent tag-->
-    <p class="whitecenter">
-        <img src="aryan.jpg" width="200" alt="My Image" id="my_image">
-    </p>
-
+    <div class="whitecenter">
+        <h1 id="about">Aryan Sidhwani</h1>
+        <img src="aryan.jpg" width="150" alt="My Image" id="my_image">
+    </div>
 
     <!--Some Font in italics in place of em tag-->
-    <i class="whitecenter">
-        I am a self proclaimed scientist and programmer. I have been using Linux since 8th class<br>
-        and I generally code through Vim, VS Code, and Android Studio.<br>
-        I have wrote a lot of stuff in all kinds of languages and <br>
-        even posted a few on github<br>
-    </i>
 
+    <div class="whitecenteritalics">
+        <p>
+            I am a self proclaimed scientist and programmer. I have been using Linux since 8th class<br>
+            and I generally code through Vim, VS Code, and Android Studio.<br>
+            I have wrote a lot of stuff in all kinds of languages and <br>
+            even posted a few on github<br>
+        </p>
+    </div>
 
+    <hr id="interests">
 
     <!--Interests part-->
-    <h4>This is a *constantly* updated list of stuff that I am into: </h4>
-    <aside class="spotify_iframe">
-        <iframe src="https://open.spotify.com/embed/playlist/5n43dSuQ7aKvHzpcVSG7uy" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </aside>
-    <ul>
-        <li>Programming</li>
-        <li><a href="https://open.spotify.com/playlist/5n43dSuQ7aKvHzpcVSG7uy?si=3a1d516904d54d0a" rel="noreferrer noopener" target="_blank" id="music_link">Music</a></li>
-        <li>Solid State Physics</li>
-        <li>Astronomy</li>
-        <li>Philosophy of Science</li>
-        <li>Linear Algebra</li>
-        <li>Cricket</li>
-        <li>Swimming</li>
+    <h1 class="whitecenter">This is a *constantly* updated list of stuff that I am into: </h1>
+
+    <!-- Twitter Part -->
+    <div id="twitter_embed">
+        <a class="twitter-timeline" href="https://twitter.com/sidhwani_aryan?ref_src=twsrc%5Etfw" rel="noreferrer noopener" target="_blank">Tweets by sidhwani_aryan</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+    <ul class="skilul">
+        <li class="skilli" id="progm_li">
+                <a href="https://www.w3schools.com/" rel="noreferrer noopener" target="_blank" class="skill_link">
+                    <p>Programming</p>
+                </a>
+
+                <p class="progm">
+                    <!--
+                    My Favourite language to work in is -- Javascript -- because,
+                    it brings the best of all the worlds together in one place.
+                    1. Auto TypeCasting, Curly Brackets, and the distinction between Initialization and Declaration retained from Java, C++ <br>
+                    2. It has let, const, var distinction for flexibility in scope and
+                    mutability. <br>
+                    3. Convenient Array Methods like shift
+                    4. Still so readable! eg. - 'typeof'
+                    -->
+                    I learned python from the book authored by Sumita Arora, rest of them from W3S, FreeCodeCamp, Youtube tuts</p>
+                </p>
+        </li>
+
+        <li class="skilli" id="music_li">
+                <a href="https://open.spotify.com/playlist/5n43dSuQ7aKvHzpcVSG7uy?si=3a1d516904d54d0a" rel="noreferrer noopener" target="_blank" id="music_link" class="skill_link">
+                    <p>Music</p>
+                </a>
+                <div id="spotify_iframe">
+                    <iframe src="https://open.spotify.com/embed/playlist/5n43dSuQ7aKvHzpcVSG7uy" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
+ 
+        </li>
+        <li class="skilli_n">
+ 
+                <p>Solid State Physics</p>
+ 
+        </li>
+        <li class="skilli_n">
+ 
+                <p>Astronomy</p>
+        </li>
+        <li class="skilli_n">
+ 
+                <p>Philosophy of Science</p>
+
+        </li>
+        <li class="skilli_n">
+ 
+                <p>Linear Algebra</p>
+ 
+        </li>
+        <li class="skilli_n">
+ 
+                <p>Cricket</p>
+ 
+        </li>
+        <li class="skilli_n">
+                <p>Swimming</p>
+ 
+        </li>
     </ul>
 
 
+
     <!--Languages Part-->
-    <h4>A list of languages I know: </h4>
-    <ul>
-        <li>English</li>
-        <li>Hindi</li>
-        <li>French</li>
+    <h1 class="whitecenter" id="langhead">A list of languages I know: </h1>
+    <ul class="skilul">
+        <li class="skilli_n">
+            <p>English</p>
+        </li>
+        <li class="skilli_n">
+            <p>Hindi</p>
+        </li>
+        <li class="skilli_n">
+            <p>French</p>
+        </li>
     </ul>
 
 
     <!--Skills Part-->
-    <hr>
-    <h2>The specific set of skills I have: </h2>
-    <img src="liam_neeson.png" width="300" alt="Liam Neeson Meme">
+    <hr id="skills">
+
+    <div class="whitecenter">
+        <h4>The specific set of skills I have: </h4>
+        <img src="liam_neeson.png" width="300" alt="Liam Neeson Meme">
+    </div>
     
-    <ol type = "i">
-        <li>Python</li>
-        <li>Kotlin</li>
-        <li>Java</li>
-        <li>Perl</li>
-        <li>C++</li>
-        <li>Bash</li>
-        <li>HTML+CSS (The Fact that I designed this page)</li>
-    </ol>
+    
+    <ul class="skilul">
+        <li class="skilli_n">Python</li>
+        <li class="skilli_n">Kotlin</li>
+        <li class="skilli_n">Java</li>
+        <li class="skilli_n">Perl</li>
+        <li class="skilli_n">C++</li>
+        <li class="skilli_n">Bash</li>
+        <li class="skilli_n">HTML</li>
+        <li class="skilli_n">CSS</li>
+    </ul>
 
     <hr>
 
@@ -82,7 +154,10 @@
 
 
     <!--Projects Part-->
-    <h2>Some of the projects I have made: </h2>
+
+    <div class="whitecenter">
+        <h4 id="projects">Some of the projects I have made: </h4>
+    </div>
     <table style="width:100%">
         <tr>
           <td>
@@ -112,16 +187,10 @@
         </tr>
       </table> 
 
-    <hr>
+    <hr id="contact">
 
 
-    <!--Aside tag for twitter after project's ending hr line-->
-    <aside id="twitter_embed">
 
-        <a class="twitter-timeline" href="https://twitter.com/sidhwani_aryan?ref_src=twsrc%5Etfw" rel="noreferrer noopener" target="_blank">Tweets by sidhwani_aryan</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-    </aside>
 
 
     <!--Form Part-->
@@ -142,6 +211,7 @@
             </fieldset>
         </p>
     </form>
+
 
 
     <!--The Other Links Section-->
