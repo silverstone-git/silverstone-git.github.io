@@ -1,21 +1,22 @@
 @font-face { font-family: OdibeeSans; src: url("../fonts/OdibeeSans-Regular.ttf"); }
 @font-face { font-family: Roboto; src: url("../fonts/Roboto-Light.ttf"); }
+@font-face { font-family: "Roboto Mono"; src: url("../fonts/RobotoMono-Regular.ttf"); }
 html {
-    font-family: "Roboto", "Open Sans", sans-serif;
+    font-family: "Roboto Mono", "Open Sans", sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    background-image: url('../pictures/milky_way_starry_sky_galaxy.jpg');
+/**    background-image: url('../pictures/milky_way_starry_sky_galaxy.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; **/
 }
 
 
 #navbarul {
-    border-radius: 20px 20px 20px 20px;
-    border-color: aliceblue;
+    border-radius: 10px 10px 10px 10px;
+    border-color: rgb(0,0,0);
     border-style: groove;
 	border-spacing: 1%;
     border-width: 5%;
@@ -23,7 +24,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: rgba(255,255,255,0.2);
+    /**background: rgba(255,255,255,0.2);**/
 }
 
 .navli {
@@ -32,7 +33,7 @@ body {
 
 .navlink {
     display: block;
-    color: white;
+    color: rgb(0,0,0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -72,7 +73,7 @@ section {
 
 .skilul {
     border-radius: 20px 20px 20px 20px;
-    border-color: aliceblue;
+    border-color: rgb(0,0,0);
     border-style: groove;
 	border-spacing: 1%;
     border-width: 5%;
@@ -91,7 +92,6 @@ section {
 }
 
 .skilli:hover {
-    background-color: rgba(255,255,255,0.6);
     max-height: 30em;
 }
 
@@ -127,15 +127,15 @@ section {
 
 
 .whiteone, li {
-    font-family: Arial, Helvetica, sans-serif;
-    color: aliceblue;
+    font-family: "Roboto Mono", monospace, sans-serif;
+    color: rgb(0,0,0);
 }
 
 
 .whitecenter {
-    font-family: "Roboto", Helvetica, sans-serif;
+    font-family: "Roboto Mono", monospace, sans-serif;
     font-size: 2em;
-    color: aliceblue;
+    color: black;
     text-align: center;
 }
 
@@ -144,20 +144,21 @@ section {
     font-size: 1.3em;
     font-style: italic;
     font-weight: 800;
-    color: aliceblue;
+    color: black ;
     text-align: center;
 }
 
 #about {
 	/* My Name */
-	color: aliceblue
+	color: rgb(0,0,0);
+    font-size: 2em;
 }
 
 
 footer {
     text-align: center;
     padding: 3px;
-    color: white;
+    color: black;
 }
 
 
@@ -167,13 +168,13 @@ footer {
 	border-radius: 20px 20px 20px 20px;
 	border-style: groove;
 	border-spacing: 1%;
-    border-color: rgba(255,255,255,0.8);
+    border-color: rgb(0,0,0);
     border-width: 5%;
     font-style: bold;
     font-weight: 900;
-	color: aliceblue;
-	background: rgba(255,255,255,0.2);
-	transition-property: background;
+	color: rgb(0,0,0);
+	background: white;
+    transition-property: background;
 	transition-duration: 0.3s;
 	transition-timing-function: ease;
 	transition-delay: 0;
@@ -181,7 +182,7 @@ footer {
 }
 
 .darkit:hover {
-	background: rgba(255,255,255,0.6);
+	/**background: rgba(255,255,255,0.6);**/
 }
 
 .flinkfont {
@@ -198,34 +199,40 @@ footer {
 
 .myformdiv {
     border-radius: 5px;
-    background: rgba(255,255,255,0.4);
+    background: white;
     padding: 20px;
 }
 
 button[type="submit"] {
     font-size: 1.2em;
-    width: 100%;
-    background: rgba(255,255,255,0.5);
-    color: white;
+    width: 50%;
+    text-align: center;
+    color: black;
     padding: 14px 20px;
-    margin: 8px 0;
+    /**margin: 8px 0;**/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background 0.6s;
+    background-color: greenyellow;
+    transition: background-color 0.6s;
 
 }
 
 button[type="submit"]:hover {
-    background: rgba(255,255,255,0.8);
+    background-color: limegreen;
+    text-decoration: underline;
 }
 
 input[type="text"], input[type="email"], textarea {
     width: 100%;
-    padding: 12px 20px;
+    padding: 6px 10px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0,0,0);
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -268,3 +275,6 @@ input[type="text"], input[type="email"], textarea {
   }
 
 
+hr {
+    opacity: 0;
+}
