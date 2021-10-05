@@ -55,8 +55,8 @@ section {
 
 
 #twitter_embed {
-    margin-right: 35%;
-    margin-left: 5%;
+    margin-right: auto; 
+    margin-left: auto;
     padding-left: 0;
     max-height: 640px;
     /*float: left;*/
@@ -237,6 +237,12 @@ input[type="text"], input[type="email"], textarea {
     box-sizing: border-box;
 }
 
+#liam_neeson {
+    display: block;
+    float: right;
+}
+
+
 @media screen and (max-width : 804px ){
     /* Code when width bw > 800px, ie, Mobile Phone screen range*/
     #spotify_iframe {
@@ -272,14 +278,13 @@ input[type="text"], input[type="email"], textarea {
     #pgmli:hover {
         height: 300px;
     }*/
+
+    #liam_neeson {
+        visibility: hidden;
+    }
   }
 
 
 hr {
     opacity: 0;
-}
-
-#liam_neeson {
-    display: block;
-    float: right;
 }
