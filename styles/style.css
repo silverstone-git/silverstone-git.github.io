@@ -41,7 +41,7 @@ body {
   }
   
 .navlink:hover {
-    background: rgba(255,255,255,0.6);
+    background: rgb(208, 217, 219);;
   }
 
 section {
@@ -89,10 +89,12 @@ section {
 .skilli {
     transition: background 0.4s, max-height 2s;
     overflow: hidden;
+    
 }
 
 .skilli:hover {
     max-height: 30em;
+    background-color: rgb(208, 217, 219);;
 }
 
 .skilli_n {
@@ -178,11 +180,12 @@ footer {
 	transition-duration: 0.3s;
 	transition-timing-function: ease;
 	transition-delay: 0;
+    cursor: pointer;
 	
 }
 
 .darkit:hover {
-	/**background: rgba(255,255,255,0.6);**/
+    background: rgb(208, 217, 219);
 }
 
 .flinkfont {
