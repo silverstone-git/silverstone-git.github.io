@@ -55,16 +55,6 @@ section {
     border-radius: 50%;
 }
 
-
-#twitter_embed {
-    margin-right: auto; 
-    margin-left: auto;
-    padding-left: 0;
-    max-height: 640px;
-    /*float: left;*/
-    overflow: auto;
-}
-
 #skillhead {
     font-size: 2em;
 }
@@ -127,6 +117,10 @@ section {
 
 .joined_links {
     margin-left: 1%;
+}
+
+.contactlinks {
+    text-align: center;
 }
 
 
