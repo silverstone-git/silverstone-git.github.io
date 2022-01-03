@@ -295,3 +295,7 @@ input[type="text"], input[type="email"], textarea {
 hr {
     opacity: 0;
 }
+
+.thanksgithub {
+    color: darkgray;
+}
