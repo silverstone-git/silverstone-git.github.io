@@ -1,5 +1,5 @@
 You have reached the root of the website
 
-This Website can be accessed -- <a href="https://aryansidhwani.tech>here</a>
+This website git is at work, but the main one meanwhile is live
 
-This website has external javascript for twitter and spotify, might not work on primitive browsers
+This Website can be accessed -- <a href="https://aryansidhwani.tech">here</a>
