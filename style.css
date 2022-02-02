@@ -568,6 +568,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   float: left;
 }
 
+.mx-16 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-16 {
   margin-top: 4rem;
   margin-bottom: 4rem;
@@ -583,29 +608,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 9rem;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
 }
 
 .my-5 {
@@ -708,6 +713,34 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
 }
@@ -748,6 +781,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .h-fit {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -774,8 +811,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 12rem;
 }
 
-.h-96 {
-  height: 24rem;
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .max-h-96 {
@@ -826,6 +867,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-full {
   width: 100%;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .max-w-4xl {
@@ -937,12 +986,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: space-around;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .justify-items-end {
   justify-items: end;
 }
 
 .justify-items-center {
   justify-items: center;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .gap-5 {
@@ -964,6 +1025,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-self-center {
   justify-self: center;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-clip {
@@ -1009,6 +1074,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(52 211 153 / var(--tw-bg-opacity));
 }
 
+.bg-teal-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+}
+
+.bg-teal-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 94 89 / var(--tw-bg-opacity));
+}
+
 .bg-emerald-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(110 231 183 / var(--tw-bg-opacity));
@@ -1029,6 +1104,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
+.bg-teal-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(13 148 136 / var(--tw-bg-opacity));
+}
+
 .object-center {
   -o-object-position: center;
      object-position: center;
@@ -1037,6 +1117,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .object-right {
   -o-object-position: right;
      object-position: right;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-5 {
@@ -1157,6 +1241,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .text-teal-600 {
   --tw-text-opacity: 1;
   color: rgb(13 148 136 / var(--tw-text-opacity));
@@ -1173,6 +1267,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
+}
+
+.hover\:bg-teal-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(45 212 191 / var(--tw-bg-opacity));
 }
 
 .hover\:font-bold:hover {
