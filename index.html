@@ -18,16 +18,22 @@
   <script>
     function expandSideNav() {
       document.getElementById("sideNav").style.width="250px";
+      document.getElementById("closeButtonLink").style.width="auto";
+      document.getElementById("closeButtonLink").style.display="block";
+      document.getElementById("closeButton").style.visibility="visible";
       document.getElementById("sideNav").style.display="flex";
+      document.getElementById("closeButton").style.display="flex";
       document.getElementById("navExpander").style.display="none";
     }
     function closeSideNav() {
       document.getElementById("sideNav").style.width="0";
-      document.getElementById("sideNav").style.display="none";
+      document.getElementById("sideNav").style.display="block";
+      document.getElementById("closeButton").style.display="block";
+      document.getElementById("closeButton").style.visibility="invisible";
+      document.getElementById("closeButtonLink").style.display="none";
       document.getElementById("navExpander").style.display="block";
     }
   </script>
-
   <nav class="flex justify-between">
     <p class=" text-gray-400 px-5 py-5 font-bold">Aryan Sidhwani</p>
     <div id="navExpander">
@@ -42,8 +48,8 @@
       <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Interests</li>
       <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Projects</li>
     </ul>
-    <ul id="sideNav" class=" h-screen hidden right-0 fixed flex-col justify-evenly bg-green-200">
-      <li class=" mx-3 my-3 text-3xl "> <a class=" hover:text-black text-gray-500" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li>
+    <ul id="sideNav" class=" h-screen block w-0 transition-all right-0 fixed flex-col justify-evenly bg-green-200">
+      <li id="closeButton" class="justify-end invisible transition-all" > <a id="closeButtonLink" class=" transition-all hover:text-black text-gray-500 text-3xl w-0 top-5 right-5 fixed justify-end" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li>
       <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Home</li>
       <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">About</li>
       <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Skills</li>
