@@ -42,22 +42,36 @@
       </button>
     </div>
     <ul class=" sm:flex hidden px-5 justify-end">
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Home</li>
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">About</li>
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Skills</li>
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Interests</li>
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Projects</li>
+      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <a href="#aboutline">About</a>
+      </li>
+      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <a href="#skillline">Skills</a>
+      </li>
+      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <a href="#projectline">Projects</a>
+      </li>
+      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <a href="https://pleaseexplain.me" target=”_blank”>Blog</a>
+      </li>
     </ul>
     <ul id="sideNav" class=" h-screen block w-0 transition-all right-0 fixed flex-col justify-evenly bg-green-200">
       <li id="closeButton" class="justify-end invisible transition-all" > <a id="closeButtonLink" class=" transition-all hover:text-black text-gray-500 text-3xl w-0 top-5 right-5 fixed justify-end" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li>
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Home</li>
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">About</li>
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Skills</li>
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Interests</li>
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">Projects</li>
+      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <a href="#aboutline">About</a>
+      </li>
+      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <a href="#skillline">Skills</a>
+      </li>
+      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <a href="#projectline">Projects</a>
+      </li>
+      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <a href="https://pleaseexplain.me" target=”_blank”>Blog</a>
+      </li>
     </ul>
   </nav>
-  <hr>
+  <hr id="aboutline">
   <div class="flex flex-wrap justify-between">
     <img src="./pictures/aryan2_1.jpg" alt="" class="max-h-96 w-auto h-96 rounded-xl mt-12 sm:mx-16 mx-auto" >
     <div class="bg-emerald-400 h-fit rounded-md flex mt-12 sm:mx-16 mx-1">
@@ -72,7 +86,7 @@
       </div>
     </div>
   </div>
-  <hr>
+  <hr id="projectline">
   <h2 class="text-center">Projects</h2>
   <ul class=" mt-6 text-center ">
     <p>Engineering</p>
@@ -141,7 +155,7 @@
     -->
     <div class="flex gap-6">
       <p class="text-gray-300 font-bold">Aryan Sidhwani</p>
-      <a class=" hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer " href="https://www.pleaseexplain.me">Blog</a>
+      <a class=" hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer " href="https://www.pleaseexplain.me" target=”_blank”>Blog</a>
     </div>
   </footer>
 </body>
