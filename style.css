@@ -796,6 +796,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.25rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -898,6 +902,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 5rem;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -940,8 +948,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 7rem;
 }
 
-.w-24 {
-  width: 6rem;
+.w-10 {
+  width: 2.5rem;
 }
 
 .max-w-4xl {
@@ -1141,6 +1149,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
 .bg-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(187 247 208 / var(--tw-bg-opacity));
@@ -1159,11 +1172,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-teal-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
-}
-
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
 }
 
 .bg-emerald-300 {
@@ -1189,6 +1197,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-teal-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(13 148 136 / var(--tw-bg-opacity));
+}
+
+.bg-emerald-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 250 229 / var(--tw-bg-opacity));
+}
+
+.bg-emerald-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 243 208 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
 
 .object-center {
@@ -1384,6 +1410,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(13 148 136 / var(--tw-text-opacity));
 }
 
+.text-blue-50 {
+  --tw-text-opacity: 1;
+  color: rgb(239 246 255 / var(--tw-text-opacity));
+}
+
+.text-blue-100 {
+  --tw-text-opacity: 1;
+  color: rgb(219 234 254 / var(--tw-text-opacity));
+}
+
+.text-yellow-200 {
+  --tw-text-opacity: 1;
+  color: rgb(254 240 138 / var(--tw-text-opacity));
+}
+
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1395,6 +1436,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .transition-all {
   transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1413,12 +1462,100 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
-.transition-colors {
-  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.\[backgroud\:red\] {
+  backgroud: red;
+}
+
+.\[background\:red\] {
+  background: red;
+}
+
+.\[background\:linear-gradient\(5deg\2c red\2c blue\)\] {
+  background: linear-gradient(5deg,red,blue);
+}
+
+.\[background\:linear-gradient\(red\2c blue\)\] {
+  background: linear-gradient(red,blue);
+}
+
+.\[background\:linear-gradient\(blue\2c white\)\] {
+  background: linear-gradient(blue,white);
+}
+
+.\[background\:linear-gradient\(blue\2c _white\)\] {
+  background: linear-gradient(blue, white);
+}
+
+.\[background\:linear-gradient\(5deg\2c _blue\2c _white\)\] {
+  background: linear-gradient(5deg, blue, white);
+}
+
+.\[background\:linear-gradient\(5deg\2c _white_60\%\2c _blue_60\%\)\] {
+  background: linear-gradient(5deg, white 60%, blue 60%);
+}
+
+.\[background\:linear-gradient\(5deg\2c _white_60\%\2c _blue_70\%\)\] {
+  background: linear-gradient(5deg, white 60%, blue 70%);
+}
+
+.\[background\:linear-gradient\(_white_60\%\2c _blue_70\%\)\] {
+  background: linear-gradient( white 60%, blue 70%);
+}
+
+.\[background\:linear-gradient\(_white_10\%\2c _blue_90\%\)\] {
+  background: linear-gradient( white 10%, blue 90%);
+}
+
+.\[background\:linear-gradient\(_white_10\%\2c _green_90\%\)\] {
+  background: linear-gradient( white 10%, green 90%);
+}
+
+.\[background\:linear-gradient\(_white_10\%\2c _emerald_90\%\)\] {
+  background: linear-gradient( white 10%, emerald 90%);
+}
+
+.\[background\:repeating-linear-gradient\(_white_10\%\2c _green_90\%\)\] {
+  background: repeating-linear-gradient( white 10%, green 90%);
+}
+
+.\[background\:repeating-linear-gradient\(45deg\2c _white_10\%\2c _green_15\%\2c \)\] {
+  background: repeating-linear-gradient(45deg, white 10%, green 15%,);
+}
+
+.\[background\:repeating-linear-gradient\(45deg\2c _white_10\%\2c _green_15\%\)\] {
+  background: repeating-linear-gradient(45deg, white 10%, green 15%);
+}
+
+.\[background\:repeating-linear-gradient\(45deg\2c _white_10\%\2c _rgb\(153\2c _255\2c _102\)_15\%\)\] {
+  background: repeating-linear-gradient(45deg, white 10%, rgb(153, 255, 102) 15%);
+}
+
+.\[background\:repeating-linear-gradient\(45deg\2c _rgb\(153\2c _255\2c _102\)_15\%\2c _rgb\(153\2c _255\2c _102\)_10\%\)\] {
+  background: repeating-linear-gradient(45deg, rgb(153, 255, 102) 15%, rgb(153, 255, 102) 10%);
+}
+
+.\[background\:red\2c blue\] {
+  background: red,blue;
+}
+
+.\[background\:red_blue\] {
+  background: red blue;
+}
+
+.\[background-image\:linear-gradient\(45\2c rgb\(22\2c 163\2c 74\)_0\%\2c rgb\(20\2c 83\2c 45\)_100\%\)\2c repeating-linear-gradient\(45deg\2c _rgb\(153\2c _255\2c _102\)_0\%\2c _rgb\(153\2c _255\2c _102\)_5\%\2c transparent_5\%\2c transparent_10\%\)\] {
+  background-image: linear-gradient(45,rgb(22,163,74) 0%,rgb(20,83,45) 100%),repeating-linear-gradient(45deg, rgb(153, 255, 102) 0%, rgb(153, 255, 102) 5%,transparent 5%,transparent 10%);
+}
+
+.\[background-image\:repeating-linear-gradient\(45deg\2c _rgb\(153\2c _255\2c _102\)_0\%\2c _rgb\(153\2c _255\2c _102\)_5\%\2c transparent_5\%\2c transparent_10\%\)\] {
+  background-image: repeating-linear-gradient(45deg, rgb(153, 255, 102) 0%, rgb(153, 255, 102) 5%,transparent 5%,transparent 10%);
+}
+
+.\[background-image\:repeating-linear-gradient\(45deg\2c _rgb\(209\2c _250\2c _229\)_0\%\2c _rgb\(209\2c _250\2c _229\)_5\%\2c _transparent_5\%\2c _transparent_10\%\)\] {
+  background-image: repeating-linear-gradient(45deg, rgb(209, 250, 229) 0%, rgb(209, 250, 229) 5%, transparent 5%, transparent 10%);
+}
+
+.\[background-image\:repeating-linear-gradient\(45deg\2c _rgb\(209\2c _250\2c _229\)_0\%\2c _rgb\(209\2c _250\2c _229\)_2\%\2c _transparent_2\%\2c _transparent_4\%\)\] {
+  background-image: repeating-linear-gradient(45deg, rgb(209, 250, 229) 0%, rgb(209, 250, 229) 2%, transparent 2%, transparent 4%);
 }
 
 .hover\:cursor-pointer:hover {

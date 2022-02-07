@@ -1,205 +1,217 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./pictures/penguin.png">
-  <link 
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
-    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
 
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./pictures/penguin.png">
+    <link 
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer">
 
-  <script>
-    function expandSideNav() {
-      document.getElementById("sideNav").style.width="250px";
-      document.getElementById("closeButtonLink").style.width="auto";
-      document.getElementById("closeButtonLink").style.display="block";
-      document.getElementById("closeButton").style.visibility="visible";
-      document.getElementById("sideNav").style.display="flex";
-      document.getElementById("closeButton").style.display="flex";
-      document.getElementById("navExpander").style.display="none";
-    }
-    function closeSideNav() {
-      document.getElementById("sideNav").style.width="0";
-      document.getElementById("sideNav").style.display="block";
-      document.getElementById("closeButton").style.display="block";
-      document.getElementById("closeButton").style.visibility="invisible";
-      document.getElementById("closeButtonLink").style.display="none";
-      document.getElementById("navExpander").style.display="block";
-    }
-  </script>
-  <nav class="flex justify-between">
-    <p class=" text-gray-400 px-5 py-5 font-bold">Aryan Sidhwani</p>
-    <div id="navExpander">
-      <button onclick="expandSideNav()">
-        <i class="fas fa-bars flex sm:hidden p-5"></i>
-      </button>
-    </div>
-    <ul class=" sm:flex hidden px-5 justify-end">
-      <a href="#aboutline" class=" w-24 overflow-hidden">
-        <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5" href="#aboutline">
-          About
-        </li>
-      </a>
-
-      <a href="#skillline" class=" w-24 overflow-hidden">
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
-        Skills
-      </li>
-      </a>
-
-      <a href="#projectline" class=" w-24 overflow-hidden">
-        <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
-          Project
-        </li>
-      </a>
-
-      <a href="https://pleaseexplain.me" target=”_blank” class=" w-24 overflow-hidden">
-        <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
-          Blog
-        </li>
-      </a>
-    </ul>
-
-    <ul id="sideNav" class=" h-screen block w-0 transition-all right-0 fixed flex-col justify-evenly bg-green-200">
-      <li id="closeButton" class="justify-end invisible transition-all" > <a id="closeButtonLink" class=" transition-all hover:text-black text-gray-500 text-3xl w-0 top-5 right-5 fixed justify-end" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li>
-      <a href="#aboutline">
-        <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5" href="#aboutline">
-          About
-        </li>
-      </a>
-
-      <a href="#skillline">
-      <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
-        Skills
-      </li>
-      </a>
-
-      <a href="#projectline">
-        <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
-          Project
-        </li>
-      </a>
-
-      <a href="https://pleaseexplain.me" target=”_blank”>
-        <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
-          Blog
-        </li>
-      </a>
-    </ul>
-  </nav>
-
-<section>
-  <hr id="aboutline">
-  <div class="flex flex-wrap justify-between pb-3">
-    <img src="./pictures/aryan2_1.jpg" alt="" class="max-h-96 w-auto h-96 rounded-xl mt-12 sm:mx-16 mx-auto" >
-    <div class="bg-emerald-400 h-fit rounded-md flex mt-12 sm:mx-16 mx-1">
-      <div class="border-white border-2 bg-emerald-400 my-4 mx-4 text-slate-600 flex rounded-md">
-        <div class="my-4 mx-4">
-          <em class="font-bold text-5xl">Hi! I'm Aryan</em>
-          <p class="text-2xl overflow-clip max-w-4xl">
-            I am an aspiring engineer studying at DTU Delhi since 2021, I base my personality on science and
-            I improve and learn new things everyday
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <hr id="projectline">
-  <h2 class="text-center text-emerald-400 text-2xl py-3 font-extrabold">Projects</h2>
-  <ul class=" mt-6 text-center py-4">
-    <p class="text-emerald-500 text-xl">Engineering</p>
-    <li class=" mt-3 flex justify-center items-center">
-                
-      <a href="https://github.com/silverstone-git/matops" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
-          <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-              <p>Matrix Operation Project in Python</p>
-              <img src="pictures/matrix.jpeg" class="max-h-24 w-auto rounded-md">
-          </button>
-      </a>
-
-
-      <a href="https://github.com/silverstone-git/esql" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
-          <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-              <p>Minimal DBMS Program in Python</p>
-              <img src="pictures/dbms.jpg" class="max-h-24 w-auto rounded-md">
-          </button>
-      </a>
-
-
-    </li>
-    <p class="mt-6 text-emerald-500 text-xl"> Web development</p>
-    <li class=" mt-3 flex justify-center items-center">
-      <a href="http://pen-pineapple.herokuapp.com" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
-          <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-              <p>A Movie Rating Website using Django</p>
-              <img src="pictures/cloud.jpg" class="max-h-24 w-auto rounded-md">
-          </button>
-      </a>
-    </li>
-    <p class="mt-6 text-emerald-500 text-xl">Android Development </p>
-    <li class=" mt-3 flex justify-center items-center">
-
-      <a href="https://github.com/silverstone-git/what-food" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
-          <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-              <p>A food recommendation app</p>
-              <img src="pictures/foodimg.jpg" class="max-h-24 w-auto rounded-md">
-          </button>
-      </a>
-    </li>
-
-    <p class="mt-6 text-emerald-500 text-xl"> Python Scripts</p>
-    <li class="flex justify-center items-center mt-3"> 
-      <a href="https://github.com/silverstone-git/amateur-ballistics" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
-          <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-              <p>Multiplayer Tank Battle Game</p>
-              <img src="pictures/tank.jpg" class="max-h-24 w-auto rounded-md">
-          </button>
-      </a>
-
-      <a href="https://github.com/silverstone-git/arch-install" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
-          <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-              <p>Arch Linux Installer</p>
-              <img src="pictures/arch_linux.png" class="max-h-24 w-auto rounded-md">
-          </button>
-      </a>
-
-    </li>
-  </ul>
-
-</section>
-
-  <section>
-
-  <hr id="skillline">
-  <p class="py-4">My Tech Journey</p>
-  <p>I used to try different custom ROMs in android smartphone and learned about root and linux there, after that, I moved on to tinker with OSes on my desktop computer
-      I learned HTML and python in school and then learned Java and Kotlin right before college. I now focus on Web and App Development
-  </p>
-  <ul>
-
-
-  </ul>
-  </section>
-
-  <footer class="bg-teal-800 text-white flex p-5 mt-2">
-    <!--
-      <a class="max-w-fit mx-auto mt-6" href="https://www.digitalocean.com/?refcode=c6bc600d254c&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge" /></a><br>
-      <p class="max-w-fit"> Copyright &copy; 2022, Aryan Sidhwani </p>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <!--[background:repeating-linear-gradient(45deg,_rgb(153,_255,_102)_15%,_rgb(153,_255,_102)_10%)]-->
+    <!--background-image:linear-gradient(45,rgb(22,163,74)_0%,rgb(20,83,45)_100%)
+      emerald -> 209,250,229
     -->
-    <div class="flex gap-6">
-      <p class="text-gray-300 font-bold">Aryan Sidhwani</p>
-      <a class=" hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer " href="https://www.pleaseexplain.me" target=”_blank”>Blog</a>
+
+    <script>
+      function expandSideNav() {
+        document.getElementById("sideNav").style.width="250px";
+        document.getElementById("closeButtonLink").style.width="auto";
+        document.getElementById("closeButtonLink").style.display="block";
+        document.getElementById("closeButton").style.visibility="visible";
+        document.getElementById("sideNav").style.display="flex";
+        document.getElementById("closeButton").style.display="flex";
+        document.getElementById("navExpander").style.display="none";
+      }
+      function closeSideNav() {
+        document.getElementById("sideNav").style.width="0";
+        document.getElementById("sideNav").style.display="block";
+        document.getElementById("closeButton").style.display="block";
+        document.getElementById("closeButton").style.visibility="invisible";
+        document.getElementById("closeButtonLink").style.display="none";
+        document.getElementById("navExpander").style.display="block";
+      }
+    </script>
+    <nav class="flex justify-between">
+      <p class=" text-gray-400 px-5 py-5 font-bold">Aryan Sidhwani</p>
+      <div id="navExpander">
+        <button onclick="expandSideNav()">
+          <i class="fas fa-bars flex sm:hidden p-5"></i>
+        </button>
+      </div>
+      <ul class=" sm:flex hidden px-5 justify-end">
+        <a href="#aboutline" class=" w-24 overflow-hidden">
+          <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5" href="#aboutline">
+            About
+          </li>
+        </a>
+
+        <a href="#skillline" class=" w-24 overflow-hidden">
+        <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+          Skills
+        </li>
+        </a>
+
+        <a href="#projectline" class=" w-24 overflow-hidden">
+          <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+            Project
+          </li>
+        </a>
+
+        <a href="https://pleaseexplain.me" target=”_blank” class=" w-24 overflow-hidden">
+          <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+            Blog
+          </li>
+        </a>
+      </ul>
+
+      <ul id="sideNav" class=" h-screen block w-0 transition-all right-0 fixed flex-col justify-evenly bg-emerald-200">
+        <li id="closeButton" class="justify-end invisible transition-all" > <a id="closeButtonLink" class=" transition-all hover:text-black text-gray-500 text-3xl w-0 top-5 right-5 fixed justify-end" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li>
+        <a href="#aboutline">
+          <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5" href="#aboutline">
+            About
+          </li>
+        </a>
+
+        <a href="#skillline">
+        <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+          Skills
+        </li>
+        </a>
+
+        <a href="#projectline">
+          <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+            Project
+          </li>
+        </a>
+
+        <a href="https://pleaseexplain.me" target=”_blank”>
+          <li class=" text-blue-700 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+            Blog
+          </li>
+        </a>
+      </ul>
+    </nav>
+
+    <div class="[background-image:repeating-linear-gradient(45deg,_rgb(209,_250,_229)_0%,_rgb(209,_250,_229)_2%,_transparent_2%,_transparent_4%)]">
+      <section>
+        <hr id="aboutline">
+        <div class="flex flex-wrap justify-between pb-3">
+          <img src="./pictures/aryan2_1.jpg" alt="" class="max-h-96 w-auto h-96 rounded-xl mt-12 sm:mx-16 mx-auto" >
+          <div class="bg-emerald-400 h-fit rounded-md flex mt-12 sm:mx-16 mx-1">
+            <div class="border-white border-2 bg-emerald-400 my-4 mx-4 text-slate-600 flex rounded-md">
+              <div class="my-4 mx-4">
+                <em class="font-bold text-5xl">Hi! I'm Aryan</em>
+                <p class="text-2xl overflow-clip max-w-4xl">
+                  I am an aspiring engineer studying at DTU Delhi since 2021, I base my personality on science and
+                  I improve and learn new things everyday
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <hr id="projectline">
+        <h2 class="text-center text-emerald-400 text-2xl py-3 font-extrabold">Projects</h2>
+        <ul class=" mt-6 text-center py-4">
+          <p class="text-emerald-500 text-xl">Engineering</p>
+          <li class=" mt-3 flex justify-center items-center">
+                      
+            <a href="https://github.com/silverstone-git/matops" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>Matrix Operation Project in Python</p>
+                    <img src="pictures/matrix.jpeg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
+
+
+            <a href="https://github.com/silverstone-git/esql" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>Minimal DBMS Program in Python</p>
+                    <img src="pictures/dbms.jpg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
+
+
+          </li>
+          <p class="mt-6 text-emerald-500 text-xl"> Web development</p>
+          <li class=" mt-3 flex justify-center items-center">
+            <a href="http://pen-pineapple.herokuapp.com" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>A Movie Rating Website using Django</p>
+                    <img src="pictures/cloud.jpg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
+          </li>
+          <p class="mt-6 text-emerald-500 text-xl">Android Development </p>
+          <li class=" mt-3 flex justify-center items-center">
+
+            <a href="https://github.com/silverstone-git/what-food" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>A food recommendation app</p>
+                    <img src="pictures/foodimg.jpg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
+          </li>
+
+          <p class="mt-6 text-emerald-500 text-xl"> Python Scripts</p>
+          <li class="flex justify-center items-center mt-3"> 
+            <a href="https://github.com/silverstone-git/amateur-ballistics" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>Multiplayer Tank Battle Game</p>
+                    <img src="pictures/tank.jpg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
+
+            <a href="https://github.com/silverstone-git/arch-install" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-emerald-400 hover:text-white border-2 border-emerald-400 rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>Arch Linux Installer</p>
+                    <img src="pictures/arch_linux.png" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
+
+          </li>
+        </ul>
+
+      </section>
+
+        <section>
+
+        <hr id="skillline">
+        <p class="py-4">My Tech Journey</p>
+        <p>I used to try different custom ROMs in android smartphone and learned about root and linux there, after that, I moved on to tinker with OSes on my desktop computer
+            I learned HTML and python in school and then learned Java and Kotlin right after school. I now focus on Web and App Development
+        </p>
+        <ul>
+
+
+        </ul>
+        </section>
     </div>
-  </footer>
-</body>
+
+    <footer class="bg-teal-800 text-white flex p-5">
+      <!--
+        <a class="max-w-fit mx-auto mt-6" href="https://www.digitalocean.com/?refcode=c6bc600d254c&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge" /></a><br>
+        <p class="max-w-fit"> Copyright &copy; 2022, Aryan Sidhwani </p>
+      -->
+      <div class="flex gap-6">
+        <p class="text-gray-300 font-bold">Aryan Sidhwani</p>
+        <a class=" text-yellow-200 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer w-10 " href="https://www.pleaseexplain.me" target=”_blank”>Blog</a>
+        <p> Powered by 
+          <a class=" text-yellow-200 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer w-28 " href="https://www.digitalocean.com/?refcode=c6bc600d254c&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" target=”_blank”>
+            Digital Ocean
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
