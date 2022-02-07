@@ -26,9 +26,9 @@
       <!--[background-image:repeating-linear-gradient(45deg,_rgb(209,_250,_229)_0%,_rgb(209,_250,_229)_2%,_transparent_2%,_transparent_4%)]-->
       <!--<hr id="aboutline">-->
       <div class=" flex justify-center">
-        <div class="flex flex-wrap justify-between pb-3 gap-11 [height:120vh] [margin-top:40vh]">
+        <div class="flex flex-wrap justify-between pb-3 gap-9 [height:100vh] [margin-top:40vh] sm:h-40">
           <img src="./pictures/aryan.jpg" alt="" class=" rounded-xl h-48 mx-auto" >
-          <div class="bg-emerald-400 h-fit rounded-md flex mx-1">
+          <div class="bg-emerald-400 h-fit rounded-md flex mx-2">
             <div class="border-white border-2 bg-emerald-400 my-4 mx-4 text-slate-600 flex rounded-md">
               <div class="my-4 mx-4">
                 <em class="font-bold text-5xl">Hi! I'm Aryan</em>
@@ -43,13 +43,14 @@
       </div>
     </div>
 
-    <section class=" [background:rgb(198,_35,_104)] text-white [height:120vh] flex flex-col justify-start [padding-top:40vh]">
+    <!--<img src="./pictures/layered-waves-haikei.svg" alt="">-->
+
+    <div class=" [background-image:url('./pictures/layered-waves-haikei.svg')] w-full bg-cover bg-no-repeat aspect-video">
+    </div>
+
+    <section class=" [background:rgb(198,_35,_104)] text-white [height:120vh] flex flex-col justify-start [padding-top:20vh]">
       <h2 class="text-center text-2xl py-3 [font-family:Roboto] [top:50vh]">Projects</h2>
       <div class=" flex flex-wrap justify-center mt-6 py-4 overflow-y-hidden h-auto">
-        <!--
-        <p class=" text-xl">Engineering</p>
-        <li class=" mt-3 flex justify-center items-center">
-        -->
                     
         <a href="https://github.com/silverstone-git/matops" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
             <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
@@ -67,16 +68,12 @@
         </a>
 
 
-        <!--<p class="mt-6 text-emerald-500 text-xl"> Web development</p>
-        <li class=" mt-3 flex justify-center items-center">-->
         <a href="http://pen-pineapple.herokuapp.com" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
             <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
                 <p>A Movie Rating Website using Django</p>
                 <img src="pictures/cloud.jpg" class="max-h-24 w-auto rounded-md">
             </button>
         </a>
-        <!--<p class="mt-6 text-emerald-500 text-xl">Android Development </p>
-        <li class=" mt-3 flex justify-center items-center">-->
 
         <a href="https://github.com/silverstone-git/what-food" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
             <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
@@ -85,8 +82,6 @@
             </button>
         </a>
 
-        <!--<p class="mt-6 text-emerald-500 text-xl"> Python Scripts</p>
-        <li class="flex justify-center items-center mt-3"> -->
         <a href="https://github.com/silverstone-git/amateur-ballistics" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
             <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
                 <p>Multiplayer Tank Battle Game</p>
@@ -119,10 +114,6 @@
     </section>
 
     <footer class="bg-teal-800 text-white flex p-5">
-      <!--
-        <a class="max-w-fit mx-auto mt-6" href="https://www.digitalocean.com/?refcode=c6bc600d254c&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge" /></a><br>
-        <p class="max-w-fit"> Copyright &copy; 2022, Aryan Sidhwani </p>
-      -->
       <div class="flex gap-6">
         <p class="text-gray-300 font-bold">Aryan Sidhwani</p>
         <a class=" text-yellow-200 hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer w-10 " href="https://www.pleaseexplain.me" target=”_blank”>Blog</a>
