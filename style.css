@@ -597,9 +597,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: auto;
 }
 
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .my-4 {
@@ -615,6 +615,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .mx-3 {
@@ -752,17 +757,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .mt-2 {
@@ -779,6 +775,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-2 {
   margin-left: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mt-48 {
@@ -819,6 +819,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-44 {
   margin-top: 11rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
 }
 
 .block {
@@ -927,6 +935,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: 5rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .w-auto {
   width: auto;
 }
@@ -963,10 +975,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .w-5 {
@@ -1031,6 +1039,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .snap-center {
   scroll-snap-align: center;
+}
+
+.list-inside {
+  list-style-position: inside;
 }
 
 .list-none {
@@ -1098,8 +1110,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-items: center;
 }
 
-.gap-11 {
-  gap: 2.75rem;
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .gap-3 {
@@ -1110,16 +1122,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.5rem;
 }
 
+.gap-11 {
+  gap: 2.75rem;
+}
+
 .gap-5 {
   gap: 1.25rem;
 }
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-9 {
-  gap: 2.25rem;
 }
 
 .gap-x-10 {
@@ -1461,11 +1473,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
-.text-emerald-500 {
-  --tw-text-opacity: 1;
-  color: rgb(16 185 129 / var(--tw-text-opacity));
-}
-
 .text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
@@ -1474,6 +1481,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-yellow-200 {
   --tw-text-opacity: 1;
   color: rgb(254 240 138 / var(--tw-text-opacity));
+}
+
+.text-emerald-500 {
+  --tw-text-opacity: 1;
+  color: rgb(16 185 129 / var(--tw-text-opacity));
 }
 
 .text-gray-400 {
@@ -1524,6 +1536,11 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-line: underline;
 }
 
+.decoration-dashed {
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+
 .outline {
   outline-style: solid;
 }
@@ -1560,20 +1577,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: rgb(29,29,29);
 }
 
-.\[height\:120vh\] {
-  height: 120vh;
+.\[height\:100vh\] {
+  height: 100vh;
 }
 
 .\[margin-top\:40vh\] {
   margin-top: 40vh;
 }
 
+.\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei\.svg\'\)\] {
+  background-image: url('./pictures/layered-waves-haikei.svg');
+}
+
 .\[background\:rgb\(198\2c _35\2c _104\)\] {
   background: rgb(198, 35, 104);
 }
 
-.\[padding-top\:40vh\] {
-  padding-top: 40vh;
+.\[height\:120vh\] {
+  height: 120vh;
+}
+
+.\[padding-top\:20vh\] {
+  padding-top: 20vh;
 }
 
 .\[font-family\:Roboto\] {
@@ -1584,48 +1609,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 50vh;
 }
 
-.\[background-image\:url\(\.\/pictures\/layered-waves-haikei\.svg\)\] {
-  background-image: url(./pictures/layered-waves-haikei.svg);
+.\[list-style-type\:dash\] {
+  list-style-type: dash;
 }
 
-.\[padding-top\:20vh\] {
-  padding-top: 20vh;
+.\[list-style-type\:none\] {
+  list-style-type: none;
 }
 
-.\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei\.svg\'\)\] {
-  background-image: url('./pictures/layered-waves-haikei.svg');
-}
-
-.\[background\:url\(\'\.\/pictures\/layered-waves-haikei\.svg\'\)\] {
-  background: url('./pictures/layered-waves-haikei.svg');
-}
-
-.\[height\:40vh\] {
-  height: 40vh;
-}
-
-.\[height\:80vh\] {
-  height: 80vh;
-}
-
-.\[height\:200vh\] {
-  height: 200vh;
-}
-
-.\[height\:60vh\] {
-  height: 60vh;
-}
-
-.\[height\:30vh\] {
-  height: 30vh;
-}
-
-.\[height\:20vh\] {
-  height: 20vh;
-}
-
-.\[height\:100vh\] {
-  height: 100vh;
+.\[list-style-type\:disc\] {
+  list-style-type: disc;
 }
 
 .hover\:cursor-pointer:hover {
@@ -1662,14 +1655,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:mt-96 {
-    margin-top: 24rem;
-  }
-
-  .sm\:h-20 {
-    height: 5rem;
-  }
-
   .sm\:h-40 {
     height: 10rem;
   }
