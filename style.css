@@ -757,6 +757,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -833,10 +837,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
 .mt-16 {
   margin-top: 4rem;
 }
@@ -877,12 +877,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 16 / 9;
 }
 
-.aspect-auto {
-  aspect-ratio: auto;
-}
-
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.aspect-auto {
+  aspect-ratio: auto;
 }
 
 .h-48 {
@@ -1247,6 +1247,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(52 211 153 / var(--tw-bg-opacity));
 }
 
+.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
 .bg-teal-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 94 89 / var(--tw-bg-opacity));
@@ -1477,14 +1482,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .text-8xl {
@@ -1641,8 +1646,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: rgb(29,29,29);
 }
 
-.\[height\:100vh\] {
-  height: 100vh;
+.\[height\:200vh\] {
+  height: 200vh;
 }
 
 .\[margin-top\:40vh\] {
@@ -1653,92 +1658,72 @@ Ensure the default browser behavior of the `hidden` attribute.
   list-style-type: disc;
 }
 
-.\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei\.svg\'\)\] {
-  background-image: url('./pictures/layered-waves-haikei.svg');
+.\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei-1\.svg\'\)\] {
+  background-image: url('./pictures/layered-waves-haikei-1.svg');
 }
 
 .\[background\:rgb\(198\2c _35\2c _104\)\] {
   background: rgb(198, 35, 104);
 }
 
-.\[height\:120vh\] {
-  height: 120vh;
+.\[height\:240vh\] {
+  height: 240vh;
 }
 
-.\[padding-top\:20vh\] {
-  padding-top: 20vh;
-}
-
-.\[font-family\:Roboto\] {
-  font-family: Roboto;
-}
-
-.\[top\:50vh\] {
-  top: 50vh;
-}
-
-.\[height\:200vh\] {
-  height: 200vh;
-}
-
-.\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei-1\.svg\'\)\] {
-  background-image: url('./pictures/layered-waves-haikei-1.svg');
-}
-
-.\[background-image\:rgb\(73\2c _105\2c _126\)\] {
-  background-image: rgb(73, 105, 126);
+.\[padding-top\:50vh\] {
+  padding-top: 50vh;
 }
 
 .\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei-2\.svg\'\)\] {
   background-image: url('./pictures/layered-waves-haikei-2.svg');
 }
 
-.\[background\:rgb\(73\2c _105\2c _126\)\] {
-  background: rgb(73, 105, 126);
-}
-
-.\[margin-top\:20vh\] {
-  margin-top: 20vh;
-}
-
-.\[padding-top\:45vh\] {
-  padding-top: 45vh;
-}
-
-.\[top\:100vh\] {
-  top: 100vh;
-}
-
-.\[padding-top\:40vh\] {
-  padding-top: 40vh;
-}
-
-.\[height\:20vh\] {
-  height: 20vh;
-}
-
-.\[height\:40vh\] {
-  height: 40vh;
-}
-
-.\[height\:50vh\] {
-  height: 50vh;
+.\[height\:80vh\] {
+  height: 80vh;
 }
 
 .\[background-position\:bottom\] {
   background-position: bottom;
 }
 
-.\[height\:80vh\] {
-  height: 80vh;
+.\[background\:rgb\(73\2c _105\2c _126\)\] {
+  background: rgb(73, 105, 126);
 }
 
-.\[padding-top\:80vh\] {
-  padding-top: 80vh;
+.\[height\:120vh\] {
+  height: 120vh;
 }
 
-.\[padding-top\:50vh\] {
-  padding-top: 50vh;
+.\[padding-top\:45vh\] {
+  padding-top: 45vh;
+}
+
+.\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei-3\.svg\'\)\] {
+  background-image: url('./pictures/layered-waves-haikei-3.svg');
+}
+
+.\[color\:rgb\(114\2c _226\2c _233\)\] {
+  color: rgb(114, 226, 233);
+}
+
+.\[height\:260vh\] {
+  height: 260vh;
+}
+
+.\[height\:280vh\] {
+  height: 280vh;
+}
+
+.\[height\:20vh\] {
+  height: 20vh;
+}
+
+.\[height\:60vh\] {
+  height: 60vh;
+}
+
+.\[height\:100vh\] {
+  height: 100vh;
 }
 
 .hover\:cursor-pointer:hover {
@@ -1777,5 +1762,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 640px) {
   .sm\:h-40 {
     height: 10rem;
+  }
+
+  .sm\:\[height\:120vh\] {
+    height: 120vh;
   }
 }
