@@ -757,6 +757,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -825,8 +829,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.75rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .block {
@@ -863,6 +875,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .aspect-video {
   aspect-ratio: 16 / 9;
+}
+
+.aspect-auto {
+  aspect-ratio: auto;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .h-48 {
@@ -1062,6 +1082,10 @@ Ensure the default browser behavior of the `hidden` attribute.
        columns: 1;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1151,12 +1175,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-self: center;
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
 .overflow-clip {
   overflow: clip;
+}
+
+.overflow-visible {
+  overflow: visible;
 }
 
 .overflow-y-hidden {
@@ -1395,6 +1427,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 11rem;
 }
 
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-52 {
+  padding-top: 13rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pb-96 {
+  padding-bottom: 24rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-80 {
+  padding-top: 20rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1461,6 +1517,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .font-light {
   font-weight: 300;
+}
+
+.font-thin {
+  font-weight: 100;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .text-white {
@@ -1585,6 +1649,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 40vh;
 }
 
+.\[list-style-type\:disc\] {
+  list-style-type: disc;
+}
+
 .\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei\.svg\'\)\] {
   background-image: url('./pictures/layered-waves-haikei.svg');
 }
@@ -1609,16 +1677,68 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 50vh;
 }
 
-.\[list-style-type\:dash\] {
-  list-style-type: dash;
+.\[height\:200vh\] {
+  height: 200vh;
 }
 
-.\[list-style-type\:none\] {
-  list-style-type: none;
+.\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei-1\.svg\'\)\] {
+  background-image: url('./pictures/layered-waves-haikei-1.svg');
 }
 
-.\[list-style-type\:disc\] {
-  list-style-type: disc;
+.\[background-image\:rgb\(73\2c _105\2c _126\)\] {
+  background-image: rgb(73, 105, 126);
+}
+
+.\[background-image\:url\(\'\.\/pictures\/layered-waves-haikei-2\.svg\'\)\] {
+  background-image: url('./pictures/layered-waves-haikei-2.svg');
+}
+
+.\[background\:rgb\(73\2c _105\2c _126\)\] {
+  background: rgb(73, 105, 126);
+}
+
+.\[margin-top\:20vh\] {
+  margin-top: 20vh;
+}
+
+.\[padding-top\:45vh\] {
+  padding-top: 45vh;
+}
+
+.\[top\:100vh\] {
+  top: 100vh;
+}
+
+.\[padding-top\:40vh\] {
+  padding-top: 40vh;
+}
+
+.\[height\:20vh\] {
+  height: 20vh;
+}
+
+.\[height\:40vh\] {
+  height: 40vh;
+}
+
+.\[height\:50vh\] {
+  height: 50vh;
+}
+
+.\[background-position\:bottom\] {
+  background-position: bottom;
+}
+
+.\[height\:80vh\] {
+  height: 80vh;
+}
+
+.\[padding-top\:80vh\] {
+  padding-top: 80vh;
+}
+
+.\[padding-top\:50vh\] {
+  padding-top: 50vh;
 }
 
 .hover\:cursor-pointer:hover {
