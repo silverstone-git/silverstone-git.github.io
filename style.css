@@ -873,12 +873,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.aspect-video {
-  aspect-ratio: 16 / 9;
-}
-
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 .aspect-auto {
@@ -1057,6 +1057,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   resize: both;
 }
 
+.snap-y {
+  -ms-scroll-snap-type: y var(--tw-scroll-snap-strictness);
+      scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
 .snap-center {
   scroll-snap-align: center;
 }
@@ -1092,6 +1101,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
 }
 
 .content-center {
@@ -1193,6 +1206,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .overflow-y-hidden {
   overflow-y: hidden;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .rounded-xl {
@@ -1642,6 +1659,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.\[scroll-snap-type\:_y_mandatory\] {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.\[scroll-padding-top\:_15vh\] {
+  scroll-padding-top: 15vh;
+}
+
 .\[background\:rgb\(29\2c 29\2c 29\)\] {
   background: rgb(29,29,29);
 }
@@ -1662,12 +1688,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('./pictures/layered-waves-haikei-1.svg');
 }
 
+.\[height\:80vh\] {
+  height: 80vh;
+}
+
+.\[background-position\:bottom\] {
+  background-position: bottom;
+}
+
 .\[background\:rgb\(198\2c _35\2c _104\)\] {
   background: rgb(198, 35, 104);
 }
 
-.\[height\:240vh\] {
-  height: 240vh;
+.\[height\:280vh\] {
+  height: 280vh;
 }
 
 .\[padding-top\:50vh\] {
@@ -1678,20 +1712,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-image: url('./pictures/layered-waves-haikei-2.svg');
 }
 
-.\[height\:80vh\] {
-  height: 80vh;
-}
-
-.\[background-position\:bottom\] {
-  background-position: bottom;
-}
-
 .\[background\:rgb\(73\2c _105\2c _126\)\] {
   background: rgb(73, 105, 126);
 }
 
-.\[height\:120vh\] {
-  height: 120vh;
+.\[height\:100vh\] {
+  height: 100vh;
 }
 
 .\[padding-top\:45vh\] {
@@ -1704,26 +1730,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\[color\:rgb\(114\2c _226\2c _233\)\] {
   color: rgb(114, 226, 233);
-}
-
-.\[height\:260vh\] {
-  height: 260vh;
-}
-
-.\[height\:280vh\] {
-  height: 280vh;
-}
-
-.\[height\:20vh\] {
-  height: 20vh;
-}
-
-.\[height\:60vh\] {
-  height: 60vh;
-}
-
-.\[height\:100vh\] {
-  height: 100vh;
 }
 
 .hover\:cursor-pointer:hover {
@@ -1760,10 +1766,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:h-40 {
-    height: 10rem;
-  }
-
   .sm\:\[height\:120vh\] {
     height: 120vh;
   }
