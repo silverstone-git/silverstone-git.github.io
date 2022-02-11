@@ -16,10 +16,65 @@
   </head>
   <body>
 
-    <div class=" [scroll-snap-type:_y_mandatory] overflow-y-scroll [scroll-padding-top:_15vh] ">
+    <script>
+      function expandSideNav() {
+        document.getElementById("sideNav").style.width="250px";
+        document.getElementById("closeButtonLink").style.width="auto";
+        document.getElementById("closeButtonLink").style.display="block";
+        document.getElementById("closeButton").style.visibility="visible";
+        document.getElementById("sideNav").style.display="flex";
+        document.getElementById("closeButton").style.display="flex";
+        document.getElementById("navExpander").style.display="none";
+      }
+      function closeSideNav() {
+        document.getElementById("sideNav").style.width="0";
+        document.getElementById("sideNav").style.display="block";
+        document.getElementById("closeButton").style.display="block";
+        document.getElementById("closeButton").style.visibility="invisible";
+        document.getElementById("closeButtonLink").style.display="none";
+        document.getElementById("navExpander").style.display="flex";
+      }
+    </script>
 
-      <section class=" [background:rgb(29,29,29)] text-white snap-start">
-        <div class=" flex justify-center [height:200vh] sm:[height:120vh]">
+    <div class="sm:hidden flex justify-end [background:rgb(29,29,29)] text-white right-3" id="navExpander">
+      <button class="pt-2" onclick="expandSideNav()">
+        <i class="fas fa-bars flex p-5"></i>
+      </button>
+    </div>
+
+    <ul id="sideNav" class=" h-screen block w-0 transition-all right-0 fixed flex-col justify-evenly bg-white sm:hidden ">
+      <li id="closeButton" class="justify-end invisible transition-all" > <a id="closeButtonLink" class=" transition-all hover:text-black hover:font-bold text-gray-300 text-3xl w-0 top-5 right-5 fixed justify-end" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li>
+      <a href="#aboutline">
+        <li class=" text-black hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5" href="#aboutline">
+          About
+        </li>
+      </a>
+
+      <a href="#skillline">
+        <li class=" text-black hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+          Skills
+        </li>
+      </a>
+
+      <a href="#projectline">
+        <li class=" text-black hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+          Project
+        </li>
+      </a>
+
+      <a href="https://pleaseexplain.me" target=”_blank”>
+        <li class=" text-black hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+          Blog
+        </li>
+      </a>
+    </ul>
+
+    <div class=" [scroll-snap-type:_y_proximity] overflow-y-scroll  ">
+      <!--[scroll-padding-top:_15vh] scroll-smooth -->
+
+      <section class=" [background:rgb(29,29,29)] text-white snap-center">
+        <h1 id="aboutline" class="hidden"></h1>
+        <div class=" flex justify-center [height:300vh] sm:[height:120vh]">
           <div class="flex flex-row flex-wrap justify-between pb-3 gap-9  [margin-top:40vh]">
             <img src="./pictures/aryan.jpg" alt="" class=" rounded-xl h-48 mx-auto mt-7" >
             <div class="bg-emerald-400 h-fit rounded-md flex mx-2">
@@ -37,80 +92,83 @@
             </div>
           </div>
         </div>
+
+        <div class=" [background-image:url('./pictures/layered-waves-haikei-1.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
+        </div>
       </section>
 
-      <div class=" [background-image:url('./pictures/layered-waves-haikei-1.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
-      </div>
 
-      <section class=" [background:rgb(198,_35,_104)] text-white sm:[height:120vh] [height:280vh] flex flex-col justify-start [padding-top:50vh]  snap-start">
-        <h2 class="text-center text-3xl py-3 font-bold italic">My Karma</h2>
-        <div class=" flex flex-wrap justify-center mt-6 py-4 overflow-y-hidden h-auto">
-                      
-          <a href="https://github.com/silverstone-git/matops" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-              <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                  <p>Matrix Operation Project in Python</p>
-                  <img src="pictures/matrix.jpeg" class="max-h-24 w-auto rounded-md">
-              </button>
-          </a>
-
-
-          <a href="https://github.com/silverstone-git/esql" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-              <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                  <p>Minimal DBMS Program in Python</p>
-                  <img src="pictures/dbms.jpg" class="max-h-24 w-auto rounded-md">
-              </button>
-          </a>
+      <section class=" [background:rgb(198,_35,_104)] text-white snap-center">
+        <h1 id="projectline" class="hidden"></h1>
+        <div class="sm:[height:100vh] [height:280vh] [padding-top:40vh] flex flex-col justify-start">
+          <h2 class="text-center text-3xl py-3 font-bold italic">My Karma</h2>
+          <div class=" flex flex-wrap justify-center mt-6 py-4 overflow-y-hidden h-auto">
+                        
+            <a href="https://github.com/silverstone-git/matops" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>Matrix Operation Project in Python</p>
+                    <img src="pictures/matrix.jpeg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
 
 
-          <a href="http://pen-pineapple.herokuapp.com" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-              <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                  <p>A Movie Rating Website using Django</p>
-                  <img src="pictures/cloud.jpg" class="max-h-24 w-auto rounded-md">
-              </button>
-          </a>
+            <a href="https://github.com/silverstone-git/esql" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>Minimal DBMS Program in Python</p>
+                    <img src="pictures/dbms.jpg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
 
-          <a href="https://github.com/silverstone-git/what-food" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-              <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                  <p>A food recommendation app</p>
-                  <img src="pictures/foodimg.jpg" class="max-h-24 w-auto rounded-md">
-              </button>
-          </a>
 
-          <a href="https://github.com/silverstone-git/amateur-ballistics" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-              <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                  <p>Multiplayer Tank Battle Game</p>
-                  <img src="pictures/tank.jpg" class="max-h-24 w-auto rounded-md">
-              </button>
-          </a>
+            <a href="http://pen-pineapple.herokuapp.com" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>A Movie Rating Website using Django</p>
+                    <img src="pictures/cloud.jpg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
 
-          <a href="https://github.com/silverstone-git/arch-install" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-              <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                  <p>Arch Linux Installer</p>
-                  <img src="pictures/arch_linux.png" class="max-h-24 w-auto rounded-md">
-              </button>
-          </a>
+            <a href="https://github.com/silverstone-git/what-food" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>A food recommendation app</p>
+                    <img src="pictures/foodimg.jpg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
 
+            <a href="https://github.com/silverstone-git/amateur-ballistics" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>Multiplayer Tank Battle Game</p>
+                    <img src="pictures/tank.jpg" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
+
+            <a href="https://github.com/silverstone-git/arch-install" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
+                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
+                    <p>Arch Linux Installer</p>
+                    <img src="pictures/arch_linux.png" class="max-h-24 w-auto rounded-md">
+                </button>
+            </a>
+
+          </div>
         </div>
 
+        <div class=" [background-image:url('./pictures/layered-waves-haikei-2.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
+        </div>
       </section>
 
-      <div class=" [background-image:url('./pictures/layered-waves-haikei-2.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
-      </div>
 
-      <section class=" [background:rgb(73,_105,_126)] text-white [height:100vh] [padding-top:45vh]  snap-start" >
-
-          <p class="py-4">My Tech Journey</p>
-          <p>I used to try different custom ROMs in android smartphone and learned about root and linux there, after that, I moved on to tinker with OSes on my desktop computer
-              I learned HTML and python in school and then learned Java and Kotlin right after school. I now focus on Web and App Development
-          </p>
-          <ul>
+      <section class=" [background:rgb(73,_105,_126)] text-white snap-center [height:100vh] [padding-top:45vh]" >
+        <h1 id="skillline" class=" hidden"></h1>
+        <p class="py-4">My Tech Journey</p>
+        <p>I used to try different custom ROMs in android smartphone and learned about root and linux there, after that, I moved on to tinker with OSes on my desktop computer
+            I learned HTML and python in school and then learned Java and Kotlin right after school. I now focus on Web and App Development
+        </p>
+        <ul>
 
 
-          </ul>
+        </ul>
+        <div class=" [background-image:url('./pictures/layered-waves-haikei-3.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
+        </div>
       </section>
-
-      <div class=" [background-image:url('./pictures/layered-waves-haikei-3.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
-      </div>
 
     </div>
 
