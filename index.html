@@ -69,10 +69,10 @@
       </a>
     </ul>
 
-    <div class=" [scroll-snap-type:_y_proximity] overflow-y-scroll  ">
-      <!--[scroll-padding-top:_15vh] scroll-smooth -->
+    <div>
+      <!--[scroll-padding-top:_15vh] scroll-smooth [scroll-snap-type:_y_proximity] overflow-y-scroll-->
 
-      <section class=" [background:rgb(29,29,29)] text-white snap-end">
+      <section class=" [background:rgb(29,29,29)] text-white ">
         <h1 id="aboutline" class="hidden"></h1>
         <div class=" flex justify-center [height:300vh] sm:[height:120vh]">
           <div class="flex flex-row flex-wrap justify-between pb-3 gap-9  [margin-top:40vh]">
@@ -98,54 +98,43 @@
       </section>
 
 
-      <section class=" [background:rgb(198,_35,_104)] text-white snap-end">
+      <img src="pictures/matrix.jpeg" class="rounded-lg">
+      <section class=" [background:rgb(198,_35,_104)] text-white ">
         <h1 id="projectline" class="hidden"></h1>
-        <div class="sm:[height:100vh] [height:280vh] [padding-top:40vh] flex flex-col justify-start">
+        <div class="sm:[height:200vh] [height:380vh] [padding-top:40vh] flex flex-col justify-start">
           <h2 class="text-center text-3xl py-3 font-bold italic">My Karma</h2>
-          <div class=" flex flex-wrap justify-center mt-6 py-4 overflow-y-hidden h-auto">
+          <div class=" grid grid-cols-2 gap-x-2 justify-center mt-6 py-4 overflow-y-hidden h-auto">
                         
-            <a href="https://github.com/silverstone-git/matops" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                    <p>Matrix Operation Project in Python</p>
-                    <img src="pictures/matrix.jpeg" class="max-h-24 w-auto rounded-md">
-                </button>
+            <a href="https://github.com/silverstone-git/matops" rel="noreferrer noopener" target="_blank" class="overflow-hidden h-44 w-44 hover:font-bold">
+              <p class=" translate-y-24 z-10">Matrix Operation Project in Python</p>
+              <img src="pictures/matrix.jpeg" class="rounded-lg bg-center">
             </a>
 
 
-            <a href="https://github.com/silverstone-git/esql" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                    <p>Minimal DBMS Program in Python</p>
-                    <img src="pictures/dbms.jpg" class="max-h-24 w-auto rounded-md">
-                </button>
+            <a href="https://github.com/silverstone-git/esql" rel="noreferrer noopener" target="_blank" class="w-fit hover:font-bold">
+              <p class=" z-10 translate-y-24">Minimal DBMS Program in Python</p>
+              <img src="pictures/dbms.jpg" class="h-44 w-auto rounded-lg">
             </a>
 
 
-            <a href="http://pen-pineapple.herokuapp.com" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                    <p>A Movie Rating Website using Django</p>
-                    <img src="pictures/cloud.jpg" class="max-h-24 w-auto rounded-md">
-                </button>
+            <a href="http://pen-pineapple.herokuapp.com" rel="noreferrer noopener" target="_blank" class="w-fit hover:font-bold">
+              <p class=" z-10 translate-y-24">A Movie Rating Website using Django</p>
+              <img src="pictures/cloud.jpg" class="h-44 w-auto rounded-lg">
             </a>
 
-            <a href="https://github.com/silverstone-git/what-food" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                    <p>A food recommendation app</p>
-                    <img src="pictures/foodimg.jpg" class="max-h-24 w-auto rounded-md">
-                </button>
+            <a href="https://github.com/silverstone-git/what-food" rel="noreferrer noopener" target="_blank" class="w-fit hover:font-bold">
+              <p class=" z-10 translate-y-24">A food recommendation app</p>
+              <img src="pictures/foodimg.jpg" class="h-44 w-auto rounded-lg">
             </a>
 
-            <a href="https://github.com/silverstone-git/amateur-ballistics" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                    <p>Multiplayer Tank Battle Game</p>
-                    <img src="pictures/tank.jpg" class="max-h-24 w-auto rounded-md">
-                </button>
+            <a href="https://github.com/silverstone-git/amateur-ballistics" rel="noreferrer noopener" target="_blank" class="w-fit hover:font-bold">
+              <p class=" z-10 translate-y-24">Multiplayer Tank Battle Game</p>
+              <img src="pictures/tank.jpg" class="h-44 w-auto rounded-lg">
             </a>
 
-            <a href="https://github.com/silverstone-git/arch-install" rel="noreferrer noopener" target="_blank" class=" transition-colors hover:bg-white hover:text-black border-2 border-white hover:border-black rounded-md flex items-center justify-center mx-5">
-                <button class="flex flex-col flex-wrap items-center justify-center gap-3 mt-2 mb-2 mr-2 ml-2">
-                    <p>Arch Linux Installer</p>
-                    <img src="pictures/arch_linux.png" class="max-h-24 w-auto rounded-md">
-                </button>
+            <a href="https://github.com/silverstone-git/arch-install" rel="noreferrer noopener" target="_blank" class="w-fit hover:font-bold">
+              <p class=" z-10 translate-y-24">Arch Linux Installer</p>
+              <img src="pictures/arch_linux.png" class="h-44 w-auto rounded-lg">
             </a>
 
           </div>
@@ -156,7 +145,7 @@
       </section>
 
 
-      <section class=" [background:rgb(73,_105,_126)] text-white snap-end [height:100vh] [padding-top:45vh]" >
+      <section class=" [background:rgb(73,_105,_126)] text-white [height:100vh] [padding-top:45vh]" >
         <h1 id="skillline" class=" hidden"></h1>
         <p class="py-4">My Tech Journey</p>
         <p>I used to try different custom ROMs in android smartphone and learned about root and linux there, after that, I moved on to tinker with OSes on my desktop computer
@@ -166,9 +155,9 @@
 
 
         </ul>
-        <div class=" [background-image:url('./pictures/layered-waves-haikei-3.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
-        </div>
       </section>
+      <div class=" [background-image:url('./pictures/layered-waves-haikei-3.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
+      </div>
 
     </div>
 

@@ -879,6 +879,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: table;
 }
 
+.grid {
+  display: grid;
+}
+
 .contents {
   display: contents;
 }
@@ -943,6 +947,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-8 {
   height: 2rem;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-44 {
+  height: 11rem;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-56 {
+  height: 14rem;
 }
 
 .max-h-24 {
@@ -1019,6 +1039,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 10rem;
 }
 
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-44 {
+  width: 11rem;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -1061,6 +1089,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .origin-center {
   transform-origin: center;
+}
+
+.translate-y-12 {
+  --tw-translate-y: 3rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-4 {
+  --tw-translate-y: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-20 {
+  --tw-translate-y: 5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-24 {
+  --tw-translate-y: 6rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -1107,6 +1155,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .columns-1 {
   -moz-columns: 1;
        columns: 1;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -1192,6 +1244,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
+}
+
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
+
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .place-self-center {
@@ -1386,6 +1447,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-cover {
   background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-no-repeat {
@@ -1649,8 +1714,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: transparent;
 }
 
+.text-\[rgba\(0\2c 0\2c 0\2c 0\)\] {
+  color: rgba(0,0,0,0);
+}
+
 .text-opacity-0 {
   --tw-text-opacity: 0;
+}
+
+.text-opacity-5 {
+  --tw-text-opacity: 0.05;
+}
+
+.text-opacity-75 {
+  --tw-text-opacity: 0.75;
 }
 
 .underline {
@@ -1764,6 +1841,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(114, 226, 233);
 }
 
+.\[height\:380vh\] {
+  height: 380vh;
+}
+
+.\[margin\:_-75px_0_0_-100px\] {
+  margin: -75px 0 0 -100px;
+}
+
+.hover\:visible:hover {
+  visibility: visible;
+}
+
+.hover\:z-10:hover {
+  z-index: 10;
+}
+
+.hover\:block:hover {
+  display: block;
+}
+
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
@@ -1778,6 +1875,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-yellow-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 224 71 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-yellow-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 252 232 / var(--tw-bg-opacity));
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
 }
@@ -1790,6 +1897,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-green-500:hover {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-current:hover {
+  color: currentColor;
+}
+
+.hover\:text-\[rgba\(256\2c 256\2c 256\2c 1\)\]:hover {
+  color: rgba(256,256,256,1);
+}
+
+.hover\:text-opacity-100:hover {
+  --tw-text-opacity: 1;
 }
 
 .hover\:underline:hover {
@@ -1808,5 +1932,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:\[height\:100vh\] {
     height: 100vh;
+  }
+
+  .sm\:\[height\:200vh\] {
+    height: 200vh;
   }
 }
