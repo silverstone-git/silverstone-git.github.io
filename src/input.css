@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    ::-moz-selection {
+        color : black;
+        background : violet;
+    }
+    ::selection {
+        color : black;
+        background : violet;
+    }
+}
