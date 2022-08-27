@@ -1,187 +1,139 @@
-<!doctype html>
-<html>
-
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./pictures/penguin.png">
-    <link 
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
       integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
-      crossorigin="anonymous" 
+      crossorigin="anonymous"
       referrerpolicy="no-referrer"
     >
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
+    <link rel="stylesheet" href="./style.css">
+    <title>Scroll Demo</title>
+</head>
+<body>
+
 
     <script>
-      function expandSideNav() {
-        document.getElementById("sideNav").style.width="250px";
-        document.getElementById("closeButtonLink").style.width="auto";
-        document.getElementById("closeButtonLink").style.display="block";
-        document.getElementById("closeButton").style.visibility="visible";
-        document.getElementById("sideNav").style.display="flex";
-        document.getElementById("closeButton").style.display="flex";
-        document.getElementById("navExpander").style.display="none";
-      }
-      function closeSideNav() {
-        document.getElementById("sideNav").style.width="0";
-        document.getElementById("sideNav").style.display="block";
-        document.getElementById("closeButton").style.display="block";
-        document.getElementById("closeButton").style.visibility="invisible";
-        document.getElementById("closeButtonLink").style.display="none";
-        document.getElementById("navExpander").style.display="flex";
-      }
-    </script>
+        function expandSideNav() {
+          document.getElementById("sideNav").style.width="250px";
+          document.getElementById("closeButtonLink").style.width="auto";
+          document.getElementById("closeButtonLink").style.display="block";
+          document.getElementById("closeButton").style.visibility="visible";
+          document.getElementById("sideNav").style.display="flex";
+          document.getElementById("closeButton").style.display="flex";
+          document.getElementById("nav-expander").style.display="none";
+        }
+        function closeSideNav() {
+          document.getElementById("sideNav").style.width="0";
+          document.getElementById("sideNav").style.display="none";
+          document.getElementById("closeButton").style.display="block";
+          document.getElementById("closeButton").style.visibility="invisible";
+          document.getElementById("closeButtonLink").style.display="none";
+          document.getElementById("nav-expander").style.display="flex";
+        }
+      </script>
 
-    <div class="sm:hidden flex justify-end [background:rgb(29,29,29)] text-white right-3" id="navExpander">
+
+    <div id="nav-expander">
       <button class="pt-2" onclick="expandSideNav()">
-        <i class="fas fa-bars flex p-5"></i>
+        <i class="fas fa-bars"></i>
       </button>
     </div>
 
-    <ul id="sideNav" class=" h-screen block w-0 transition-all right-0 fixed flex-col justify-evenly bg-white sm:hidden ">
-      <li id="closeButton" class="justify-end invisible transition-all" > <a id="closeButtonLink" class=" transition-all hover:text-black hover:font-bold text-gray-300 text-3xl w-0 top-5 right-5 fixed justify-end" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li>
+    <ul id="sideNav">
+      <li id="closeButton"> <a id="closeButtonLink" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li>
       <a href="#aboutline">
-        <li class=" text-black hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5" href="#aboutline">
+        <li class="sideNavli" href="#aboutline">
           About
         </li>
       </a>
 
       <a href="#skillline">
-        <li class=" text-black hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <li class="sideNavli">
           Skills
         </li>
       </a>
 
       <a href="#projectline">
-        <li class=" text-black hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <li class="sideNavli">
           Project
         </li>
       </a>
 
       <a href="https://pleaseexplain.me" target=”_blank”>
-        <li class=" text-black hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer px-5 py-5">
+        <li class="sideNavli">
           Blog
         </li>
       </a>
     </ul>
 
-    <div>
-      <!--[scroll-padding-top:_15vh] scroll-smooth [scroll-snap-type:_y_proximity] overflow-y-scroll-->
-
-      <section class=" [background:rgb(29,29,29)] text-white ">
-        <h1 id="aboutline" class="hidden"></h1>
-        <div class=" flex justify-center [height:300vh] sm:[height:120vh]">
-          <div class="flex flex-row flex-wrap justify-between pb-3 gap-9  [margin-top:40vh]">
-            <img src="./pictures/aryan.jpg" alt="" class=" rounded-xl h-48 mx-auto mt-7" >
-            <div class="bg-emerald-400 h-fit rounded-md flex mx-2">
-              <div class="border-white border-2 bg-emerald-400 my-4 mx-4 text-slate-600 flex rounded-md">
-                <div class="my-4 mx-4">
-                  <em class="font-bold text-5xl">Hi! I'm Aryan</em>
-                  <ul class="text-2xl max-w-4xl [list-style-type:disc] ml-5">
-                    <li> I am good at Web and Android Development </li>
-                    <li> Python is my language of choice </li>
-                    <li> My personality is a mix of Science, Star Wars and Memes </li>
-                    <li> Currently pursuing my B.Tech at DTU Delhi </li>
-                  </p>
-                </div>
-              </div>
+    <div class="container">
+        <section id="introSection" class="section1">
+            <!--<div class="typewriter">
+            </div>-->
+            <div class="greet-container">
+              <p class="greet"> Hi! I am Aryan Sidhwani </p>
+              <p class="greet-small">
+                - I code, a lot. <br>
+                - I am currently studying Applied Physics at DTU, Delhi <br>
+                - I am into Web Development, App Development, and Machine Learning <br>
+              </p>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <div class=" [background-image:url('./pictures/layered-waves-haikei-1.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
-        </div>
-      </section>
-
-
-      <section class=" [background:rgb(198,_35,_104)] text-white ">
-        <h1 id="projectline" class="hidden"></h1>
-        <div class="sm:[height:200vh] [height:380vh] [padding-top:40vh] flex flex-col justify-start">
-          <h2 class="text-center text-3xl py-3 font-bold italic">My Karma</h2>
-          <div class=" grid sm:grid-cols-3 grid-cols-1 gap-x-0  mt-6 py-4">
-                        
-            <a href="https://github.com/silverstone-git/matops" rel="noreferrer noopener" target="_blank" >
-              <div class="w-56 h-56 group overflow-hidden">
-                <p class="translate-y-28 text-sm font-bold z-10">Matrix Operation Project in Python</p>
-                <img src="pictures/matrix.jpeg" class=" h-64 ml-auto mr-auto group-hover:scale-125 transition ">
+          <script src="./scripts/three.min.js"></script>
+          <script src="./scripts/vanta.net.min.js"></script>
+          <script>
+          VANTA.NET({
+            el: "#introSection",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3f99ff,
+            backgroundColor: 0x1d1d1d
+          })
+          </script>
+              <div style="background-image: url('./pictures/layered-waves-haikei-1.svg');" class="transitionImage"></div>
+              <!--
+              <div class="transitionImageDiv">
+                <img class="transitionImage" src="./pictures/layered-waves-haikei-1.svg" alt="" class="transitionImage">
               </div>
-            </a>
+-->
 
 
-            <a href="htpps://github.com/silverstone-git/esql" rel="noreferrer noopener" target="_blank" >
-              <div class="w-56 h-56 group overflow-hidden">
-                <p class="translate-y-28 text-sm font-bold z-10">Minimal DBMS Program in Python</p>
-                <img src="pictures/dbms.jpg" class=" h-64 ml-auto mr-auto group-hover:scale-125 transition ">
-              </div>
-            </a>
+        <section class="section2">
+            <h1> This is the second page</h1>
+        </section>
+              <div style="background-image: url('./pictures/layered-waves-haikei-2.svg');" class="transitionImage"></div>
+        <!--
+            <div class="transitionImageDiv">
+              <img class="transitionImage" src="./pictures/layered-waves-haikei-2.svg" alt="Nothing here to see">
+            </div>
+-->
+        <section class="section3">
+            <h1> This is the third page</h1>
+        </section>
+              <div style="background-image: url('./pictures/layered-waves-haikei-3.svg');" class="transitionImage"></div>
 
+        <section style="height:50vh;" class="section4">
+          <h1>&copy; Aryan Sidhwani 2022 </h1>
+        </section>
 
-            <a href="https://github.com/silverstone-git/amateur-ballistics" rel="noreferrer noopener" target="_blank" >
-              <div class="w-56 h-56 group overflow-hidden">
-                <p class="translate-y-28 text-sm font-bold z-10">Multiplayer Tank Battle Game</p>
-                <img src="pictures/tank.jpg" class=" h-64 ml-auto mr-auto group-hover:scale-125 transition ">
-              </div>
-            </a>
-
-            <a href="https://github.com/silverstone-git/what-food" rel="noreferrer noopener" target="_blank" >
-              <div class="w-56 h-56 group overflow-hidden">
-                <p class="translate-y-28 text-sm font-bold z-10">Food Recommendation App</p>
-                <img src="pictures/foodimg.jpg" class=" h-64 ml-auto mr-auto group-hover:scale-125 transition ">
-              </div>
-            </a>
-
-            <a href="http://pen-pineapple.herokuapp.com" rel="noreferrer noopener" target="_blank" >
-              <div class="w-56 h-56 group overflow-hidden">
-                <p class="translate-y-28 text-sm font-bold z-10">A Movie Rating Website using Django</p>
-                <img src="pictures/cloud.jpg" class=" h-64 ml-auto mr-auto group-hover:scale-125 transition ">
-              </div>
-            </a>
-
-            <a href="https://github.com/silverstone-git/arch-install" rel="noreferrer noopener" target="_blank" >
-              <div class="w-56 h-56 group overflow-hidden">
-                <p class="translate-y-28 text-sm font-bold z-10">Arch Linux Installer</p>
-                <img src="pictures/arch_linux.png" class=" h-64 ml-auto mr-auto group-hover:scale-125 transition ">
-              </div>
-            </a>
-
-          </div>
-        </div>
-
-        <div class=" [background-image:url('./pictures/layered-waves-haikei-2.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
-        </div>
-      </section>
-
-
-      <section class=" [background:rgb(73,_105,_126)] text-white [height:100vh] [padding-top:45vh]" >
-        <h1 id="skillline" class=" hidden"></h1>
-        <p class="py-4">My Tech Journey</p>
-        <p>I used to try different custom ROMs in android smartphone and learned about root and linux there, after that, I moved on to tinker with OSes on my desktop computer
-            I learned HTML and python in school and then learned Java and Kotlin right after school. I now focus on Web and App Development
-        </p>
-        <ul>
-
-
-        </ul>
-      </section>
-      <div class=" [background-image:url('./pictures/layered-waves-haikei-3.svg')] w-full bg-cover bg-no-repeat aspect-square [height:80vh] overflow-hidden [background-position:bottom] ">
-      </div>
-
+        <!--
+            <div class="transitionImageDiv">
+              <img class="transitionImage" src="./pictures/layered-waves-haikei-3.svg" alt="Nothing here to see">
+            </div>
+-->
     </div>
 
-    <footer class="bg-slate-700 text-white flex p-5">
-      <div class="flex gap-6">
-        <p class="text-gray-300 font-bold">Aryan Sidhwani</p>
-        <a class="[color:rgb(114,_226,_233)] hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer w-10 " href="https://www.pleaseexplain.me" target=”_blank”>Blog</a>
-        <p> Powered by 
-          <a class=" [color:rgb(114,_226,_233)] hover:underline hover:font-bold hover:text-green-500 hover:cursor-pointer w-28 " href="https://www.digitalocean.com/?refcode=c6bc600d254c&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge" target=”_blank”>
-            Digital Ocean
-          </a>
-        </p>
-      </div>
-    </footer>
-  </body>
+</body>
 </html>
