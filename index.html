@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     >
     <link rel="stylesheet" href="./style.css">
-    <title>Scroll Demo</title>
+    <title>Aryan Sidhwani</title>
 </head>
 <body>
 
@@ -39,8 +39,28 @@
       </script>
 
 
+    <!---
+    <div id="scroll-find" style="position: absolute; left: 10px; top: 10px; z-index: 2">
+      <button onclick="getScrollPos()">
+        get scroll position
+      </button>
+    </div>
+
+
+    <div id="scroll-get" style="position: absolute; left: 10px; top: 50px; z-index: 2; background-color: aquamarine;">
+      <p>Change me to scroll position</p>
+    </div>
+
+    <script>
+      function getScrollPos() {
+        document.getElementById("scroll-get").innerText = document.body.scrollTop;
+      }
+    </script>
+    -->
+
+
     <div id="nav-expander">
-      <button class="pt-2" onclick="expandSideNav()">
+      <button onclick="expandSideNav()">
         <i class="fas fa-bars"></i>
       </button>
     </div>
@@ -111,16 +131,57 @@
 
 
         <section class="section2">
-            <h1> This is the second page</h1>
+            <h1 class="section-heading"> My Work </h1>
+            <div class="greet-container projectsdiv">
+              <a href="https://github.com/silverstone-git/esql" class="project-link">
+                <div class="project">
+                  <p class="project-title">
+                    ESQL: A DBMS CLI in python
+                  </p>
+                  <img src="./pictures/esql.svg" alt="A photo with a cloud and raining bits" class="project-image">
+                </div>
+              </a>
+
+              <a href="https://pen-pineapple.herokuapp.com" class="project-link">
+                <div class="project">
+                  <p class="project-title">
+                    Pen-Pineapple: A Movie Review Website
+                  </p>
+                  <img src="./pictures/pen-pineapple.svg" alt="A histogram with a film on top" class="project-image">
+                </div>
+              </a>
+
+              <a href="https://github.com/silverstone-git/cweather" class="project-link">
+                <div class="project">
+                  <p class="project-title">
+                    Cweather: An input friendly Weather App in C
+                  </p>
+                  <img src="./pictures/cweather_1.svg" alt="A big C with a sun at mouth" class="project-image">
+                </div>
+              </a>
+
+
+              <a href="https://github.com/silverstone-git/what-food" class="project-link">
+                <div class="project">
+                  <p class="project-title">
+                    What-Food: A Food Recommendation app in Android
+                  </p>
+                  <img src="./pictures/what-food.svg" alt="A carrot with spoon and fork" class="project-image">
+                </div>
+              </a>
+            </div>
         </section>
               <div style="background-image: url('./pictures/layered-waves-haikei-2.svg');" class="transitionImage"></div>
+
         <!--
             <div class="transitionImageDiv">
               <img class="transitionImage" src="./pictures/layered-waves-haikei-2.svg" alt="Nothing here to see">
             </div>
 -->
+
+
         <section class="section3">
-            <h1> This is the third page</h1>
+            <h1 class="section-heading"> This is the third page</h1>
         </section>
               <div style="background-image: url('./pictures/layered-waves-haikei-3.svg');" class="transitionImage"></div>
 
