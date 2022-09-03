@@ -5,12 +5,14 @@ body {
     margin: 0;
 }
 
+
 .container{
     height: 100%;
     width: 100%;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
 }
+
 
 .container > section {
     display: flex;
@@ -97,6 +99,7 @@ body {
     justify-content: flex-end;
 }
 
+
 #closeButtonLink:hover {
     color: black;
     font-weight: 700;
@@ -108,6 +111,7 @@ body {
     padding : 1.25rem;
 }
 
+
 .sideNavli:hover {
     text-decoration-line: underline;
     font-weight: 700;
@@ -115,9 +119,14 @@ body {
     cursor: pointer;
 }
 
+
 @media screen and (max-width: 707px) {
     #nav-expander {
         display: flex;
+    }
+
+    .section2 {
+        overflow: auto;
     }
 
 }
@@ -215,11 +224,13 @@ body {
 }
 
 .project-title {
-    font-size: medium;
+    font-size: 1.6em;
 }
+
 
 .project-link {
     color: black;
+    text-decoration: wavy;
 }
 
 
@@ -228,4 +239,23 @@ body {
     flex-direction: column;
     justify-content: center ;
     align-items: center;
+}
+
+.project:hover {
+    /* when a link is hovered upon */
+    color: rgb(110, 87, 138);
+}
+
+
+.platforms {
+    /*div to contain the languages's divs*/
+    display: flex;
+    flex-direction: row;
+    color: rgb(245, 197, 197);
+}
+
+.platform {
+    margin-right: 20px;
+    font-weight: 600;
+    font-size: 40px;
 }
