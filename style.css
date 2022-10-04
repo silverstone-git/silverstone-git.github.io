@@ -9,8 +9,8 @@ body {
 .container{
     height: 100%;
     width: 100%;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    /*scroll-snap-type: y mandatory;
+    overflow-y: scroll;*/
 }
 
 
@@ -22,7 +22,7 @@ body {
     width: 100vw;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    scroll-snap-align: start;
+    /*scroll-snap-align: start;*/
 }
 
 .section1 {
@@ -119,6 +119,17 @@ body {
     cursor: pointer;
 }
 
+.greet {
+    /* The Hi! Part */
+    font-size: 40px;
+}
+
+.greet-small {
+    /* The description below the main greet at the first page */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 
 @media screen and (max-width: 707px) {
     #nav-expander {
@@ -158,16 +169,6 @@ body {
 
 */
 
-.greet {
-    /* The Hi! Part */
-    font-size: 40px;
-}
-
-.greet-small {
-    /* The description below the main greet at the first page */
-    margin-left: 20px;
-    margin-right: 20px;
-}
 
 .greet-container {
     /* Contains the greet message in the Intro Page */
@@ -207,7 +208,7 @@ body {
 .projectsdiv {
     /* the div containing all the links to projects */
 
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -217,6 +218,7 @@ body {
     font-size: large;
     margin-top: 100px;
 }
+
 
 
 .project-image {
@@ -251,6 +253,7 @@ body {
     /*div to contain the languages's divs*/
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     color: rgb(245, 197, 197);
 }
 

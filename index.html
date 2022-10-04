@@ -13,6 +13,11 @@
       referrerpolicy="no-referrer"
     >
     <link rel="stylesheet" href="./style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <title>Aryan Sidhwani</title>
 </head>
 <body>
@@ -58,7 +63,6 @@
     </script>
     -->
 
-
     <div id="nav-expander">
       <button onclick="expandSideNav()">
         <i class="fas fa-bars"></i>
@@ -93,10 +97,10 @@
     </ul>
 
     <div class="container">
-        <section id="introSection" class="section1">
+        <section id="intro-section" class="section1">
             <!--<div class="typewriter">
             </div>-->
-            <div class="greet-container">
+            <div id="greet-container" class="greet-container">
               <p class="greet"> Hi! I am Aryan Sidhwani </p>
               <p class="greet-small">
                 - I code, a lot. <br>
@@ -110,7 +114,7 @@
           <script src="./scripts/vanta.net.min.js"></script>
           <script>
           VANTA.NET({
-            el: "#introSection",
+            el: "#intro-section",
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -130,9 +134,10 @@
 -->
 
 
-        <section class="section2">
-            <h1 class="section-heading"> My Work </h1>
-            <div class="greet-container projectsdiv">
+        <section id="work-section" class="section2">
+          <div id="waypointer" style="visibility: hidden;"></div>
+            <h1 id="work-section-heading" class="section-heading"> My Work </h1>
+            <div id="projects-div" class="greet-container projectsdiv">
 
               <a href="https://github.com/silverstone-git/esql" class="project-link">
                 <div class="project">
@@ -178,7 +183,7 @@
                     What-Food
                   </p>
                   <p class="project-desc">
-                    A Food Recommendation app in Android in python
+                    A Food Recommendation app in Android
                   </p>
                   <img src="./pictures/what-food.svg" alt="A carrot with spoon and fork" class="project-image">
                 </div>
@@ -194,9 +199,9 @@
 -->
 
 
-        <section class="section3">
+        <section id="platform-section" class="section3">
             <h1 class="section-heading"> Platforms</h1>
-            <div class="platforms">
+            <div id="platforms" class="platforms">
               <div class="platform">C/C++</div>
               <div class="platform">Python</div>
               <div class="platform">Java</div>
@@ -218,6 +223,10 @@
             </div>
 -->
     </div>
+
+    <script src="./scripts/jquery-3.6.1.min.js"></script>
+    <script src="./scripts/jquery.waypoints.js"></script>
+    <script src="./scripts/bounce.js"></script>
 
 </body>
 </html>
