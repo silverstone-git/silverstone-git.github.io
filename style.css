@@ -121,19 +121,23 @@ body {
 
 .greet {
     /* The Hi! Part */
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 40px;
 }
 
 .greet-small {
     /* The description below the main greet at the first page */
+    list-style-type: disc;
     margin-left: 20px;
     margin-right: 20px;
+    font-size: 30px;
 }
 
 
 .greet-container {
     /* Contains the greet message in the Intro Page */
-    display: flex;
+    display: hidden;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -147,7 +151,6 @@ body {
     border-radius: 10px;
     background-color: rgba(64, 201, 101, 0.6);
     font-family: monospace;
-    font-size: 25px;
 }
 
 .transitionImage {
@@ -182,10 +185,9 @@ body {
     scroll-snap-type: x mandatory;
 }
 
-
-
 .project-image {
-    height: 400px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .project-title {
@@ -213,6 +215,7 @@ body {
 }
 
 
+
 @media screen and (max-width: 707px) {
     #nav-expander {
         display: flex;
@@ -220,6 +223,18 @@ body {
 
     .section2 {
         overflow: auto;
+    }
+
+    .greet {
+        font-size: 25px;
+    }
+
+    .greet-small {
+        font-size: 18px;
+    }
+
+    .project-image-div {
+        height: 200px;
     }
 
 }

@@ -4,11 +4,10 @@ function animate($element, animationType) {
     $element.addClass(`animate__animated animate__${animationType}`).css("display", "flex");
 }
 
-projectsDiv = $("#projects-div")
 
 var bounceWP = $("#waypointer").waypoint(function() {
     console.log("waypoints triggered for worksection!");
-    animate(projectsDiv, "bounceInLeft");
+    animate($("#projects-div"), "bounceInLeft");
 }, {offset: "50%"})
 
 var introfadeWP = $("#intro-section").waypoint(function() {
