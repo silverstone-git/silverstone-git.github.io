@@ -258,10 +258,14 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     color: rgb(245, 197, 197);
+    list-style-type: none;
 }
 
 .platform {
     margin-right: 20px;
     font-weight: 600;
     font-size: 40px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: greenyellow;
 }

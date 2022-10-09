@@ -1,5 +1,3 @@
-console.log("Hemlo Domst");
-
 function animate($element, animationType) {
     $element.addClass(`animate__animated animate__${animationType}`).css("display", "flex");
 }
