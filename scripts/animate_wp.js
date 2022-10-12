@@ -2,6 +2,12 @@ function animate($element, animationType) {
     $element.addClass(`animate__animated animate__${animationType}`).css("display", "flex");
 }
 
+$(".platform").hover(function() {
+    animate($("#" + this.id), "heartBeat");
+}, function () {
+    $("#" + this.id).removeClass("animate__animated animate__heartBeat")
+})
+
 
 var bounceWP = $("#waypointer").waypoint(function() {
     console.log("waypoints triggered for worksection!");
