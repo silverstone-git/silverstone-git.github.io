@@ -215,6 +215,41 @@ body {
 
 
 
+
+
+.platforms {
+    /*div to contain the languages's divs*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: rgb(245, 197, 197);
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    gap: 5%;
+}
+
+.platform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1em;
+    height: 16%;
+    /*
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: greenyellow;
+    */
+}
+
+.platform > img {
+    height: 55%;
+}
+
 @media screen and (max-width: 707px) {
     #nav-expander {
         display: flex;
@@ -243,6 +278,7 @@ body {
         flex-basis: auto;
     }
 
+
 }
 
 @media screen and (max-width: 1400px){
@@ -250,38 +286,4 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
     }
-}
-
-.platforms {
-    /*div to contain the languages's divs*/
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    color: rgb(245, 197, 197);
-    list-style-type: none;
-    /*
-    gap: 10px;
-    */
-}
-
-.platform {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 11%;
-    width: 11%;
-
-    font-weight: 600;
-    font-size: 1em;
-    /*
-    border-style: solid;
-    border-radius: 50%;
-    border-width: 5px;
-    border-color: greenyellow;
-    */
-}
-
-.platform > img {
-    height: 55%;
 }
