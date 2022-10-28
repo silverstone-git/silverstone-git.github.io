@@ -40,6 +40,7 @@ body {
 
 .section4 {
     background: #334155;
+    height: fit-content;
 }
 
 
@@ -248,6 +249,86 @@ body {
 
 .platform > img {
     height: 55%;
+}
+
+
+/*
+about the form
+*/
+
+.myformdiv {
+    border-style: solid;
+    border-color: aquamarine;
+    border-width: 4px;
+    border-radius: 5px;
+    background: white;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+button[type="submit"] {
+    font-size: 1.2em;
+    width: 70%;
+    text-align: center;
+    color: black;
+    padding: 14px 20px;
+    /**margin: 8px 0;**/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: greenyellow;
+    transition: background-color 0.6s;
+
+}
+
+button[type="submit"]:hover {
+    background-color: limegreen;
+    text-decoration: underline;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0,0,0);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.darkit {
+    /* Button Class */
+        /*font-family: "Roboto";*/
+        border-radius: 20px 20px 20px 20px;
+        border-style: groove;
+        border-spacing: 1%;
+    border-color: rgb(0,0,0);
+    border-width: 5%;
+    font-style: bold;
+    font-weight: 900;
+        color: rgb(0,0,0);
+        background: white;
+    transition-property: background;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0;
+    cursor: pointer;
+
+}
+
+.darkit:hover {
+    background: rgb(208, 217, 219);
+}
+
+.flinkfont {
+    font-size: 1.2em;
+    font-style: bold;
+    font-weight: 800;
+    color: #334155;
 }
 
 @media screen and (max-width: 707px) {

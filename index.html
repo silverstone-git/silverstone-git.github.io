@@ -204,23 +204,62 @@
             <div id="platforms" class="platforms">
             </div>
         </section>
-              <div style="background-image: url('./pictures/layered-waves-haikei-3.svg');" class="transitionImage"></div>
+      <div style="background-image: url('./pictures/layered-waves-haikei-3.svg');" class="transitionImage"></div>
 
-        <section style="height:50vh;" class="section4">
-          <h1>&copy; Aryan Sidhwani 2022 </h1>
-        </section>
+
+      <script>
+        function sendMyMail(theForm) {
+          alert("Got the message, its: " + theForm.message.value);
+        }
+      </script>
+
+  <section class="section4" style="height: fit-content; min-height: 100vh;">
+    <div class="myformdiv">  
+      <form action="javascript:;" onsubmit="sendMyMail(this)"> 
+          
+        <!--<legend class="whiteone">Your Query</legend>--> 
+        <label for="name"> 
+            <p class="flinkfont">Name</p> 
+        </label> 
+        <input type="text" name="name" id="name" placeholder="Your Name"> 
+
+        <label for="Subject"> 
+            <p class="flinkfont"> Subject</p> 
+        </label> 
+        <input type="text" name="Subject" id="Subject"  placeholder="Subject of the Message"> 
+
+        <label for="email"> 
+            <p class="flinkfont" >Email Address</p> 
+        </label> 
+        <input type="email" name="_replyto" id="email"  placeholder="Your Email Address"> 
+
+        <label for="message"> 
+            <p class="flinkfont" >Message</p> 
+        </label> 
+        <textarea name="message" id="message" cols="100" rows="8"  placeholder="Your Message"> 
+        </textarea> 
+
+        <button class="darkit" type="submit"> 
+            <p> 
+                Send 
+            </p> 
+        </button> 
+      </form> 
+    </div>
+    <h1>&copy; Aryan Sidhwani 2022 </h1>
+  </section>
 
         <!--
             <div class="transitionImageDiv">
               <img class="transitionImage" src="./pictures/layered-waves-haikei-3.svg" alt="Nothing here to see">
             </div>
 -->
-    </div>
+  </div>
 
-    <script src="./scripts/jquery-3.6.1.min.js"></script>
-    <script src="./scripts/jquery.waypoints.js"></script>
-    <script src="./scripts/put_platforms.js"></script>
-    <script src="./scripts/animate_wp.js"></script>
+  <script src="./scripts/jquery-3.6.1.min.js"></script>
+  <script src="./scripts/jquery.waypoints.js"></script>
+  <script src="./scripts/put_platforms.js"></script>
+  <script src="./scripts/animate_wp.js"></script>
 
 
 </body>
