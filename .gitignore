@@ -1,1 +1,4 @@
+.gitignore
 message.txt
+public/mailCommand.txt
+node_modules/

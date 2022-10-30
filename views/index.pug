@@ -1,0 +1,173 @@
+//
+  extends layout
+  block content
+  h1= title
+  p Welcome to #{title}
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='icon' href='/images/penguin.png')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' integrity='sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  link(rel='stylesheet' href='/stylesheets/style.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')
+  title Aryan Sidhwani
+script.
+  function expandSideNav() {
+  document.getElementById("sideNav").style.width="250px";
+  document.getElementById("closeButtonLink").style.width="auto";
+  document.getElementById("closeButtonLink").style.display="block";
+  document.getElementById("closeButton").style.visibility="visible";
+  document.getElementById("sideNav").style.display="flex";
+  document.getElementById("closeButton").style.display="flex";
+  document.getElementById("nav-expander").style.display="none";
+  }
+  function closeSideNav() {
+  document.getElementById("sideNav").style.width="0";
+  document.getElementById("sideNav").style.display="none";
+  document.getElementById("closeButton").style.display="block";
+  document.getElementById("closeButton").style.visibility="invisible";
+  document.getElementById("closeButtonLink").style.display="none";
+  document.getElementById("nav-expander").style.display="flex";
+  }
+//
+  -
+  <div id="scroll-find" style="position: absolute; left: 10px; top: 10px; z-index: 2">
+  <button onclick="getScrollPos()">
+  get scroll position
+  </button>
+  </div>
+  <div id="scroll-get" style="position: absolute; left: 10px; top: 50px; z-index: 2; background-color: aquamarine;">
+  <p>Change me to scroll position</p>
+  </div>
+  <script>
+  function getScrollPos() {
+  document.getElementById("scroll-get").innerText = document.body.scrollTop;
+  }
+  </script>
+block message
+#nav-expander
+  button(onclick='expandSideNav()')
+    i.fas.fa-bars
+ul#sideNav
+  li#closeButton
+    a#closeButtonLink(href='javascript:void(0)' onclick='closeSideNav()') &times;
+  a(href='#aboutline')
+    li.sideNavli(href='#aboutline')
+      | About
+  a(href='#skillline')
+    li.sideNavli
+      | Skills
+  a(href='#projectline')
+    li.sideNavli
+      | Project
+  a(href='https://pleaseexplain.me' target='”_blank”')
+    li.sideNavli
+      | Blog
+.container
+  section#intro-section.section1
+    //
+      <div class="typewriter">
+      </div>
+    #greet-container.greet-container
+      p.greet  Hi! I am Aryan Sidhwani 
+      ul.greet-small
+        li
+          | I code, a lot. 
+          br
+        li
+          | I am currently studying Applied Physics at DTU, Delhi 
+          br
+        li
+          | I am into Web Development, App Development, and Machine Learning 
+          br
+  script(src='/javascripts/three.min.js')
+  script(src='/javascripts/vanta.net.min.js')
+  script.
+    VANTA.NET({
+    el: "#intro-section",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x3f99ff,
+    backgroundColor: 0x1d1d1d
+    })
+  .transitionImage(style="background-image: url('/images/layered-waves-haikei-1.svg');")
+  //
+    <div class="transitionImageDiv">
+    <img class="transitionImage" src="/images/layered-waves-haikei-1.svg" alt="" class="transitionImage">
+    </div>
+  section#work-section.section2
+    #waypointer(style='visibility: hidden;')
+    h1#work-section-heading.section-heading  My Work 
+    #projects-div.greet-container.projectsdiv
+      a.project-link(href='https://github.com/silverstone-git/esql')
+        p.project-title
+          | ESQL
+        p.project-desc
+          | A DBMS CLI in python
+        .project-image-div
+          img.project-image(src='/images/esql.svg' alt='A photo with a cloud and raining bits')
+      a.project-link(href='https://pen-pineapple.herokuapp.com')
+        p.project-title
+          | Pen-Pineapple
+        p.project-desc
+          | A Movie Review Website
+        .project-image-div
+          img.project-image(src='/images/pen-pineapple.svg' alt='A histogram with a film on top')
+      a.project-link(href='https://github.com/silverstone-git/cweather')
+        p.project-title
+          | Cweather
+        p.project-desc
+          | An input friendly Weather App in C
+        .project-image-div
+          img.project-image(src='/images/cweather_1.svg' alt='A big C with a sun at mouth')
+      a.project-link(href='https://github.com/silverstone-git/what-food')
+        p.project-title
+          | What-Food
+        p.project-desc
+          | A Food Recommendation app in Android
+        .project-image-div
+          img.project-image(src='/images/what-food.svg' alt='A carrot with spoon and fork')
+  .transitionImage(style="background-image: url('/images/layered-waves-haikei-2.svg');")
+  //
+    <div class="transitionImageDiv">
+    <img class="transitionImage" src="/images/layered-waves-haikei-2.svg" alt="Nothing here to see">
+    </div>
+  section#platform-section.section3
+    h1.section-heading  Platforms
+    #platforms.platforms
+  .transitionImage(style="background-image: url('/images/layered-waves-haikei-3.svg');")
+  section.section4(style='height: fit-content; min-height: 100vh;')
+    .myformdiv
+      form(action='/' method='POST')
+        // <legend class="whiteone">Your Query</legend>
+        label(for='name')
+          p.flinkfont Name
+        input#name(type='text' name='name' placeholder='Your Name')
+        label(for='Subject')
+          p.flinkfont  Subject
+        input#Subject(type='text' name='Subject' placeholder='Subject of the Message')
+        label(for='email')
+          p.flinkfont Email Address
+        input#email(type='email' name='_replyto' placeholder='Your Email Address')
+        label(for='message')
+          p.flinkfont Message
+        textarea#message(name='message' cols='100' rows='8' placeholder='Your Message')
+        button.darkit(type='submit')
+          p
+            | Send
+    h1 &copy; Aryan Sidhwani 2022 
+  //
+    <div class="transitionImageDiv">
+    <img class="transitionImage" src="/images/layered-waves-haikei-3.svg" alt="Nothing here to see">
+    </div>
+script(src='/javascripts/jquery-3.6.1.min.js')
+script(src='/javascripts/jquery.waypoints.js')
+script(src='/javascripts/put_platforms.js')
+script(src='/javascripts/animate_wp.js')
