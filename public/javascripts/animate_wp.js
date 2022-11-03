@@ -10,13 +10,15 @@ $(".platform").hover(function() {
 
 
 var bounceWP = $("#waypointer").waypoint(function() {
-    animate($("#projects-div"), "bounceInLeft");
+    animate($("#projects-div"), "fadeIn");
 }, {offset: "50%"})
+
 
 var introfadeWP = $("#intro-section").waypoint(function() {
     animate($("#greet-container"), "fadeIn");
 })
 
+
 var bounceRtWP = $("#platforms").waypoint(function() {
-    animate($("#platforms"), "bounceInRight");
+    animate($("#platforms"), "fadeIn");
 }, {offset: "60%"})

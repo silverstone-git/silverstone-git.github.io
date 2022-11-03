@@ -40,7 +40,6 @@ body {
 
 .section4 {
     background: #334155;
-    height: fit-content;
 }
 
 
@@ -124,34 +123,53 @@ body {
     /* The Hi! Part */
     margin-left: 20px;
     margin-right: 20px;
-    font-size: 40px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.greet-sub {
+    font-weight: bold;
+    font-size: 22px;
+    margin-left: 7%;
+    margin-right: auto;
+    gap: 5px;
 }
 
 .greet-small {
     /* The description below the main greet at the first page */
     list-style-type: disc;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 30px;
+    margin-left: 7%;
+    margin-right: auto;
+    margin-top: 0;
+    font-size: 22px;
+    line-height: 1.6;
 }
 
 
 .greet-container {
     /* Contains the greet message in the Intro Page */
-    display: hidden;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     top: 30vh;
     border-style: groove;
     border-width: 10px;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     border-color: #00ff00;
     border-radius: 10px;
     background-color: rgba(64, 201, 101, 0.6);
     font-family: monospace;
+}
+
+#intro-holder {
+    display: flex;
+    margin-top: 2%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
 }
 
 .transitionImage {
@@ -251,19 +269,25 @@ body {
     height: 55%;
 }
 
+#mug {
+    height: 30%;
+    width: auto;
+    border-radius: 50%;
+}
 
 /*
 about the form
 */
 
 .myformdiv {
-    border-style: solid;
-    border-color: aquamarine;
-    border-width: 4px;
-    border-radius: 5px;
-    background: white;
+    border-style: groove;
+    border-color: #00ff00;
+    border-width: 10px;
+    border-radius: 10px;
+    background-color: rgba(64, 201, 101, 0.6);
     padding: 20px;
     margin-top: 5%;
+    font-family: monospace;
 }
 
 button[type="submit"] {
@@ -302,20 +326,20 @@ input[type="text"], input[type="email"], textarea {
 
 .darkit {
     /* Button Class */
-        /*font-family: "Roboto";*/
-        border-radius: 20px 20px 20px 20px;
-        border-style: groove;
-        border-spacing: 1%;
+    /*font-family: "Roboto";*/
+    border-radius: 20px 20px 20px 20px;
+    border-style: groove;
+    border-spacing: 1%;
     border-color: rgb(0,0,0);
     border-width: 5%;
     font-style: bold;
     font-weight: 900;
-        color: rgb(0,0,0);
-        background: white;
+    color: rgb(0,0,0);
+    background: white;
     transition-property: background;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
-        transition-delay: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0;
     cursor: pointer;
 
 }
@@ -328,7 +352,7 @@ input[type="text"], input[type="email"], textarea {
     font-size: 1.2em;
     font-style: bold;
     font-weight: 800;
-    color: #334155;
+    color: aliceblue;
 }
 
 .message-close-button {
@@ -378,6 +402,31 @@ input[type="text"], input[type="email"], textarea {
     background-color: rgba(227, 67, 39, 0.6);
 }
 
+.footer-message {
+    font-size: medium;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 2%;
+}
+
+
+@media screen and (max-width: 1400px){
+    .projectsdiv {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+
+@media screen and (max-width: 880px) {
+    #mug {
+        display:none;
+    }
+
+    #intro-holder {
+        margin-top: 20%;
+    }
+}
 
 @media screen and (max-width: 707px) {
     #nav-expander {
@@ -389,11 +438,19 @@ input[type="text"], input[type="email"], textarea {
     }
 
     .greet {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .greet-small {
-        font-size: 18px;
+        font-size: 17px;
+    }
+
+    .greet-sub {
+        font-size: 17px;
+    }
+
+    #intro-holder {
+        margin-top: 40%;
     }
 
     .project-image-div {
@@ -410,9 +467,3 @@ input[type="text"], input[type="email"], textarea {
 
 }
 
-@media screen and (max-width: 1400px){
-    .projectsdiv {
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-}

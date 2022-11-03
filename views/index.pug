@@ -55,18 +55,26 @@ ul#sideNav
       | Blog
 .container
   section#intro-section.section1
-    #greet-container.greet-container
-      p.greet  Hi! I am Aryan Sidhwani 
-      ul.greet-small
-        li
-          | I code, a lot. 
+    #intro-holder
+      img#mug(src="/images/aryan.jpeg", alt="my face")
+      #greet-container.greet-container
+        p.greet  Hi! I am Aryan Sidhwani 👋
+        p.greet-sub
+          | > software developer in Delhi 📍
           br
-        li
-          | I am currently studying Applied Physics at DTU, Delhi 
-          br
-        li
-          | I am into Web Development, App Development, and Machine Learning 
-          br
+          | > sophomore at DTU 📚
+        p.greet-sub
+          | my interests include:
+        ul.greet-small
+          li
+            | programming 💻
+            br
+          li
+            | astronomy ☄️
+            br
+          li
+            | rock music 🎵
+            br
   script(src='/javascripts/three.min.js')
   script(src='/javascripts/vanta.net.min.js')
   script.
@@ -89,7 +97,7 @@ ul#sideNav
     </div>
   section#work-section.section2
     #waypointer(style='visibility: hidden;')
-    h1#work-section-heading.section-heading  My Work 
+    h1#work-section-heading.section-heading  Featured Projects
     #projects-div.greet-container.projectsdiv
       a.project-link(href='https://github.com/silverstone-git/esql')
         p.project-title
@@ -125,7 +133,7 @@ ul#sideNav
     <img class="transitionImage" src="/images/layered-waves-haikei-2.svg" alt="Nothing here to see">
     </div>
   section#platform-section.section3
-    h1.section-heading  Platforms
+    h1.section-heading  My Tech Stack
     #platforms.platforms
   .transitionImage(style="background-image: url('/images/layered-waves-haikei-3.svg');")
   section.section4(style='height: fit-content; min-height: 100vh;')
@@ -147,7 +155,7 @@ ul#sideNav
         button.darkit(type='submit')
           p
             | Send
-    h1 &copy; Aryan Sidhwani 2022 
+    p.footer-message &copy; Aryan Sidhwani 2022 
   //
     <div class="transitionImageDiv">
     <img class="transitionImage" src="/images/layered-waves-haikei-3.svg" alt="Nothing here to see">
