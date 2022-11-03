@@ -31,21 +31,9 @@ script.
   document.getElementById("closeButtonLink").style.display="none";
   document.getElementById("nav-expander").style.display="flex";
   }
-//
-  -
-  <div id="scroll-find" style="position: absolute; left: 10px; top: 10px; z-index: 2">
-  <button onclick="getScrollPos()">
-  get scroll position
-  </button>
-  </div>
-  <div id="scroll-get" style="position: absolute; left: 10px; top: 50px; z-index: 2; background-color: aquamarine;">
-  <p>Change me to scroll position</p>
-  </div>
-  <script>
-  function getScrollPos() {
-  document.getElementById("scroll-get").innerText = document.body.scrollTop;
+  function removeMessage() {
+  document.getElementById("message-box").style.display="none";
   }
-  </script>
 block message
 #nav-expander
   button(onclick='expandSideNav()')
@@ -67,9 +55,6 @@ ul#sideNav
       | Blog
 .container
   section#intro-section.section1
-    //
-      <div class="typewriter">
-      </div>
     #greet-container.greet-container
       p.greet  Hi! I am Aryan Sidhwani 
       ul.greet-small

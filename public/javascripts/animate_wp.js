@@ -10,16 +10,13 @@ $(".platform").hover(function() {
 
 
 var bounceWP = $("#waypointer").waypoint(function() {
-    console.log("waypoints triggered for worksection!");
     animate($("#projects-div"), "bounceInLeft");
 }, {offset: "50%"})
 
 var introfadeWP = $("#intro-section").waypoint(function() {
-    console.log("waypoints triggered for introsection fadein");
     animate($("#greet-container"), "fadeIn");
 })
 
 var bounceRtWP = $("#platforms").waypoint(function() {
-    console.log("waypoints trigerred for platforms div");
     animate($("#platforms"), "bounceInRight");
 }, {offset: "60%"})

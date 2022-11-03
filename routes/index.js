@@ -9,7 +9,8 @@ var mailCommandFilePath = path.join(myStaticPath, "mailCommand.txt")
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
+  //res.render('succ', { name: 'Expresss', message: "Good Morning Deer" });
 });
 
 router.post("/", function(req, res, next) {

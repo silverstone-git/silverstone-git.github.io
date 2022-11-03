@@ -2,4 +2,5 @@ extends index
 
 block message
   #message-box.green-message
-    p.flinkfont Hi! #{name}, #{message}
+    p.message-text Hi! #{name}, #{message}
+    .message-close-button(onclick='removeMessage()') &times;

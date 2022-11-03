@@ -10,6 +10,7 @@ platformList = [
     "Firebase",
     "SQL",
     "Git",
+    "Node.js",
 ]
 
 
@@ -25,6 +26,7 @@ var platformSVGList = [
     "https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg",
     "https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg",
     "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
 ]
 
 
