@@ -58,8 +58,9 @@ body {
 
 #nav-expander {
     display: none;
-    justify-content: end;
-    background:rgb(29,29,29);
+    background: url("/images/menu.svg") no-repeat scroll 0 0 transparent;
+    height: 20px;
+    width: 20px;
     color: white;
     position: absolute;
     top: 25px;
@@ -68,25 +69,23 @@ body {
 }
 
 
-#nav-expander-icon {
-    /* the i tag in button in div.nav-expander */
-    display: flex;
-    padding: 1.25rem;
-    
-}
-
-
 #sideNav {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background: white;
+    background: gray;
     height: 100vh;
     width: 0;
     right: 0;
     position: fixed;
-    transition: all;
     z-index: 2;
+    transition: width 1s;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+
+.bigNav {
+    width: 250px !important;
 }
 
 #closeButton {
@@ -96,8 +95,7 @@ body {
 }
 
 #closeButtonLink {
-    transition: all;
-    color: rgb(209, 213, 219);
+    color: rgb(255, 255, 255);
     font-size: 1.875em;
     line-height: 2.25rem;
     width: 0px;
@@ -105,6 +103,7 @@ body {
     right: 1.25rem;
     position: fixed;
     justify-content: flex-end;
+    text-decoration: none;
 }
 
 
@@ -113,9 +112,16 @@ body {
     font-weight: 700;
 }
 
+#sideNav > a {
+    text-decoration: none;
+}
+
 
 .sideNavli {
-    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    color: white;
     padding : 1.25rem;
 }
 
@@ -130,8 +136,7 @@ body {
 #mug-icontain {
     display: flex;
     flex-direction: row;
-    margin-right: 4%;
-    margin-left: auto;
+    width: 100%;
 }
 
 .mug {
@@ -155,6 +160,8 @@ body {
 
 #leftgreets {
     width: 100%;
+    margin-left: 4%;
+    margin-right: auto;
 }
 
 .greet {
@@ -196,6 +203,10 @@ body {
     font-family: monospace;
 }
 
+#greet-container {
+    width: 35vw;
+}
+
 #intro-holder {
     display: flex;
     margin-top: 2%;
@@ -220,23 +231,45 @@ body {
     overflow: hidden;
 }
 
+#proj-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    gap: 40px;
+}
+
+#proj-desc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#proj-desc {
+    font-weight: bold;
+    font-size: 20px;
+}
 
 
 .projectsdiv {
     /* the div containing all the links to projects */
 
-    width: 93vw;
+    width: 30vw;
     display: none;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     align-items: center;
     flex-wrap: nowrap;
     height: fit-content;
     background: rgb(91, 240, 146);
     font-size: large;
-    margin-top: 100px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    scrollbar-color: rgb(198, 35, 104) rgb(91, 240, 146);
+}
+
+.project-image-div {
+    height: 200px;
 }
 
 .project-image {
@@ -257,6 +290,10 @@ body {
     justify-content: center ;
     align-items: center;
     scroll-snap-align: center;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
 }
 
 
@@ -473,7 +510,47 @@ input[type="text"], input[type="email"], textarea {
     background-image: url("/images/mail_black.svg");
 }
 */
+.imp-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
+.imp-sheet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.impressum-text {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.imp-close-link {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: auto;
+    margin-bottom: auto;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
 
 .footer-message {
     font-size: medium;
@@ -481,13 +558,24 @@ input[type="text"], input[type="email"], textarea {
     margin-top: 1.5%;
 }
 
+@media screen and (max-width: 1572px){
+    #greet-container {
+        width: 60vw;
+    }
 
+    .projectsdiv {
+        width: 40vw;
+    }
+}
+
+/*
 @media screen and (max-width: 1400px){
     .projectsdiv {
         justify-content: flex-start;
         align-items: flex-start;
     }
 }
+*/
 
 
 @media screen and (max-width: 880px) {
@@ -515,6 +603,17 @@ input[type="text"], input[type="email"], textarea {
     #rightgreets {
         display: block;
         text-align: right;
+        margin-right: 4%;
+        margin-left: auto;
+    }
+
+
+    .projectsdiv {
+        width: 60vw;
+    }
+
+    .myformdiv {
+        width: 75vw;
     }
 }
 
@@ -551,15 +650,12 @@ input[type="text"], input[type="email"], textarea {
         margin-top: 40%;
     }
 
-    .project-image-div {
-        height: 200px;
+    #proj-desc-container {
+        display: none;
     }
 
-    .project-link {
-        width: 100%;
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: auto;
+    .projectsdiv {
+        width: 75vw;
     }
 
     .icon {
@@ -609,4 +705,10 @@ input[type="text"], input[type="email"], textarea {
         height: 30%;
     }
 
+}
+
+@media screen and (max-width: 340px) {
+    #inmug {
+        height: 100px;
+    }
 }

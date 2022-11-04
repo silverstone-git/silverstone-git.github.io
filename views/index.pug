@@ -8,24 +8,24 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  link(rel='icon' href='/images/penguin.png')
+  //
+    link(rel='icon' href='/images/penguin.png')
+  link(rel='shortcut icon' href='/images/penguin.png')
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' integrity='sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==' crossorigin='anonymous' referrerpolicy='no-referrer')
   link(rel='stylesheet' href='/stylesheets/style.css')
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')
   title Aryan Sidhwani
 script.
   function expandSideNav() {
-  document.getElementById("sideNav").style.width="250px";
+  document.getElementById("sideNav").classList.add("bigNav");
   document.getElementById("closeButtonLink").style.width="auto";
   document.getElementById("closeButtonLink").style.display="block";
   document.getElementById("closeButton").style.visibility="visible";
-  document.getElementById("sideNav").style.display="flex";
   document.getElementById("closeButton").style.display="flex";
   document.getElementById("nav-expander").style.display="none";
   }
   function closeSideNav() {
-  document.getElementById("sideNav").style.width="0";
-  document.getElementById("sideNav").style.display="none";
+  document.getElementById("sideNav").classList.remove("bigNav");
   document.getElementById("closeButton").style.display="block";
   document.getElementById("closeButton").style.visibility="invisible";
   document.getElementById("closeButtonLink").style.display="none";
@@ -34,26 +34,48 @@ script.
   function removeMessage() {
   document.getElementById("message-box").style.display="none";
   }
+  function showImpressum() {
+  closeSideNav();
+  var sheet = document.createElement("div");
+  var impDiv = document.createElement("div");
+  var text = document.createElement("p");
+  var closeButton = document.createElement("a");
+  sheet.id = "impressum-sheet";
+  closeButton.classList.add("imp-close-link");
+  closeButton.href="/";
+  closeButton.appendChild(document.createTextNode("X"));
+  text.classList.add("impressum-text");
+  text.appendChild(document.createTextNode("Icons in icons div and the hamburger menu icon designed by <a href='https://freeicons.io' target='_blank'>icons king1</a>"));
+  impDiv.appendChild(text);
+  impDiv.appendChild(closeButton);
+  sheet.appendChild(impDiv);
+  impDiv.classList.add("imp-div");
+  sheet.classList.add("imp-sheet");
+  impDiv.onclick="closeImpressum()";
+  document.getElementById("sections-container").appendChild(sheet);
+  console.log("show impressum function tried to run");
+  }
 block message
-#nav-expander
-  button(onclick='expandSideNav()')
-    i.fas.fa-bars
-ul#sideNav
-  li#closeButton
+#nav-expander(onclick='expandSideNav()')
+#sideNav
+  #closeButton
     a#closeButtonLink(href='javascript:void(0)' onclick='closeSideNav()') &times;
-  a(href='#aboutline')
-    li.sideNavli(href='#aboutline')
+  a(href='#intro-section')
+    .sideNavli
       | About
-  a(href='#skillline')
-    li.sideNavli
-      | Skills
-  a(href='#projectline')
-    li.sideNavli
+  a(href='#work-section')
+    .sideNavli
       | Project
+  a(href='#platform-section')
+    .sideNavli
+      | Skills
   a(href='https://pleaseexplain.me' target='”_blank”')
-    li.sideNavli
+    .sideNavli
       | Blog
-.container
+  a(href='javascript:void(0)' onclick='showImpressum()')
+    .sideNavli
+      | Impressum
+#sections-container.container
   section#intro-section.section1
     #intro-holder
       img#floatmug.mug(src="/images/aryan.jpeg" alt="my face")
@@ -111,36 +133,42 @@ ul#sideNav
     </div>
   section#work-section.section2
     #waypointer(style='visibility: hidden;')
-    h1#work-section-heading.section-heading  Featured Projects
-    #projects-div.greet-container.projectsdiv
-      a.project-link(href='https://github.com/silverstone-git/esql' target="_blank")
-        p.project-title
-          | ESQL
-        p.project-desc
-          | A DBMS CLI in python
-        .project-image-div
-          img.project-image(src='/images/esql.svg' alt='A photo with a cloud and raining bits')
-      a.project-link(href='https://pen-pineapple.herokuapp.com' target="_blank")
-        p.project-title
-          | Pen-Pineapple
-        p.project-desc
-          | A Movie Review Website
-        .project-image-div
-          img.project-image(src='/images/pen-pineapple.svg' alt='A histogram with a film on top')
-      a.project-link(href='https://github.com/silverstone-git/cweather' target="_blank")
-        p.project-title
-          | Cweather
-        p.project-desc
-          | An input friendly Weather App in C
-        .project-image-div
-          img.project-image(src='/images/cweather_1.svg' alt='A big C with a sun at mouth')
-      a.project-link(href='https://github.com/silverstone-git/what-food' target="_blank")
-        p.project-title
-          | What-Food
-        p.project-desc
-          | A Food Recommendation app in Android
-        .project-image-div
-          img.project-image(src='/images/what-food.svg' alt='A carrot with spoon and fork')
+    h1#work-section-heading.section-heading  My Work
+    #proj-container
+      #proj-desc-container
+        p#proj-desc
+          | A Gallery of some of the projects that I have made
+          br
+          | Swipe Right ➡️
+      #projects-div.greet-container.projectsdiv
+        a.project-link(href='https://github.com/silverstone-git/esql' target="_blank")
+          p.project-title
+            | ESQL
+          p.project-desc
+            | A DBMS CLI in python
+          .project-image-div
+            img.project-image(src='/images/esql.svg' alt='A photo with a cloud and raining bits')
+        a.project-link(href='https://pen-pineapple.herokuapp.com' target="_blank")
+          p.project-title
+            | Pen-Pineapple
+          p.project-desc
+            | A Movie Review Website
+          .project-image-div
+            img.project-image(src='/images/pen-pineapple.svg' alt='A histogram with a film on top')
+        a.project-link(href='https://github.com/silverstone-git/cweather' target="_blank")
+          p.project-title
+            | Cweather
+          p.project-desc
+            | An input friendly Weather App in C
+          .project-image-div
+            img.project-image(src='/images/cweather_1.svg' alt='A big C with a sun at mouth')
+        a.project-link(href='https://github.com/silverstone-git/what-food' target="_blank")
+          p.project-title
+            | What-Food
+          p.project-desc
+            | A Food Recommendation app in Android
+          .project-image-div
+            img.project-image(src='/images/what-food.svg' alt='A carrot with spoon and fork')
   .transitionImage(style="background-image: url('/images/layered-waves-haikei-2.svg');")
   //
     <div class="transitionImageDiv">
