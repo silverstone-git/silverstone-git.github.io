@@ -56,25 +56,39 @@ ul#sideNav
 .container
   section#intro-section.section1
     #intro-holder
-      img#mug(src="/images/aryan.jpeg", alt="my face")
+      img#floatmug.mug(src="/images/aryan.jpeg" alt="my face")
       #greet-container.greet-container
         p.greet  Hi! I am Aryan Sidhwani 👋
-        p.greet-sub
-          | > software developer in Delhi 📍
-          br
-          | > sophomore at DTU 📚
-        p.greet-sub
-          | my interests include:
-        ul.greet-small
-          li
-            | programming 💻
-            br
-          li
-            | astronomy ☄️
-            br
-          li
-            | rock music 🎵
-            br
+        #mug-icontain
+          #leftgreets
+            p.greet-sub
+              | > software developer in Delhi 📍
+              br
+              | > sophomore at DTU 📚
+            p.greet-sub
+              | my interests include:
+            p.greet-small
+              | - programming 💻
+              br
+              | - astronomy ☄️
+              br
+              | - rock music 🎵
+              br
+          #rightgreets
+            p.greet-sub
+              | 📍 software developer in Delhi <
+              br
+              | 📚 sophomore at DTU <
+            p.greet-sub
+              | my interests include:
+            p.greet-small
+              | 💻 programming -
+              br
+              | ☄️ astronomy -
+              br
+              | 🎵 rock music
+              br
+          img#inmug.mug(src="/images/aryan.jpeg" alt="my face")
   script(src='/javascripts/three.min.js')
   script(src='/javascripts/vanta.net.min.js')
   script.
@@ -138,23 +152,24 @@ ul#sideNav
   .transitionImage(style="background-image: url('/images/layered-waves-haikei-3.svg');")
   section.section4(style='height: fit-content; min-height: 100vh;')
     .myformdiv
+      p#dummyp(style="display: none") #{sandwich}
       form(action='/' method='POST')
         // <legend class="whiteone">Your Query</legend>
         label(for='name')
           p.flinkfont Name
         input#name(type='text' name='name' placeholder='Your Name')
-        label(for='Subject')
-          p.flinkfont  Subject
-        input#Subject(type='text' name='Subject' placeholder='Subject of the Message')
         label(for='email')
           p.flinkfont Email Address
         input#email(type='email' name='_replyto' placeholder='Your Email Address')
+        input#sandwich(type="radio" name="sandwich" value="#{sandwich}" style="display:none" checked)
         label(for='message')
           p.flinkfont Message
         textarea#message(name='message' cols='100' rows='8' placeholder='Your Message')
         button.darkit(type='submit')
           p
             | Send
+      script.
+        document.getElementById("sandwich").value = document.getElementById("dummyp").innerHTML;
     #icons
       //
         object.icon.icon-github(type="image/svg+xml" data="/images/github.svg")

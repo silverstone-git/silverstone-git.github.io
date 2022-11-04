@@ -127,10 +127,41 @@ body {
     cursor: pointer;
 }
 
+#mug-icontain {
+    display: flex;
+    flex-direction: row;
+    margin-right: 4%;
+    margin-left: auto;
+}
+
+.mug {
+    height: 30%;
+    width: auto;
+    border-radius: 50%;
+}
+
+#inmug {
+    display: none;
+    position: absolute;
+    width: auto;
+    bottom: 15px;
+    left: 15px;
+}
+
+#rightgreets {
+    display: none;
+    width: 100%;
+}
+
+#leftgreets {
+    width: 100%;
+}
+
 .greet {
     /* The Hi! Part */
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 0;
     margin-top: 30px;
     font-size: 30px;
 }
@@ -138,17 +169,12 @@ body {
 .greet-sub {
     font-weight: bold;
     font-size: 22px;
-    margin-left: 7%;
     margin-right: auto;
     gap: 5px;
 }
 
 .greet-small {
     /* The description below the main greet at the first page */
-    list-style-type: disc;
-    margin-left: 7%;
-    margin-right: auto;
-    margin-top: 0;
     font-size: 22px;
     line-height: 1.6;
 }
@@ -163,7 +189,6 @@ body {
     top: 30vh;
     border-style: groove;
     border-width: 10px;
-    padding: 0;
     overflow: hidden;
     border-color: #00ff00;
     border-radius: 10px;
@@ -265,7 +290,7 @@ body {
     align-items: center;
     font-weight: 600;
     font-size: 1em;
-    height: 25%;
+    height: 40%;
     /*
     border-style: solid;
     border-radius: 50%;
@@ -278,13 +303,6 @@ body {
     height: 55%;
     margin-bottom: 2%;
 }
-
-#mug {
-    height: 30%;
-    width: auto;
-    border-radius: 50%;
-}
-
 /*
 about the form
 */
@@ -296,7 +314,7 @@ about the form
     border-radius: 10px;
     background-color: rgba(64, 201, 101, 0.6);
     padding: 20px;
-    margin-top: 5%;
+    margin-top: 10%;
     font-family: monospace;
 }
 
@@ -417,7 +435,7 @@ input[type="text"], input[type="email"], textarea {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 4%;
+    margin-top: 7%;
     gap: 15px;
 }
 
@@ -473,12 +491,30 @@ input[type="text"], input[type="email"], textarea {
 
 
 @media screen and (max-width: 880px) {
-    #mug {
+    #floatmug {
         display:none;
+    }
+
+    #inmug {
+        display: block;
+        height: 200px;
     }
 
     #intro-holder {
         margin-top: 20%;
+    }
+
+    #greet-container {
+        width: 85vw;
+    }
+
+    #leftgreets {
+        display: none;
+    }
+
+    #rightgreets {
+        display: block;
+        text-align: right;
     }
 }
 
@@ -489,6 +525,14 @@ input[type="text"], input[type="email"], textarea {
 
     .section2 {
         overflow: auto;
+    }
+
+    #inmug {
+        height: 150px;
+    }
+
+    #greet-container {
+        width: 90vw;
     }
 
     .greet {
@@ -518,7 +562,18 @@ input[type="text"], input[type="email"], textarea {
         flex-basis: auto;
     }
 
+    .icon {
+        height: 35px;
+        width: 35px;
+    }
 
+}
+
+
+@media screen and (max-width: 400px) {
+    #inmug {
+        height: 125px;
+    }
 }
 
 
@@ -527,6 +582,7 @@ input[type="text"], input[type="email"], textarea {
     #intro-holder {
         margin-top: 50%;
     }
+
 
     .greet {
         font-size: 17px;
@@ -539,4 +595,18 @@ input[type="text"], input[type="email"], textarea {
     .greet-sub {
         font-size: 14px;
     }
+
+    .icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .platforms {
+        gap: 10%;
+    }
+
+    .platform {
+        height: 30%;
+    }
+
 }
