@@ -99,28 +99,28 @@ ul#sideNav
     #waypointer(style='visibility: hidden;')
     h1#work-section-heading.section-heading  Featured Projects
     #projects-div.greet-container.projectsdiv
-      a.project-link(href='https://github.com/silverstone-git/esql')
+      a.project-link(href='https://github.com/silverstone-git/esql' target="_blank")
         p.project-title
           | ESQL
         p.project-desc
           | A DBMS CLI in python
         .project-image-div
           img.project-image(src='/images/esql.svg' alt='A photo with a cloud and raining bits')
-      a.project-link(href='https://pen-pineapple.herokuapp.com')
+      a.project-link(href='https://pen-pineapple.herokuapp.com' target="_blank")
         p.project-title
           | Pen-Pineapple
         p.project-desc
           | A Movie Review Website
         .project-image-div
           img.project-image(src='/images/pen-pineapple.svg' alt='A histogram with a film on top')
-      a.project-link(href='https://github.com/silverstone-git/cweather')
+      a.project-link(href='https://github.com/silverstone-git/cweather' target="_blank")
         p.project-title
           | Cweather
         p.project-desc
           | An input friendly Weather App in C
         .project-image-div
           img.project-image(src='/images/cweather_1.svg' alt='A big C with a sun at mouth')
-      a.project-link(href='https://github.com/silverstone-git/what-food')
+      a.project-link(href='https://github.com/silverstone-git/what-food' target="_blank")
         p.project-title
           | What-Food
         p.project-desc
@@ -155,6 +155,29 @@ ul#sideNav
         button.darkit(type='submit')
           p
             | Send
+    #icons
+      //
+        object.icon.icon-github(type="image/svg+xml" data="/images/github.svg")
+        object.icon.icon-linkedin(type="image/svg+xml" data="/images/linkedin.svg")
+        object.icon.icon-twitter(type="image/svg+xml" data="/images/twitter.svg")
+        object.icon.icon-instagram(type="image/svg+xml" data="/images/instagram.svg")
+        object.icon.icon-mail(type="image/svg+xml" data="/images/mail_black.svg")
+      //
+        span.icon.icon-github
+        span.icon.icon-linkedin
+        span.icon.icon-twitter
+        span.icon.icon-instagram
+        span.icon.icon-mail
+      a(href="https://github.com/silverstone-git/" target="_blank")
+        img.icon(src="/images/github.svg")
+      a(href="https://linkedin.com/in/aryan-sidhwani" target="_blank")
+        img.icon(src="/images/linkedin.svg")
+      a(href="https://twitter.com/silverstonium/" target="_blank")
+        img.icon(src="/images/twitter.svg")
+      a(href="https://instagram.com/silverstonium/" target="_blank")
+        img.icon(src="/images/instagram.svg")
+      a(href="mailto:admin@aryansidhwani.tech")
+        img.icon(src="/images/mail_black.svg")
     p.footer-message &copy; Aryan Sidhwani 2022 
   //
     <div class="transitionImageDiv">

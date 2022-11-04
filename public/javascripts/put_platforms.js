@@ -33,5 +33,5 @@ var platformSVGList = [
 var platformUl = $("div.platforms")
 
 for(var i = 0; i < platformList.length; i ++) {
-    platformUl.append('<div class="platform" id="platform' + i + '">' + '<img src="' + platformSVGList[i] + '">'  + platformList[i] + '</div>');
+    platformUl.append('<div class="platform" id="platform' + i + '"> <img src="' + platformSVGList[i] + '"> <p>'  + platformList[i] + '</p></div>');
 }

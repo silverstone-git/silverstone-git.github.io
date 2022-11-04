@@ -13,6 +13,14 @@ body {
     overflow-y: scroll;*/
 }
 
+::-moz-selection {
+  background: purple;
+}
+
+::selection {
+  background: purple;
+}
+
 
 .container > section {
     display: flex;
@@ -199,7 +207,7 @@ body {
     align-items: center;
     flex-wrap: nowrap;
     height: fit-content;
-    background: rgb(239, 245, 132);
+    background: rgb(91, 240, 146);
     font-size: large;
     margin-top: 100px;
     overflow-x: scroll;
@@ -241,12 +249,13 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    color: rgb(245, 197, 197);
+    color: aliceblue;
     justify-content: center;
     align-items: center;
-    height: 70%;
+    height: 40%;
     width: 100%;
     gap: 5%;
+    margin-top: 7%;
 }
 
 .platform {
@@ -256,7 +265,7 @@ body {
     align-items: center;
     font-weight: 600;
     font-size: 1em;
-    height: 16%;
+    height: 25%;
     /*
     border-style: solid;
     border-radius: 50%;
@@ -267,6 +276,7 @@ body {
 
 .platform > img {
     height: 55%;
+    margin-bottom: 2%;
 }
 
 #mug {
@@ -402,11 +412,55 @@ input[type="text"], input[type="email"], textarea {
     background-color: rgba(227, 67, 39, 0.6);
 }
 
+#icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    gap: 15px;
+}
+
+
+.icon {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.icon:hover {
+    filter: invert(.5) sepia(0.5) saturate(5) hue-rotate(85deg);
+}
+
+
+/*
+.icon-github {
+    background-image: url("/images/github.svg");
+}
+
+.icon-linkedin {
+    background-image: url("/images/linkedin.svg");
+}
+
+.icon-twitter {
+    background-image: url("/images/twitter.svg");
+}
+
+.icon-instagram {
+    background-image: url("/images/instagram.svg");
+}
+
+.icon-mail {
+    background-image: url("/images/mail_black.svg");
+}
+*/
+
+
 .footer-message {
     font-size: medium;
     font-weight: bold;
-    margin-top: auto;
-    margin-bottom: 2%;
+    margin-top: 1.5%;
 }
 
 
@@ -467,3 +521,22 @@ input[type="text"], input[type="email"], textarea {
 
 }
 
+
+@media screen and (max-width: 390px) {
+
+    #intro-holder {
+        margin-top: 50%;
+    }
+
+    .greet {
+        font-size: 17px;
+    }
+
+    .greet-small {
+        font-size: 14px;
+    }
+
+    .greet-sub {
+        font-size: 14px;
+    }
+}
