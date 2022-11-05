@@ -6,12 +6,44 @@ function removeAnimate($element, animationType) {
     $element.removeClass(`animate__animated animate__${animationType}`).css("display", "none");
 }
 
+
+//var slideCounter = 0;
+
 $(".platform").hover(function() {
     animate($("#" + this.id), "heartBeat");
 }, function () {
     $("#" + this.id).removeClass("animate__animated animate__heartBeat")
 })
 
+$("#next-proj").click(function() {
+    var linkWidth = $("#projects-div").width();
+    var curpos = $("#projects-div").scrollLeft();
+    curpos += linkWidth;
+    $("#projects-div").scrollLeft(curpos)
+    if($("#prev-proj").css("display") == "none") {
+        $("#prev-proj").css("display", "block");
+    }
+
+    console.log(linkWidth)
+    if(curpos > linkWidth*2 + 100) {
+        $("#next-proj").css("display", "none");
+    }
+    console.log(curpos);
+})
+
+$("#prev-proj").click(function() {
+    var linkWidth = $("#projects-div").width();
+    var curpos = $("#projects-div").scrollLeft();
+    curpos -= linkWidth;
+    $("#projects-div").scrollLeft(curpos);
+    if($("#next-proj").css("display") == "none") {
+        $("#next-proj").css("display", "block");
+    }
+    if(curpos < 200) {
+        $("#prev-proj").css("display", "none");
+    }
+    console.log(curpos);
+})
 
 
 var projTopRemoveWP = $("#waypointer").waypoint(function(direction) {
