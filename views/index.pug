@@ -1,15 +1,8 @@
-//
-  extends layout
-  block content
-  h1= title
-  p Welcome to #{title}
 doctype html
 head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  //
-    link(rel='icon' href='/images/penguin.png')
   link(rel='shortcut icon' href='/images/penguin.png')
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' integrity='sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==' crossorigin='anonymous' referrerpolicy='no-referrer')
   link(rel='stylesheet' href='/stylesheets/style.css')
@@ -17,43 +10,74 @@ head
   title Aryan Sidhwani
 script.
   function expandSideNav() {
-  document.getElementById("sideNav").classList.add("bigNav");
   document.getElementById("closeButtonLink").style.width="auto";
   document.getElementById("closeButtonLink").style.display="block";
   document.getElementById("closeButton").style.visibility="visible";
   document.getElementById("closeButton").style.display="flex";
   document.getElementById("nav-expander").style.display="none";
+  document.getElementById("sideNav").classList.add("bigNav");
+  var sheet = document.getElementById("dark-sheet");
+  sheet.style.display = "flex";
+  sheet.classList.remove("dark-sheet-hide");
+  sheet.classList.add("dark-sheet-show");
   }
-  function closeSideNav() {
+  function closeSideNav(nosheet = false) {
   document.getElementById("sideNav").classList.remove("bigNav");
   document.getElementById("closeButton").style.display="block";
-  document.getElementById("closeButton").style.visibility="invisible";
+  document.getElementById("closeButton").style.visibility="hidden";
   document.getElementById("closeButtonLink").style.display="none";
   document.getElementById("nav-expander").style.display="flex";
+  // if the sheet is removed on close side nav, the impressum goes with it, because its a child
+  if(!nosheet) {
+    var sheet = document.getElementById("dark-sheet");
+    sheet.style.backgroundColor = null;
+    sheet.classList.remove("dark-sheet-show");
+    sheet.classList.add("dark-sheet-hide");
+    setTimeout(
+      function() {
+        sheet.style.display='none';
+      }, 1000);
+  }
   }
   function removeMessage() {
   document.getElementById("message-box").style.display="none";
   }
+  function removeImpressum() {
+  document.getElementById("imp-div").remove();
+  var sheet = document.getElementById("dark-sheet");
+  sheet.style.zIndex = 2;
+  sheet.style.display = "none";
+  sheet.style.backgroundColor = null;
+  sheet.classList.remove("dark-sheet-show");
+  sheet.classList.add("dark-sheet-hide");
+  }
   function showImpressum() {
-  closeSideNav();
-  var sheet = document.createElement("div");
+  closeSideNav(true);
+  var sheet = document.getElementById("dark-sheet");
   var impDiv = document.createElement("div");
   var text = document.createElement("p");
+  var authorLink = document.createElement("a");
+  var impTextDiv = document.createElement("div");
   var closeButton = document.createElement("a");
-  sheet.id = "impressum-sheet";
   closeButton.classList.add("imp-close-link");
-  closeButton.href="/";
+  closeButton.href="#";
+  sheet.onclick = removeImpressum;
   closeButton.appendChild(document.createTextNode("X"));
-  text.classList.add("impressum-text");
-  text.appendChild(document.createTextNode("Icons in icons div and the hamburger menu icon designed by <a href='https://freeicons.io' target='_blank'>icons king1</a>"));
-  impDiv.appendChild(text);
+  impTextDiv.classList.add("impressum-text");
+  text.appendChild(document.createTextNode("Icons in icons div and the hamburger menu icon designed by"));
+  authorLink.href = "https://freeicons.io";
+  authorLink.target = "_blank";
+  authorLink.innerHTML = "icons king1";
+  impDiv.id = "imp-div";
+  impTextDiv.appendChild(text);
+  impTextDiv.appendChild(authorLink);
+  impDiv.appendChild(impTextDiv);
   impDiv.appendChild(closeButton);
   sheet.appendChild(impDiv);
   impDiv.classList.add("imp-div");
   sheet.classList.add("imp-sheet");
-  impDiv.onclick="closeImpressum()";
-  document.getElementById("sections-container").appendChild(sheet);
-  console.log("show impressum function tried to run");
+  sheet.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  sheet.style.zIndex = 3;
   }
 block message
 #nav-expander(onclick='expandSideNav()')
@@ -127,10 +151,6 @@ block message
     backgroundColor: 0x1d1d1d
     })
   .transitionImage(style="background-image: url('/images/layered-waves-haikei-1.svg');")
-  //
-    <div class="transitionImageDiv">
-    <img class="transitionImage" src="/images/layered-waves-haikei-1.svg" alt="" class="transitionImage">
-    </div>
   section#work-section.section2
     #waypointer(style='visibility: hidden;')
     h1#work-section-heading.section-heading  My Work
@@ -170,11 +190,8 @@ block message
           .project-image-div
             img.project-image(src='/images/what-food.svg' alt='A carrot with spoon and fork')
   .transitionImage(style="background-image: url('/images/layered-waves-haikei-2.svg');")
-  //
-    <div class="transitionImageDiv">
-    <img class="transitionImage" src="/images/layered-waves-haikei-2.svg" alt="Nothing here to see">
-    </div>
   section#platform-section.section3
+    #waypointer2(style='visibility: hidden;')
     h1.section-heading  My Tech Stack
     #platforms.platforms
   .transitionImage(style="background-image: url('/images/layered-waves-haikei-3.svg');")
@@ -182,7 +199,6 @@ block message
     .myformdiv
       p#dummyp(style="display: none") #{sandwich}
       form(action='/' method='POST')
-        // <legend class="whiteone">Your Query</legend>
         label(for='name')
           p.flinkfont Name
         input#name(type='text' name='name' placeholder='Your Name')
@@ -199,18 +215,6 @@ block message
       script.
         document.getElementById("sandwich").value = document.getElementById("dummyp").innerHTML;
     #icons
-      //
-        object.icon.icon-github(type="image/svg+xml" data="/images/github.svg")
-        object.icon.icon-linkedin(type="image/svg+xml" data="/images/linkedin.svg")
-        object.icon.icon-twitter(type="image/svg+xml" data="/images/twitter.svg")
-        object.icon.icon-instagram(type="image/svg+xml" data="/images/instagram.svg")
-        object.icon.icon-mail(type="image/svg+xml" data="/images/mail_black.svg")
-      //
-        span.icon.icon-github
-        span.icon.icon-linkedin
-        span.icon.icon-twitter
-        span.icon.icon-instagram
-        span.icon.icon-mail
       a(href="https://github.com/silverstone-git/" target="_blank")
         img.icon(src="/images/github.svg")
       a(href="https://linkedin.com/in/aryan-sidhwani" target="_blank")
@@ -222,10 +226,7 @@ block message
       a(href="mailto:admin@aryansidhwani.tech")
         img.icon(src="/images/mail_black.svg")
     p.footer-message &copy; Aryan Sidhwani 2022 
-  //
-    <div class="transitionImageDiv">
-    <img class="transitionImage" src="/images/layered-waves-haikei-3.svg" alt="Nothing here to see">
-    </div>
+  #dark-sheet.imp-sheet
 script(src='/javascripts/jquery-3.6.1.min.js')
 script(src='/javascripts/jquery.waypoints.js')
 script(src='/javascripts/put_platforms.js')

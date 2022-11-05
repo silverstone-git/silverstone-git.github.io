@@ -65,7 +65,7 @@ body {
     position: absolute;
     top: 25px;
     right: 25px;
-    z-index: 2;
+    z-index: 3;
 }
 
 
@@ -78,7 +78,7 @@ body {
     width: 0;
     right: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     transition: width 1s;
     border-top-left-radius: 5%;
     border-bottom-left-radius: 5%;
@@ -232,7 +232,7 @@ body {
 }
 
 #proj-container {
-    display: flex;
+    display: none;
     flex-direction: row;
     margin-top: 100px;
     gap: 40px;
@@ -253,8 +253,8 @@ body {
 .projectsdiv {
     /* the div containing all the links to projects */
 
+    display: flex;
     width: 30vw;
-    display: none;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
@@ -308,7 +308,7 @@ body {
 
 .platforms {
     /*div to contain the languages's divs*/
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     color: aliceblue;
@@ -454,7 +454,7 @@ input[type="text"], input[type="email"], textarea {
     border-style: solid;
     border-width: 10px;
     border-radius: 10px;
-    z-index: 3;
+    z-index: 4;
 }
 
 .green-message {
@@ -489,27 +489,6 @@ input[type="text"], input[type="email"], textarea {
 }
 
 
-/*
-.icon-github {
-    background-image: url("/images/github.svg");
-}
-
-.icon-linkedin {
-    background-image: url("/images/linkedin.svg");
-}
-
-.icon-twitter {
-    background-image: url("/images/twitter.svg");
-}
-
-.icon-instagram {
-    background-image: url("/images/instagram.svg");
-}
-
-.icon-mail {
-    background-image: url("/images/mail_black.svg");
-}
-*/
 .imp-div {
     display: flex;
     justify-content: center;
@@ -523,16 +502,25 @@ input[type="text"], input[type="email"], textarea {
 }
 
 .imp-sheet {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0);
     height: 100vh;
     width: 100vw;
     position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
+    transition: background-color 1s;
+}
+
+.dark-sheet-hide {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dark-sheet-show {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .impressum-text {
@@ -543,8 +531,8 @@ input[type="text"], input[type="email"], textarea {
 }
 
 .imp-close-link {
-    margin-top: 10px;
-    margin-right: 10px;
+    margin-top: 0;
+    margin-right: 0;
     margin-left: auto;
     margin-bottom: auto;
     text-decoration: none;
@@ -567,15 +555,6 @@ input[type="text"], input[type="email"], textarea {
         width: 40vw;
     }
 }
-
-/*
-@media screen and (max-width: 1400px){
-    .projectsdiv {
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-}
-*/
 
 
 @media screen and (max-width: 880px) {
