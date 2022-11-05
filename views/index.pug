@@ -58,18 +58,20 @@ script.
   var sheet = document.getElementById("dark-sheet");
   var impDiv = document.createElement("div");
   var text = document.createElement("p");
+  var text2 = document.createElement("p");
   var authorLink = document.createElement("a");
   var impTextDiv = document.createElement("div");
   sheet.onclick = removeImpressum;
-  impTextDiv.classList.add("impressum-text");
-  text.appendChild(document.createTextNode("Icons in icons div and the hamburger menu icon designed by"));
-  authorLink.href = "https://freeicons.io";
+  impDiv.classList.add("impressum-text");
+  text2.innerHTML = ("Django Software Foundation is the original owner of the Django Logo<br>The git logo is owned by Software Freedom Conservancy<br>Oracle is the true owner of Java and MySQL Logos");
+  text.appendChild(document.createTextNode("Brand Icons, hamburger menu icon, and Arrow Icons designed by"));
+  authorLink.href = "https://fontawesome.com";
   authorLink.target = "_blank";
-  authorLink.innerHTML = "icons king1";
+  authorLink.innerHTML = "Font Awesome";
   impDiv.id = "imp-div";
-  impTextDiv.appendChild(text);
-  impTextDiv.appendChild(authorLink);
-  impDiv.appendChild(impTextDiv);
+  impDiv.appendChild(text);
+  impDiv.appendChild(authorLink);
+  impDiv.appendChild(text2);
   sheet.appendChild(impDiv);
   impDiv.classList.add("imp-div");
   sheet.classList.add("imp-sheet");
@@ -199,36 +201,48 @@ i#nav-expander.fa-solid.fa-bars(onclick='expandSideNav()')
     #form-container.proj-container
       .myformdiv
         p#dummyp(style="display: none") #{sandwich}
+        p#dummyp2(style="display: none") #{toffee}
         form(action='/' method='POST')
           label(for='name')
             p.flinkfont Name
-          input#name(type='text' name='name' placeholder='Your Name')
+          input#name(type='text' name='name' placeholder='Your Name' required)
           label(for='email')
             p.flinkfont Email Address
-          input#email(type='email' name='_replyto' placeholder='Your Email Address')
+          input#email(type='email' name='_replyto' placeholder='Your Email Address' required)
           input#sandwich(type="radio" name="sandwich" value="#{sandwich}" style="display:none" checked)
           label(for='message')
             p.flinkfont Message
-          textarea#message(name='message' cols='100' rows='8' placeholder='Your Message')
+          textarea#message(name='message' cols='100' rows='8' placeholder='Your Message' required)
+          label(for='captcha')
+            p.flinkfont Captcha
+          #captcha-input-container.inline
+            input#captcha-input(type="text" name="captcha" placeholder="Enter Captcha" required)
+          #captcha.inline
           button.darkit(type='submit')
             p
               | Send
         script.
           document.getElementById("sandwich").value = document.getElementById("dummyp").innerHTML;
+          document.getElementById("captcha").innerHTML = document.getElementById("dummyp2").innerHTML;
       #form-desc-container.proj-desc-container
         p#form-desc.proj-desc
           | Feel free to Contact Me! 👋
     #icons
       a(href="https://github.com/silverstone-git/" target="_blank")
-        img.icon(src="/images/github.svg")
+        //img.icon(src="/images/github.svg")
+        i.icon.fa-brands.fa-github.fa-2x
       a(href="https://linkedin.com/in/aryan-sidhwani" target="_blank")
-        img.icon(src="/images/linkedin.svg")
+        //img.icon(src="/images/linkedin.svg")
+        i.icon.fa-brands.fa-linkedin.fa-2x
       a(href="https://twitter.com/silverstonium/" target="_blank")
-        img.icon(src="/images/twitter.svg")
+        //img.icon(src="/images/twitter.svg")
+        i.icon.fa-brands.fa-twitter.fa-2x
       a(href="https://instagram.com/silverstonium/" target="_blank")
-        img.icon(src="/images/instagram.svg")
+        //img.icon(src="/images/instagram.svg")
+        i.icon.fa-brands.fa-instagram.fa-2x
       a(href="mailto:admin@aryansidhwani.tech")
-        img.icon(src="/images/mail_black.svg")
+        //img.icon(src="/images/mail_black.svg")
+        i.icon.fa-regular.fa-envelope.fa-2x
     a#impressum-link.footer-message(href="javascript:void(0)" onclick="showImpressum(true)") Roll the Credits!
     p.footer-message &copy; Aryan Sidhwani 2022 
   #dark-sheet.imp-sheet

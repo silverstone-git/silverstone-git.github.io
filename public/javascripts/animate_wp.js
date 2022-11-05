@@ -56,7 +56,7 @@ var projTopWP = $("#waypointer").waypoint(function(direction) {
     if(direction == "down") {
         animate($("#proj-container"), "fadeIn");
     }
-}, {offset: "30%"})
+}, {offset: "55%"})
 
 var projBottomWP = $("#waypointer").waypoint(function(direction) {
     if(direction == "up") {
@@ -110,7 +110,7 @@ var platformsTopWP = $("#waypointer2").waypoint(function(direction) {
     if(direction == "down") {
         animate($("#platforms"), "fadeIn");
     }
-}, {offset: "30%"})
+}, {offset: "50%"})
 
 var platformsBottomWP = $("#waypointer2").waypoint(function(direction) {
     if(direction == "up") {

@@ -61,7 +61,7 @@ body {
     /*Abackground: url("/images/menu.svg") no-repeat scroll 0 0 transparent;*/
     color: white;
     position: absolute;
-    top: 25px;
+    top: 27px;
     right: 25px;
     z-index: 3;
 }
@@ -370,6 +370,32 @@ about the form
     font-family: monospace;
 }
 
+.inline {
+    display: inline-block;
+}
+
+#captcha {
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px 5px gray;
+    width: 60px;;
+    padding: 20px;
+    font-weight: 400;
+    padding-bottom: 0px;
+    height: 40px;
+    text-decoration: line-through;
+    font-style: italic;
+    font-size: x-large;
+    border: red 2px solid;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 button[type="submit"] {
     font-size: 1.2em;
     width: 70%;
@@ -488,19 +514,17 @@ input[type="text"], input[type="email"], textarea {
     justify-content: center;
     align-items: center;
     margin-top: 7%;
-    gap: 15px;
+    gap: 25px;
 }
 
 
 .icon {
-    height: 48px;
-    width: 48px;
     cursor: pointer;
-    filter: invert(1);
+    color: white;
 }
 
 .icon:hover {
-    filter: invert(.5) sepia(0.5) saturate(5) hue-rotate(85deg);
+    color: #00ff00;
 }
 
 
@@ -508,7 +532,7 @@ input[type="text"], input[type="email"], textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     padding: 30px;
     background-color: white;
     border-radius: 10px;
@@ -548,7 +572,7 @@ input[type="text"], input[type="email"], textarea {
 .footer-message {
     font-size: medium;
     font-weight: bold;
-    margin-top: 1%;
+    margin-top: 20px;
 }
 
 #impressum-link {
@@ -611,6 +635,10 @@ input[type="text"], input[type="email"], textarea {
     .myformdiv {
         width: 75vw;
     }
+
+    #message-box {
+        width: 92.5%;
+    }
 }
 
 @media screen and (max-width: 707px) {
@@ -666,10 +694,14 @@ input[type="text"], input[type="email"], textarea {
         display: none;
     }
 
+    #message-box {
+        width: 90%;
+    }
+
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
     #inmug {
         height: 125px;
     }
@@ -710,8 +742,12 @@ input[type="text"], input[type="email"], textarea {
 
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 350px) {
     #inmug {
         height: 100px;
+    }
+
+    .message-text {
+        font-size: small;
     }
 }

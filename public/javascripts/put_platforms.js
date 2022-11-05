@@ -24,7 +24,7 @@ var platformSVGList = [
     "https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png",
     "https://upload.wikimedia.org/wikipedia/commons/2/20/Bash_Logo_black_and_white_icon_only.svg",
     "https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg",
-    "https://upload.wikimedia.org/wikipedia/commons/0/0a/MySQL_textlogo.svg",
+    "https://www.mysql.com/common/logos/powered-by-mysql-167x86.png",
     "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg",
     "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
 ]
