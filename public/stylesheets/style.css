@@ -231,22 +231,26 @@ body {
     overflow: hidden;
 }
 
-#proj-container {
+.proj-container {
     display: none;
     flex-direction: row;
     margin-top: 100px;
-    gap: 40px;
+    gap: 50px;
 }
 
-#proj-desc-container {
+.proj-desc-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#proj-desc {
+.proj-desc {
     font-weight: bold;
     font-size: 20px;
+}
+
+#form-container {
+    display: flex;
 }
 
 
@@ -530,20 +534,16 @@ input[type="text"], input[type="email"], textarea {
     color: black;
 }
 
-.imp-close-link {
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: auto;
-    margin-bottom: auto;
-    text-decoration: none;
-    color: black;
-    font-weight: 400;
-}
-
 .footer-message {
     font-size: medium;
     font-weight: bold;
-    margin-top: 1.5%;
+    margin-top: 1%;
+}
+
+#impressum-link {
+    margin-top: 2%;
+    text-decoration: underline;
+    color: white;
 }
 
 @media screen and (max-width: 1572px){
@@ -629,7 +629,7 @@ input[type="text"], input[type="email"], textarea {
         margin-top: 40%;
     }
 
-    #proj-desc-container {
+    .proj-desc-container {
         display: none;
     }
 
@@ -640,6 +640,10 @@ input[type="text"], input[type="email"], textarea {
     .icon {
         height: 35px;
         width: 35px;
+    }
+
+    #impressum-link {
+        display: none;
     }
 
 }

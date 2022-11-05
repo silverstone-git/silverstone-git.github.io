@@ -51,18 +51,16 @@ script.
   sheet.classList.remove("dark-sheet-show");
   sheet.classList.add("dark-sheet-hide");
   }
-  function showImpressum() {
-  closeSideNav(true);
+  function showImpressum(fromDesktop = false) {
+  if(!fromDesktop){
+    closeSideNav(true);
+  }
   var sheet = document.getElementById("dark-sheet");
   var impDiv = document.createElement("div");
   var text = document.createElement("p");
   var authorLink = document.createElement("a");
   var impTextDiv = document.createElement("div");
-  var closeButton = document.createElement("a");
-  closeButton.classList.add("imp-close-link");
-  closeButton.href="#";
   sheet.onclick = removeImpressum;
-  closeButton.appendChild(document.createTextNode("X"));
   impTextDiv.classList.add("impressum-text");
   text.appendChild(document.createTextNode("Icons in icons div and the hamburger menu icon designed by"));
   authorLink.href = "https://freeicons.io";
@@ -72,10 +70,10 @@ script.
   impTextDiv.appendChild(text);
   impTextDiv.appendChild(authorLink);
   impDiv.appendChild(impTextDiv);
-  impDiv.appendChild(closeButton);
   sheet.appendChild(impDiv);
   impDiv.classList.add("imp-div");
   sheet.classList.add("imp-sheet");
+  sheet.style.display = "flex";
   sheet.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
   sheet.style.zIndex = 3;
   }
@@ -154,9 +152,9 @@ block message
   section#work-section.section2
     #waypointer(style='visibility: hidden;')
     h1#work-section-heading.section-heading  My Work
-    #proj-container
-      #proj-desc-container
-        p#proj-desc
+    #proj-container.proj-container
+      #proj-desc-container.proj-desc-container
+        p#proj-desc.proj-desc
           | A Gallery of some of the projects that I have made
           br
           | Swipe Right ➡️
@@ -196,24 +194,28 @@ block message
     #platforms.platforms
   .transitionImage(style="background-image: url('/images/layered-waves-haikei-3.svg');")
   section.section4(style='height: fit-content; min-height: 100vh;')
-    .myformdiv
-      p#dummyp(style="display: none") #{sandwich}
-      form(action='/' method='POST')
-        label(for='name')
-          p.flinkfont Name
-        input#name(type='text' name='name' placeholder='Your Name')
-        label(for='email')
-          p.flinkfont Email Address
-        input#email(type='email' name='_replyto' placeholder='Your Email Address')
-        input#sandwich(type="radio" name="sandwich" value="#{sandwich}" style="display:none" checked)
-        label(for='message')
-          p.flinkfont Message
-        textarea#message(name='message' cols='100' rows='8' placeholder='Your Message')
-        button.darkit(type='submit')
-          p
-            | Send
-      script.
-        document.getElementById("sandwich").value = document.getElementById("dummyp").innerHTML;
+    #form-container.proj-container
+      .myformdiv
+        p#dummyp(style="display: none") #{sandwich}
+        form(action='/' method='POST')
+          label(for='name')
+            p.flinkfont Name
+          input#name(type='text' name='name' placeholder='Your Name')
+          label(for='email')
+            p.flinkfont Email Address
+          input#email(type='email' name='_replyto' placeholder='Your Email Address')
+          input#sandwich(type="radio" name="sandwich" value="#{sandwich}" style="display:none" checked)
+          label(for='message')
+            p.flinkfont Message
+          textarea#message(name='message' cols='100' rows='8' placeholder='Your Message')
+          button.darkit(type='submit')
+            p
+              | Send
+        script.
+          document.getElementById("sandwich").value = document.getElementById("dummyp").innerHTML;
+      #form-desc-container.proj-desc-container
+        p#form-desc.proj-desc
+          | Feel free to Contact Me! 👋
     #icons
       a(href="https://github.com/silverstone-git/" target="_blank")
         img.icon(src="/images/github.svg")
@@ -225,6 +227,7 @@ block message
         img.icon(src="/images/instagram.svg")
       a(href="mailto:admin@aryansidhwani.tech")
         img.icon(src="/images/mail_black.svg")
+    a#impressum-link.footer-message(href="javascript:void(0)" onclick="showImpressum(true)") Roll the Credits!
     p.footer-message &copy; Aryan Sidhwani 2022 
   #dark-sheet.imp-sheet
 script(src='/javascripts/jquery-3.6.1.min.js')
