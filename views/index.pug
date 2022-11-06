@@ -228,22 +228,18 @@ i#nav-expander.fa-solid.fa-bars(onclick='expandSideNav()')
         p#form-desc.proj-desc
           | Feel free to Contact Me! 👋
     #icons
-      a(href="https://github.com/silverstone-git/" target="_blank")
-        //img.icon(src="/images/github.svg")
+      a.icon-container(href="https://github.com/silverstone-git/" target="_blank")
         i.icon.fa-brands.fa-github.fa-2x
-      a(href="https://linkedin.com/in/aryan-sidhwani" target="_blank")
-        //img.icon(src="/images/linkedin.svg")
+      a.icon-container(href="https://linkedin.com/in/aryan-sidhwani" target="_blank")
         i.icon.fa-brands.fa-linkedin.fa-2x
-      a(href="https://twitter.com/silverstonium/" target="_blank")
-        //img.icon(src="/images/twitter.svg")
+      a.icon-container(href="https://twitter.com/silverstonium/" target="_blank")
         i.icon.fa-brands.fa-twitter.fa-2x
-      a(href="https://instagram.com/silverstonium/" target="_blank")
-        //img.icon(src="/images/instagram.svg")
+      a.icon-container(href="https://instagram.com/silverstonium/" target="_blank")
         i.icon.fa-brands.fa-instagram.fa-2x
-      a(href="mailto:admin@aryansidhwani.tech")
-        //img.icon(src="/images/mail_black.svg")
+      a.icon-container(href="mailto:admin@aryansidhwani.tech")
         i.icon.fa-regular.fa-envelope.fa-2x
-    a#impressum-link.footer-message(href="javascript:void(0)" onclick="showImpressum(true)") Roll the Credits!
+    #impressum-link-container
+      a#impressum-link.footer-message(href="javascript:void(0)" onclick="showImpressum(true)") Roll the Credits!
     p.footer-message &copy; Aryan Sidhwani 2022 
   #dark-sheet.imp-sheet
 script(src='/javascripts/jquery-3.6.1.min.js')
