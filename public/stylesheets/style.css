@@ -39,7 +39,7 @@ body {
 
 .section2 {
     background: rgb(198, 35, 104);
-    height: 70vh !important;
+    height: 80vh !important;
 }
 
 
@@ -213,7 +213,7 @@ body {
     overflow: hidden;
     border-color: #00ff00;
     border-radius: 10px;
-    background-color: rgba(64, 201, 101, 0.6);
+    background-color: rgba(64, 201, 101, 0.7);
     font-family: monospace;
 }
 
@@ -764,6 +764,9 @@ input[type="text"], input[type="email"], textarea {
 
     .platforms {
         gap: 10%;
+    }
+    #next-proj {
+        margin-left: 66vw
     }
 }
 
