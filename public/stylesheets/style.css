@@ -69,6 +69,12 @@ body {
     top: 27px;
     right: 25px;
     z-index: 3;
+    font-size: large;
+}
+
+#nav-expander:hover {
+    color: #00ff00;
+    font-size: x-large;
 }
 
 
@@ -85,6 +91,10 @@ body {
     transition: width 1s;
     border-top-left-radius: 5%;
     border-bottom-left-radius: 5%;
+}
+
+#sideNav > a {
+    height: 55px;
 }
 
 .bigNav {
@@ -274,6 +284,15 @@ body {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scrollbar-color: rgb(198, 35, 104) rgb(91, 240, 146);
+}
+
+#projects-div > i {
+    font-size: larger;
+}
+
+#projects-div > i:hover {
+    color: rgb(198, 35, 104);
+    font-size: x-large;
 }
 
 #next-proj {

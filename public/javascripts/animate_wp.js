@@ -20,6 +20,7 @@ $("#next-proj").click(function() {
     var curpos = $("#projects-div").scrollLeft();
     curpos += linkWidth;
     $("#projects-div").scrollLeft(curpos)
+    //$("#projects-div").animate({scrollLeft: curpos});
     if($("#prev-proj").css("display") == "none") {
         $("#prev-proj").css("display", "block");
     }
