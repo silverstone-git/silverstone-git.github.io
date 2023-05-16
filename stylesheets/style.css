@@ -1,0 +1,387 @@
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+
+.container{
+    height: 100%;
+    width: 100%;
+    /*scroll-snap-type: y mandatory;
+    overflow-y: scroll;*/
+}
+
+
+.container > section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    /*scroll-snap-align: start;*/
+}
+
+.section1 {
+    background-color: rgb(29, 29, 29);
+}
+
+.section2 {
+    background: rgb(198, 35, 104);
+}
+
+
+.section3 {
+    background: rgb(73, 105, 126);
+}
+
+.section4 {
+    background: #334155;
+    height: fit-content;
+}
+
+
+.section-heading {
+    margin-top: 100px;
+}
+
+
+#nav-expander {
+    display: none;
+    justify-content: end;
+    background:rgb(29,29,29);
+    color: white;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 2;
+}
+
+
+#nav-expander-icon {
+    /* the i tag in button in div.nav-expander */
+    display: flex;
+    padding: 1.25rem;
+    
+}
+
+
+#sideNav {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: white;
+    height: 100vh;
+    width: 0;
+    right: 0;
+    position: fixed;
+    transition: all;
+    z-index: 2;
+}
+
+#closeButton {
+    justify-content: flex-end;
+    visibility: hidden;
+    transition: all;
+}
+
+#closeButtonLink {
+    transition: all;
+    color: rgb(209, 213, 219);
+    font-size: 1.875em;
+    line-height: 2.25rem;
+    width: 0px;
+    top: 1.25rem;
+    right: 1.25rem;
+    position: fixed;
+    justify-content: flex-end;
+}
+
+
+#closeButtonLink:hover {
+    color: black;
+    font-weight: 700;
+}
+
+
+.sideNavli {
+    color: black;
+    padding : 1.25rem;
+}
+
+
+.sideNavli:hover {
+    text-decoration-line: underline;
+    font-weight: 700;
+    color: rgb(34, 197, 94);
+    cursor: pointer;
+}
+
+.greet {
+    /* The Hi! Part */
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+}
+
+.greet-small {
+    /* The description below the main greet at the first page */
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+
+.greet-container {
+    /* Contains the greet message in the Intro Page */
+    display: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 30vh;
+    border-style: groove;
+    border-width: 10px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-color: #00ff00;
+    border-radius: 10px;
+    background-color: rgba(64, 201, 101, 0.6);
+    font-family: monospace;
+}
+
+.transitionImage {
+    /*background-image: url('./pictures/layered-waves-haikei-1.svg');*/
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    height: 50vh;
+    overflow: hidden;
+    background-position: bottom;
+}
+
+.transitionImageDiv {
+    overflow: hidden;
+}
+
+
+
+.projectsdiv {
+    /* the div containing all the links to projects */
+
+    width: 93vw;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: fit-content;
+    background: rgb(239, 245, 132);
+    font-size: large;
+    margin-top: 100px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.project-image {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.project-title {
+    font-size: 1.6em;
+}
+
+
+.project-link {
+    color: black;
+    text-decoration: wavy;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+
+.project-link:hover {
+    /* when a link is hovered upon */
+    color: rgb(110, 87, 138);
+}
+
+
+
+
+
+.platforms {
+    /*div to contain the languages's divs*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: rgb(245, 197, 197);
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    gap: 5%;
+}
+
+.platform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1em;
+    height: 16%;
+    /*
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: greenyellow;
+    */
+}
+
+.platform > img {
+    height: 55%;
+}
+
+
+/*
+about the form
+*/
+
+.myformdiv {
+    border-style: solid;
+    border-color: aquamarine;
+    border-width: 4px;
+    border-radius: 5px;
+    background: white;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+button[type="submit"] {
+    font-size: 1.2em;
+    width: 70%;
+    text-align: center;
+    color: black;
+    padding: 14px 20px;
+    /**margin: 8px 0;**/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: greenyellow;
+    transition: background-color 0.6s;
+
+}
+
+button[type="submit"]:hover {
+    background-color: limegreen;
+    text-decoration: underline;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(0,0,0);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.darkit {
+    /* Button Class */
+        /*font-family: "Roboto";*/
+        border-radius: 20px 20px 20px 20px;
+        border-style: groove;
+        border-spacing: 1%;
+    border-color: rgb(0,0,0);
+    border-width: 5%;
+    font-style: bold;
+    font-weight: 900;
+        color: rgb(0,0,0);
+        background: white;
+    transition-property: background;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0;
+    cursor: pointer;
+
+}
+
+.darkit:hover {
+    background: rgb(208, 217, 219);
+}
+
+.flinkfont {
+    font-size: 1.2em;
+    font-style: bold;
+    font-weight: 800;
+    color: #334155;
+}
+
+#message-box {
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 10px;
+}
+
+.green-message {
+    border-color: green;
+    background-color: rgba(64, 201, 101, 0.6);
+}
+
+.red-message {
+    border-color: red;
+    background-color: rgba(227, 67, 39, 0.6);
+}
+
+
+@media screen and (max-width: 707px) {
+    #nav-expander {
+        display: flex;
+    }
+
+    .section2 {
+        overflow: auto;
+    }
+
+    .greet {
+        font-size: 25px;
+    }
+
+    .greet-small {
+        font-size: 18px;
+    }
+
+    .project-image-div {
+        height: 200px;
+    }
+
+    .project-link {
+        width: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 1400px){
+    .projectsdiv {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}

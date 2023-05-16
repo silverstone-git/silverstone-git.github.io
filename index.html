@@ -1,10 +1,151 @@
-<html>
-	<head>
-	<title>
-		Sorry
-	</title>
-	</head>
-	<body>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</body>
-</html>
+<!--extends layout
+block content
+h1= title
+p Welcome to -->
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/penguin.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Aryan Sidhwani</title>
+</head>
+<script>
+    function expandSideNav() {
+        document.getElementById("sideNav").style.width = "250px";
+        document.getElementById("closeButtonLink").style.width = "auto";
+        document.getElementById("closeButtonLink").style.display = "block";
+        document.getElementById("closeButton").style.visibility = "visible";
+        document.getElementById("sideNav").style.display = "flex";
+        document.getElementById("closeButton").style.display = "flex";
+        document.getElementById("nav-expander").style.display = "none";
+    }
+
+    function closeSideNav() {
+        document.getElementById("sideNav").style.width = "0";
+        document.getElementById("sideNav").style.display = "none";
+        document.getElementById("closeButton").style.display = "block";
+        document.getElementById("closeButton").style.visibility = "invisible";
+        document.getElementById("closeButtonLink").style.display = "none";
+        document.getElementById("nav-expander").style.display = "flex";
+    }
+</script>
+<!---
+<div id="scroll-find" style="position: absolute; left: 10px; top: 10px; z-index: 2">
+<button onclick="getScrollPos()">
+get scroll position
+</button>
+</div>
+<div id="scroll-get" style="position: absolute; left: 10px; top: 50px; z-index: 2; background-color: aquamarine;">
+<p>Change me to scroll position</p>
+</div>
+<script>
+function getScrollPos() {
+document.getElementById("scroll-get").innerText = document.body.scrollTop;
+}
+</script>-->
+<div id="nav-expander"><button onclick="expandSideNav()"><i class="fas fa-bars"></i></button></div>
+<ul id="sideNav">
+    <li id="closeButton"><a id="closeButtonLink" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li><a href="#aboutline">
+        <li class="sideNavli" href="#aboutline">About</li>
+    </a><a href="#skillline">
+        <li class="sideNavli">Skills</li>
+    </a><a href="#projectline">
+        <li class="sideNavli">Project</li>
+    </a><a href="https://pleaseexplain.me" target="”_blank”">
+        <li class="sideNavli">Blog</li>
+    </a>
+</ul>
+<div class="container">
+    <section class="section1" id="intro-section">
+        <!--<div class="typewriter">
+</div>-->
+        <div class="greet-container" id="greet-container">
+            <p class="greet"> Hi! I am Aryan Sidhwani </p>
+            <ul class="greet-small">
+                <li>I code, a lot. <br></li>
+                <li>I am currently studying Applied Physics at DTU, Delhi <br></li>
+                <li>I am into Web Development, App Development, and Machine Learning <br></li>
+            </ul>
+        </div>
+    </section>
+    <script src="./javascripts/three.min.js"></script>
+    <script src="./javascripts/vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+            el: "#intro-section",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3f99ff,
+            backgroundColor: 0x1d1d1d
+        })
+    </script>
+    <div class="transitionImage" style="background-image: url('./images/layered-waves-haikei-1.svg');"></div>
+    <!--<div class="transitionImageDiv">
+<img class="transitionImage" src="/images/layered-waves-haikei-1.svg" alt="" class="transitionImage">
+</div>-->
+    <section class="section2" id="work-section">
+        <div id="waypointer" style="visibility: hidden;"></div>
+        <h1 class="section-heading" id="work-section-heading"> My Work </h1>
+        <div class="greet-container projectsdiv" id="projects-div"><a class="project-link" href="https://github.com/silverstone-git/esql">
+                <p class="project-title">ESQL</p>
+                <p class="project-desc">A DBMS CLI in python</p>
+                <div class="project-image-div"><img class="project-image" src="./images/esql.svg" alt="A photo with a cloud and raining bits"></div>
+            </a><a class="project-link" href="https://pen-pineapple.herokuapp.com">
+                <p class="project-title">Pen-Pineapple</p>
+                <p class="project-desc">A Movie Review Website</p>
+                <div class="project-image-div"><img class="project-image" src="./images/pen-pineapple.svg" alt="A histogram with a film on top"></div>
+            </a><a class="project-link" href="https://github.com/silverstone-git/cweather">
+                <p class="project-title">Cweather</p>
+                <p class="project-desc">An input friendly Weather App in C</p>
+                <div class="project-image-div"><img class="project-image" src="./images/cweather_1.svg" alt="A big C with a sun at mouth"></div>
+            </a><a class="project-link" href="https://github.com/silverstone-git/what-food">
+                <p class="project-title">What-Food</p>
+                <p class="project-desc">A Food Recommendation app in Android</p>
+                <div class="project-image-div"><img class="project-image" src="./images/what-food.svg" alt="A carrot with spoon and fork"></div>
+            </a></div>
+    </section>
+    <div class="transitionImage" style="background-image: url('./images/layered-waves-haikei-2.svg');"></div>
+    <!--<div class="transitionImageDiv">
+<img class="transitionImage" src="/images/layered-waves-haikei-2.svg" alt="Nothing here to see">
+</div>-->
+    <section class="section3" id="platform-section">
+        <h1 class="section-heading"> Platforms</h1>
+        <div class="platforms" id="platforms"></div>
+    </section>
+    <div class="transitionImage" style="background-image: url('./images/layered-waves-haikei-3.svg');"></div>
+    <section class="section4" style="height: fit-content; min-height: 100vh;">
+        <div class="myformdiv">
+            <form action="/" method="POST">
+                <!-- <legend class="whiteone">Your Query</legend>--><label for="name">
+                    <p class="flinkfont">Name</p>
+                </label><input id="name" type="text" name="name" placeholder="Your Name"><label for="Subject">
+                    <p class="flinkfont"> Subject</p>
+                </label><input id="Subject" type="text" name="Subject" placeholder="Subject of the Message"><label for="email">
+                    <p class="flinkfont">Email Address</p>
+                </label><input id="email" type="email" name="_replyto" placeholder="Your Email Address"><label for="message">
+                    <p class="flinkfont">Message</p>
+                </label><textarea id="message" name="message" cols="100" rows="8" placeholder="Your Message"></textarea><button class="darkit" type="submit">
+                    <p>Send</p>
+                </button>
+            </form>
+        </div>
+        <h1>&copy; Aryan Sidhwani 2022 </h1>
+    </section>
+    <!--<div class="transitionImageDiv">
+<img class="transitionImage" src="/images/layered-waves-haikei-3.svg" alt="Nothing here to see">
+</div>-->
+</div>
+<script src="./javascripts/jquery-3.6.1.min.js"></script>
+<script src="./javascripts/jquery.waypoints.js"></script>
+<script src="./javascripts/put_platforms.js"></script>
+<script src="./javascripts/animate_wp.js"></script>
