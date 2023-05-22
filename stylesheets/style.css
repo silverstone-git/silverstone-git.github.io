@@ -13,6 +13,14 @@ body {
     overflow-y: scroll;*/
 }
 
+::-moz-selection {
+  background: purple;
+}
+
+::selection {
+  background: purple;
+}
+
 
 .container > section {
     display: flex;
@@ -31,6 +39,7 @@ body {
 
 .section2 {
     background: rgb(198, 35, 104);
+    height: 80vh !important;
 }
 
 
@@ -40,7 +49,6 @@ body {
 
 .section4 {
     background: #334155;
-    height: fit-content;
 }
 
 
@@ -48,38 +56,49 @@ body {
     margin-top: 100px;
 }
 
-
-#nav-expander {
-    display: none;
-    justify-content: end;
-    background:rgb(29,29,29);
-    color: white;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    z-index: 2;
+#work-section-heading {
+    margin-top: 30px;
 }
 
 
-#nav-expander-icon {
-    /* the i tag in button in div.nav-expander */
-    display: flex;
-    padding: 1.25rem;
-    
+#nav-expander {
+    display: none;
+    /*Abackground: url("/images/menu.svg") no-repeat scroll 0 0 transparent;*/
+    color: white;
+    position: absolute;
+    top: 27px;
+    right: 25px;
+    z-index: 3;
+    font-size: large;
+}
+
+#nav-expander:hover {
+    color: #00ff00;
+    font-size: x-large;
 }
 
 
 #sideNav {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background: white;
+    background: gray;
     height: 100vh;
     width: 0;
     right: 0;
     position: fixed;
-    transition: all;
-    z-index: 2;
+    z-index: 3;
+    transition: width 1s;
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+
+#sideNav > a {
+    height: 55px;
+}
+
+.bigNav {
+    width: 250px !important;
 }
 
 #closeButton {
@@ -89,8 +108,7 @@ body {
 }
 
 #closeButtonLink {
-    transition: all;
-    color: rgb(209, 213, 219);
+    color: rgb(255, 255, 255);
     font-size: 1.875em;
     line-height: 2.25rem;
     width: 0px;
@@ -98,6 +116,7 @@ body {
     right: 1.25rem;
     position: fixed;
     justify-content: flex-end;
+    text-decoration: none;
 }
 
 
@@ -106,9 +125,16 @@ body {
     font-weight: 700;
 }
 
+#sideNav > a {
+    text-decoration: none;
+}
+
 
 .sideNavli {
-    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    color: white;
     padding : 1.25rem;
 }
 
@@ -116,42 +142,92 @@ body {
 .sideNavli:hover {
     text-decoration-line: underline;
     font-weight: 700;
+    font-size: 23px;
     color: rgb(34, 197, 94);
     cursor: pointer;
+}
+
+#mug-icontain {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.mug {
+    height: 30%;
+    width: auto;
+    border-radius: 50%;
+}
+
+#inmug {
+    display: none;
+    position: absolute;
+    width: auto;
+    bottom: 15px;
+    left: 15px;
+}
+
+#rightgreets {
+    display: none;
+    width: 100%;
+}
+
+#leftgreets {
+    width: 100%;
+    margin-left: 4%;
+    margin-right: auto;
 }
 
 .greet {
     /* The Hi! Part */
     margin-left: 20px;
     margin-right: 20px;
-    font-size: 40px;
+    margin-bottom: 0;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.greet-sub {
+    font-weight: bold;
+    font-size: 22px;
+    margin-right: auto;
+    gap: 5px;
 }
 
 .greet-small {
     /* The description below the main greet at the first page */
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 30px;
+    font-size: 22px;
+    line-height: 1.6;
 }
 
 
 .greet-container {
     /* Contains the greet message in the Intro Page */
-    display: hidden;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     top: 30vh;
     border-style: groove;
     border-width: 10px;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     border-color: #00ff00;
     border-radius: 10px;
-    background-color: rgba(64, 201, 101, 0.6);
+    background-color: rgba(64, 201, 101, 0.7);
     font-family: monospace;
+}
+
+#greet-container {
+    width: 35vw;
+}
+
+#intro-holder {
+    display: flex;
+    margin-top: 2%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
 }
 
 .transitionImage {
@@ -169,23 +245,71 @@ body {
     overflow: hidden;
 }
 
+.proj-container {
+    display: none;
+    flex-direction: row;
+    margin-top: 60px;
+    gap: 50px;
+}
+
+.proj-desc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proj-desc {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#form-container {
+    display: flex;
+}
 
 
 .projectsdiv {
     /* the div containing all the links to projects */
 
-    width: 93vw;
-    display: none;
+    display: flex;
+    width: 30vw;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     align-items: center;
     flex-wrap: nowrap;
     height: fit-content;
-    background: rgb(239, 245, 132);
+    background: rgb(91, 240, 146);
     font-size: large;
-    margin-top: 100px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    scrollbar-color: rgb(198, 35, 104) rgb(91, 240, 146);
+}
+
+#projects-div > i {
+    font-size: larger;
+}
+
+#projects-div > i:hover {
+    color: rgb(198, 35, 104);
+    font-size: x-large;
+}
+
+#next-proj {
+    color: black;
+    position: absolute;
+    margin-left: 28vw;
+}
+
+#prev-proj {
+    display: none;
+    position: absolute;
+    color: black;
+    margin-left: 2%;
+}
+
+.project-image-div {
+    height: 200px;
 }
 
 .project-image {
@@ -206,6 +330,10 @@ body {
     justify-content: center ;
     align-items: center;
     scroll-snap-align: center;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
 }
 
 
@@ -220,15 +348,16 @@ body {
 
 .platforms {
     /*div to contain the languages's divs*/
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
-    color: rgb(245, 197, 197);
+    color: aliceblue;
     justify-content: center;
     align-items: center;
-    height: 70%;
+    height: 40%;
     width: 100%;
     gap: 5%;
+    margin-top: 7%;
 }
 
 .platform {
@@ -238,7 +367,7 @@ body {
     align-items: center;
     font-weight: 600;
     font-size: 1em;
-    height: 16%;
+    height: 40%;
     /*
     border-style: solid;
     border-radius: 50%;
@@ -249,21 +378,47 @@ body {
 
 .platform > img {
     height: 55%;
+    margin-bottom: 2%;
 }
-
-
 /*
 about the form
 */
 
 .myformdiv {
-    border-style: solid;
-    border-color: aquamarine;
-    border-width: 4px;
-    border-radius: 5px;
-    background: white;
+    border-style: groove;
+    border-color: #00ff00;
+    border-width: 10px;
+    border-radius: 10px;
+    background-color: rgba(64, 201, 101, 0.6);
     padding: 20px;
-    margin-top: 5%;
+    margin-top: 10%;
+    font-family: monospace;
+}
+
+.inline {
+    display: inline-block;
+}
+
+#captcha {
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px 5px gray;
+    width: 60px;;
+    padding: 20px;
+    font-weight: 400;
+    padding-bottom: 0px;
+    height: 40px;
+    text-decoration: line-through;
+    font-style: italic;
+    font-size: x-large;
+    border: red 2px solid;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 button[type="submit"] {
@@ -302,20 +457,20 @@ input[type="text"], input[type="email"], textarea {
 
 .darkit {
     /* Button Class */
-        /*font-family: "Roboto";*/
-        border-radius: 20px 20px 20px 20px;
-        border-style: groove;
-        border-spacing: 1%;
+    /*font-family: "Roboto";*/
+    border-radius: 20px 20px 20px 20px;
+    border-style: groove;
+    border-spacing: 1%;
     border-color: rgb(0,0,0);
     border-width: 5%;
     font-style: bold;
     font-weight: 900;
-        color: rgb(0,0,0);
-        background: white;
+    color: rgb(0,0,0);
+    background: white;
     transition-property: background;
-        transition-duration: 0.3s;
-        transition-timing-function: ease;
-        transition-delay: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0;
     cursor: pointer;
 
 }
@@ -328,13 +483,44 @@ input[type="text"], input[type="email"], textarea {
     font-size: 1.2em;
     font-style: bold;
     font-weight: 800;
-    color: #334155;
+    color: aliceblue;
+}
+
+.message-close-button {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: aliceblue;
+    margin-left: auto;
+    margin-right: 1%;
+    align-self: center;
+}
+
+.message-close-button:hover {
+    font-size: 1.7em;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.message-text {
+    font-family: monospace;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 1%;
 }
 
 #message-box {
+    width: 95%;
+    top: 2%;
+    left: 2%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
     border-style: solid;
     border-width: 10px;
     border-radius: 10px;
+    z-index: 4;
 }
 
 .green-message {
@@ -347,6 +533,162 @@ input[type="text"], input[type="email"], textarea {
     background-color: rgba(227, 67, 39, 0.6);
 }
 
+#icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    gap: 25px;
+}
+
+
+.icon {
+    cursor: pointer;
+    color: white;
+}
+
+.icon:hover {
+    color: #00ff00;
+    font-size: 40px;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 40px;
+    width: 40px;
+}
+
+
+.imp-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.imp-sheet {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    transition: background-color 1s;
+}
+
+.dark-sheet-hide {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dark-sheet-show {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.impressum-text {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.footer-message {
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#impressum-link {
+    text-decoration: underline;
+    color: white;
+    /*margin: 3% 3% 3% 3%;*/
+}
+
+#impressum-link:hover {
+    color: #00ff00;
+    font-size: large;
+}
+
+#impressum-link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+    margin-top: 2%;
+} 
+
+@media screen and (max-width: 1572px){
+    #greet-container {
+        width: 60vw;
+    }
+
+    .projectsdiv {
+        width: 40vw;
+    }
+    #next-proj {
+        margin-left: 38vw;
+    }
+}
+
+
+@media screen and (max-width: 880px) {
+    #floatmug {
+        display:none;
+    }
+
+    #inmug {
+        display: block;
+        height: 200px;
+    }
+
+    #intro-holder {
+        margin-top: 20%;
+    }
+
+    #greet-container {
+        width: 85vw;
+    }
+
+    #leftgreets {
+        display: none;
+    }
+
+    #rightgreets {
+        display: block;
+        text-align: right;
+        margin-right: 4%;
+        margin-left: auto;
+    }
+
+
+    .projectsdiv {
+        width: 60vw;
+    }
+    #next-proj {
+        margin-left: 58vw
+    }
+
+    .myformdiv {
+        width: 75vw;
+    }
+
+    #message-box {
+        width: 92.5%;
+    }
+}
 
 @media screen and (max-width: 707px) {
     #nav-expander {
@@ -357,31 +699,113 @@ input[type="text"], input[type="email"], textarea {
         overflow: auto;
     }
 
+    #inmug {
+        height: 150px;
+    }
+
+    #greet-container {
+        width: 90vw;
+    }
+
     .greet {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .greet-small {
-        font-size: 18px;
+        font-size: 17px;
     }
 
-    .project-image-div {
-        height: 200px;
+    .greet-sub {
+        font-size: 17px;
     }
 
-    .project-link {
-        width: 100%;
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: auto;
+    #intro-holder {
+        margin-top: 40%;
     }
 
+    .proj-desc-container {
+        display: none;
+    }
+
+    .projectsdiv {
+        width: 75vw;
+    }
+    #next-proj {
+        margin-left: 69vw
+    }
+
+    .icon {
+        font-size: 34px;
+    }
+
+    .icon:hover {
+        font-size: 37px;
+    }
+
+    #impressum-link-container {
+        display: none;
+    }
+
+    #message-box {
+        width: 90%;
+    }
 
 }
 
-@media screen and (max-width: 1400px){
-    .projectsdiv {
-        justify-content: flex-start;
-        align-items: flex-start;
+
+@media screen and (max-width: 450px) {
+    #inmug {
+        height: 125px;
+    }
+
+    .platform {
+        height: 30%;
+    }
+
+    .platforms {
+        gap: 10%;
+    }
+    #next-proj {
+        margin-left: 66vw
+    }
+}
+
+
+@media screen and (max-width: 390px) {
+
+    #intro-holder {
+        margin-top: 50%;
+    }
+
+
+    .greet {
+        font-size: 17px;
+    }
+
+    .greet-small {
+        font-size: 14px;
+    }
+
+    .greet-sub {
+        font-size: 14px;
+    }
+
+    .icon {
+        font-size: 30px;
+    }
+
+    .icon:hover {
+        font-size: 32px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    #inmug {
+        height: 100px;
+    }
+
+    .message-text {
+        font-size: small;
     }
 }

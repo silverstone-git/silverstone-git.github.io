@@ -1,149 +1,212 @@
-<!--extends layout
-block content
-h1= title
-p Welcome to -->
 <!DOCTYPE html>
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/penguin.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <title>Aryan Sidhwani</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/penguin.png">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"><script src="https://kit.fontawesome.com/7350121d06.js" crossorigin="anonymous"></script>
+  <title>Aryan Sidhwani</title>
 </head>
 <script>
-    function expandSideNav() {
-        document.getElementById("sideNav").style.width = "250px";
-        document.getElementById("closeButtonLink").style.width = "auto";
-        document.getElementById("closeButtonLink").style.display = "block";
-        document.getElementById("closeButton").style.visibility = "visible";
-        document.getElementById("sideNav").style.display = "flex";
-        document.getElementById("closeButton").style.display = "flex";
-        document.getElementById("nav-expander").style.display = "none";
-    }
-
-    function closeSideNav() {
-        document.getElementById("sideNav").style.width = "0";
-        document.getElementById("sideNav").style.display = "none";
-        document.getElementById("closeButton").style.display = "block";
-        document.getElementById("closeButton").style.visibility = "invisible";
-        document.getElementById("closeButtonLink").style.display = "none";
-        document.getElementById("nav-expander").style.display = "flex";
-    }
-</script>
-<!---
-<div id="scroll-find" style="position: absolute; left: 10px; top: 10px; z-index: 2">
-<button onclick="getScrollPos()">
-get scroll position
-</button>
-</div>
-<div id="scroll-get" style="position: absolute; left: 10px; top: 50px; z-index: 2; background-color: aquamarine;">
-<p>Change me to scroll position</p>
-</div>
-<script>
-function getScrollPos() {
-document.getElementById("scroll-get").innerText = document.body.scrollTop;
+  function expandSideNav() {
+  document.getElementById("closeButtonLink").style.width="auto";
+  document.getElementById("closeButtonLink").style.display="block";
+  document.getElementById("closeButton").style.visibility="visible";
+  document.getElementById("closeButton").style.display="flex";
+  document.getElementById("nav-expander").style.display="none";
+  document.getElementById("sideNav").classList.add("bigNav");
+  var sheet = document.getElementById("dark-sheet");
+  sheet.style.display = "flex";
+  sheet.classList.remove("dark-sheet-hide");
+  sheet.classList.add("dark-sheet-show");
+  }
+  function closeSideNav(nosheet = false) {
+  document.getElementById("sideNav").classList.remove("bigNav");
+  document.getElementById("closeButton").style.display="block";
+  document.getElementById("closeButton").style.visibility="hidden";
+  document.getElementById("closeButtonLink").style.display="none";
+  document.getElementById("nav-expander").style.display="flex";
+  // if the sheet is removed on close side nav, the impressum goes with it, because its a child
+  if(!nosheet) {
+    var sheet = document.getElementById("dark-sheet");
+    sheet.style.backgroundColor = null;
+    sheet.classList.remove("dark-sheet-show");
+    sheet.classList.add("dark-sheet-hide");
+    setTimeout(
+      function() {
+        sheet.style.display='none';
+      }, 1000);
+  }
+  }
+  function removeMessage() {
+  document.getElementById("message-box").style.display="none";
+  }
+  function removeImpressum() {
+  document.getElementById("imp-div").remove();
+  var sheet = document.getElementById("dark-sheet");
+  sheet.style.zIndex = 2;
+  sheet.style.display = "none";
+  sheet.style.backgroundColor = null;
+  sheet.classList.remove("dark-sheet-show");
+  sheet.classList.add("dark-sheet-hide");
+  }
+  function showImpressum(fromDesktop = false) {
+  if(!fromDesktop){
+    closeSideNav(true);
+  }
+  var sheet = document.getElementById("dark-sheet");
+  var impDiv = document.createElement("div");
+  var text = document.createElement("p");
+  var text2 = document.createElement("p");
+  var authorLink = document.createElement("a");
+  var impTextDiv = document.createElement("div");
+  sheet.onclick = removeImpressum;
+  impDiv.classList.add("impressum-text");
+  text2.innerHTML = ("Django Software Foundation is the original owner of the Django Logo<br>The git logo is owned by Software Freedom Conservancy<br>Oracle is the true owner of Java and MySQL Logos");
+  text.appendChild(document.createTextNode("Brand Icons, hamburger menu icon, and Arrow Icons designed by"));
+  authorLink.href = "https://fontawesome.com";
+  authorLink.target = "_blank";
+  authorLink.innerHTML = "Font Awesome";
+  impDiv.id = "imp-div";
+  impDiv.appendChild(text);
+  impDiv.appendChild(authorLink);
+  impDiv.appendChild(text2);
+  sheet.appendChild(impDiv);
+  impDiv.classList.add("imp-div");
+  sheet.classList.add("imp-sheet");
+  sheet.style.display = "flex";
+  sheet.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  sheet.style.zIndex = 3;
+  }
+function generateCaptcha() {
+  var uniqueChar = "";
+  const randomChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for (let i = 0; i < 5; i++) {
+    uniqueChar += randomChar.charAt(
+        Math.random() * randomChar.length)
+  }
+  return(uniqueChar);
 }
-</script>-->
-<div id="nav-expander"><button onclick="expandSideNav()"><i class="fas fa-bars"></i></button></div>
-<ul id="sideNav">
-    <li id="closeButton"><a id="closeButtonLink" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></li><a href="#aboutline">
-        <li class="sideNavli" href="#aboutline">About</li>
-    </a><a href="#skillline">
-        <li class="sideNavli">Skills</li>
-    </a><a href="#projectline">
-        <li class="sideNavli">Project</li>
-    </a><a href="https://pleaseexplain.me" target="”_blank”">
-        <li class="sideNavli">Blog</li>
-    </a>
-</ul>
-<div class="container">
-    <section class="section1" id="intro-section">
-        <!--<div class="typewriter">
-</div>-->
-        <div class="greet-container" id="greet-container">
-            <p class="greet"> Hi! I am Aryan Sidhwani </p>
-            <ul class="greet-small">
-                <li>I code, a lot. <br></li>
-                <li>I am currently studying Applied Physics at DTU, Delhi <br></li>
-                <li>I am into Web Development, App Development, and Machine Learning <br></li>
-            </ul>
+</script><i class="fa-solid fa-bars" id="nav-expander" onclick="expandSideNav()"></i>
+<div id="sideNav">
+  <div id="closeButton"><a id="closeButtonLink" href="javascript:void(0)" onclick="closeSideNav()">&times;</a></div><a href="#intro-section">
+    <div class="sideNavli">About</div></a><a href="#work-section">
+    <div class="sideNavli">Project</div></a><a href="#platform-section">
+    <div class="sideNavli">Skills</div></a><a href="https://pleaseexplain.me" target="”_blank”">
+    <div class="sideNavli">Blog</div></a><a href="javascript:void(0)" onclick="showImpressum()">
+    <div class="sideNavli">Impressum</div></a>
+</div>
+<div class="container" id="sections-container">
+  <section class="section1" id="intro-section">
+    <div id="intro-holder"><img class="mug" id="floatmug" src="./images/aryan.jpeg" alt="my face">
+      <div class="greet-container" id="greet-container">
+        <p class="greet"> Hi! I am Aryan Sidhwani 👋</p>
+        <div id="mug-icontain">
+          <div id="leftgreets">
+            <p class="greet-sub">> software developer in Delhi 📍<br>> sophomore at DTU 📚</p>
+            <p class="greet-sub">my interests include:</p>
+            <p class="greet-small">- programming 💻<br>- astronomy ☄️<br>- rock music 🎵<br></p>
+          </div>
+          <div id="rightgreets">
+            <p class="greet-sub">📍 software developer in Delhi <<br>📚 sophomore at DTU <</p>
+            <p class="greet-sub">my interests include:</p>
+            <p class="greet-small">💻 programming -<br>☄️ astronomy -<br>🎵 rock music<br></p>
+          </div><img class="mug" id="inmug" src="./images/aryan.jpeg" alt="my face">
         </div>
-    </section>
-    <script src="./javascripts/three.min.js"></script>
-    <script src="./javascripts/vanta.net.min.js"></script>
-    <script>
-        VANTA.NET({
-            el: "#intro-section",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x3f99ff,
-            backgroundColor: 0x1d1d1d
-        })
-    </script>
-    <div class="transitionImage" style="background-image: url('./images/layered-waves-haikei-1.svg');"></div>
-    <!--<div class="transitionImageDiv">
-<img class="transitionImage" src="/images/layered-waves-haikei-1.svg" alt="" class="transitionImage">
-</div>-->
-    <section class="section2" id="work-section">
-        <div id="waypointer" style="visibility: hidden;"></div>
-        <h1 class="section-heading" id="work-section-heading"> My Work </h1>
-        <div class="greet-container projectsdiv" id="projects-div"><a class="project-link" href="https://github.com/silverstone-git/esql">
-                <p class="project-title">ESQL</p>
-                <p class="project-desc">A DBMS CLI in python</p>
-                <div class="project-image-div"><img class="project-image" src="./images/esql.svg" alt="A photo with a cloud and raining bits"></div>
-            </a><a class="project-link" href="https://pen-pineapple.herokuapp.com">
-                <p class="project-title">Pen-Pineapple</p>
-                <p class="project-desc">A Movie Review Website</p>
-                <div class="project-image-div"><img class="project-image" src="./images/pen-pineapple.svg" alt="A histogram with a film on top"></div>
-            </a><a class="project-link" href="https://github.com/silverstone-git/cweather">
-                <p class="project-title">Cweather</p>
-                <p class="project-desc">An input friendly Weather App in C</p>
-                <div class="project-image-div"><img class="project-image" src="./images/cweather_1.svg" alt="A big C with a sun at mouth"></div>
-            </a><a class="project-link" href="https://github.com/silverstone-git/what-food">
-                <p class="project-title">What-Food</p>
-                <p class="project-desc">A Food Recommendation app in Android</p>
-                <div class="project-image-div"><img class="project-image" src="./images/what-food.svg" alt="A carrot with spoon and fork"></div>
-            </a></div>
-    </section>
-    <div class="transitionImage" style="background-image: url('./images/layered-waves-haikei-2.svg');"></div>
-    <!--<div class="transitionImageDiv">
-<img class="transitionImage" src="/images/layered-waves-haikei-2.svg" alt="Nothing here to see">
-</div>-->
-    <section class="section3" id="platform-section">
-        <h1 class="section-heading"> Platforms</h1>
-        <div class="platforms" id="platforms"></div>
-    </section>
-    <div class="transitionImage" style="background-image: url('./images/layered-waves-haikei-3.svg');"></div>
-    <section class="section4" style="height: fit-content; min-height: 100vh;">
-        <div class="myformdiv">
-            <form action="/" method="POST">
-                <!-- <legend class="whiteone">Your Query</legend>--><label for="name">
-                    <p class="flinkfont">Name</p>
-                </label><input id="name" type="text" name="name" placeholder="Your Name"><label for="Subject">
-                    <p class="flinkfont"> Subject</p>
-                </label><input id="Subject" type="text" name="Subject" placeholder="Subject of the Message"><label for="email">
-                    <p class="flinkfont">Email Address</p>
-                </label><input id="email" type="email" name="_replyto" placeholder="Your Email Address"><label for="message">
-                    <p class="flinkfont">Message</p>
-                </label><textarea id="message" name="message" cols="100" rows="8" placeholder="Your Message"></textarea><button class="darkit" type="submit">
-                    <p>Send</p>
-                </button>
-            </form>
-        </div>
-        <h1>&copy; Aryan Sidhwani 2022 </h1>
-    </section>
-    <!--<div class="transitionImageDiv">
-<img class="transitionImage" src="/images/layered-waves-haikei-3.svg" alt="Nothing here to see">
-</div>-->
+      </div>
+    </div>
+  </section>
+  <script src="./javascripts/three.min.js"></script>
+  <script src="./javascripts/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+    el: "#intro-section",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x3f99ff,
+    backgroundColor: 0x1d1d1d
+    })
+  </script>
+  <div class="transitionImage" style="background-image: url('./images/layered-waves-haikei-1.svg');"></div>
+  <section class="section2" id="work-section">
+    <div id="waypointer" style="visibility: hidden;"></div>
+    <h1 class="section-heading" id="work-section-heading"> My Work</h1>
+    <div class="proj-container" id="proj-container">
+      <div class="proj-desc-container" id="proj-desc-container">
+        <p class="proj-desc" id="proj-desc">A Gallery of some of the projects that I have made<br>Swipe Right ➡️</p>
+      </div>
+      <div class="greet-container projectsdiv" id="projects-div"><i class="fa-solid fa-circle-arrow-left" id="prev-proj"></i><i class="fa-solid fa-circle-arrow-right" id="next-proj"></i><a class="project-link" href="https://github.com/silverstone-git/esql" target="_blank">
+          <p class="project-title">ESQL</p>
+          <p class="project-desc">A DBMS CLI in python</p>
+          <div class="project-image-div"><img class="project-image" src="./images/esql.svg" alt="A photo with a cloud and raining bits"></div></a><a class="project-link" href="https://pen-pineapple.herokuapp.com" target="_blank">
+          <p class="project-title">Pen-Pineapple</p>
+          <p class="project-desc">A Movie Review Website</p>
+          <div class="project-image-div"><img class="project-image" src="./images/pen-pineapple.svg" alt="A histogram with a film on top"></div></a><a class="project-link" href="https://github.com/silverstone-git/cweather" target="_blank">
+          <p class="project-title">Cweather</p>
+          <p class="project-desc">An input friendly Weather App in C</p>
+          <div class="project-image-div"><img class="project-image" src="./images/cweather_1.svg" alt="A big C with a sun at mouth"></div></a><a class="project-link" href="https://github.com/silverstone-git/what-food" target="_blank">
+          <p class="project-title">What-Food</p>
+          <p class="project-desc">A Food Recommendation app in Android</p>
+          <div class="project-image-div"><img class="project-image" src="./images/what-food.svg" alt="A carrot with spoon and fork"></div></a></div>
+    </div>
+  </section>
+  <div class="transitionImage" style="background-image: url('./images/layered-waves-haikei-2.svg');"></div>
+  <section class="section3" id="platform-section">
+    <div id="waypointer2" style="visibility: hidden;"></div>
+    <h1 class="section-heading"> My Tech Stack</h1>
+    <div class="platforms" id="platforms"></div>
+  </section>
+  <div class="transitionImage" style="background-image: url('./images/layered-waves-haikei-3.svg');"></div>
+  <section class="section4" style="height: fit-content; min-height: 100vh;">
+    <div class="proj-container" id="form-container">
+      <div class="myformdiv">
+        <!-- <p id="dummyp" style="display: none">{sandwich}</p> -->
+        <p id="dummyp2" style="display: none"></p>
+        <form action="/" method="POST">
+          <label for="name">
+            <p class="flinkfont">Name</p>
+          </label>
+          <input id="name" type="text" name="name" placeholder="Your Name" required>
+          <label for="email">
+            <p class="flinkfont">Email Address</p>
+          </label>
+          <input id="email" type="email" name="_replyto" placeholder="Your Email Address" required>
+          <!-- <input id="sandwich" type="radio" name="sandwich" value="#{sandwich}" style="display:none" checked> -->
+          <label for="message">
+            <p class="flinkfont">Message</p>
+          </label>
+          <textarea id="message" name="message" cols="100" rows="8" placeholder="Your Message" required></textarea>
+          <label for="captcha">
+            <p class="flinkfont">Captcha</p>
+          </label>
+          <div class="inline" id="captcha-input-container">
+            <input id="captcha-input" type="text" name="captcha" placeholder="Enter Captcha" required>
+          </div>
+          <div class="inline" id="captcha"></div>
+          <button class="darkit" type="submit">
+            <p>Send</p>
+          </button>
+        </form>
+        <script>
+          document.getElementById("dummyp2").innerHTML = generateCaptcha();
+          document.getElementById("captcha").innerHTML = document.getElementById("dummyp2").innerHTML;
+        </script>
+      </div>
+      <div class="proj-desc-container" id="form-desc-container">
+        <p class="proj-desc" id="form-desc">Feel free to Contact Me! 👋</p>
+      </div>
+    </div>
+    <div id="icons"><a class="icon-container" href="https://github.com/silverstone-git/" target="_blank"><i class="icon fa-brands fa-github fa-2x"></i></a><a class="icon-container" href="https://linkedin.com/in/aryan-sidhwani" target="_blank"><i class="icon fa-brands fa-linkedin fa-2x"></i></a><a class="icon-container" href="https://twitter.com/silverstonium/" target="_blank"><i class="icon fa-brands fa-twitter fa-2x"></i></a><a class="icon-container" href="https://instagram.com/silverstonium/" target="_blank"><i class="icon fa-brands fa-instagram fa-2x"></i></a><a class="icon-container" href="mailto:admin@aryansidhwani.tech"><i class="icon fa-regular fa-envelope fa-2x"></i></a></div>
+    <div id="impressum-link-container"><a class="footer-message" id="impressum-link" href="javascript:void(0)" onclick="showImpressum(true)">Roll the Credits!</a></div>
+    <p class="footer-message">&copy; Aryan Sidhwani 2022 </p>
+  </section>
+  <div class="imp-sheet" id="dark-sheet"></div>
 </div>
 <script src="./javascripts/jquery-3.6.1.min.js"></script>
 <script src="./javascripts/jquery.waypoints.js"></script>
