@@ -6,26 +6,81 @@
     <title>~ cyto</title>
     <link rel="stylesheet" href="./styles/output.css" />
   </head>
-  <body>
+  <body class="bg-[#011627]">
     <div
-      class="bg-[#011627] text-white w-full min-h-screen flex flex-col items-center"
+      class="bg-[#011627] text-white font-instrument w-full min-h-screen flex flex-col items-center"
     >
-      <!-- header section -->
-      <section class="mt-[7vh] p-8 w-[90%] flex flex-col items-center gap-4">
-        <div class="flex w-full justify-between">
-          <div>Aryan's Portfolio</div>
-          <div class="flex gap-3">
-            <div>Projects</div>
-            <div>Skills</div>
-            <div>Contact</div>
+      <!-- header bar -->
+      <div class="flex w-[90%] mt-[7vh] justify-between">
+        <div>Aryan Sidhwani</div>
+        <div class="flex gap-3">
+          <div>Projects</div>
+          <div>Skills</div>
+          <div>Contact</div>
+        </div>
+      </div>
+      <div class="w-[60%]">
+        <!-- name section -->
+        <section class="p-8 w-full flex flex-col items-center gap-4">
+          <div
+            class="border rounded-3xl flex justify-center items-center w-full py-7 sm:text-8xl md:text-[200px] font-syne"
+          >
+            <div>
+              <img
+                class="absolute -translate-x-[350px] -translate-y-[50px] h-[500px]"
+                src="./assets/right-leaning-ellipse.svg"
+                alt=""
+                srcset=""
+              />
+            </div>
+            ARYAN
           </div>
-        </div>
-        <div
-          class="border rounded-3xl flex justify-center items-center w-[60%] py-7 sm:text-8xl md:text-[200px] font-syne"
-        >
-          ARYAN
-        </div>
-      </section>
+        </section>
+
+        <!-- box section -->
+        <section class="flex flex-col py-24 gap-6 w-full">
+          <div class="flex w-full justify-evenly h-[30vh]">
+            <div
+              class="z-10 bg-[#626262] h-full w-[60%] rounded-l-[100px] rounded-br-[100px] flex flex-col justify-center items-center"
+            >
+              <div class="mt-12 flex flex-col px-16 gap-4">
+                <hr class="w-[10%]" />
+                <p class="w-[70%] text-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestiae illo distinctio totam, rem, architecto error vero
+                  consequuntur, earum ex doloremque voluptates dicta officiis.
+                </p>
+              </div>
+            </div>
+            <div
+              class="z-10 bg-[#626262] h-full w-[30%] rounded-bl-[100px] rounded-tr-[100px]"
+            ></div>
+          </div>
+          <div class="w-full flex items-center justify-end">
+            <img
+              class="absolute z-0 h-[70vh] right-[10vw]"
+              src="./assets/bifoil-vertical-alt.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="flex w-full justify-evenly h-[20vh]">
+            <div
+              class="z-10 bg-[#626262] h-full w-[30%] rounded-t-[100px] rounded-br-[100px]"
+            ></div>
+            <div
+              class="z-10 bg-[#626262] h-full w-[60%] rounded-[100px] flex justify-center items-center"
+            >
+              <img
+                class="h-20"
+                src="./assets/four-boxes.svg"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   </body>
 </html>

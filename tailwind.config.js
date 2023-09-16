@@ -5,6 +5,7 @@ module.exports = {
     extend: {},
     fontFamily: {
       syne: ["Syne", "sans-serif"],
+      instrument: ["Instrument Sans", "sans-serif"],
     },
   },
   plugins: [],
