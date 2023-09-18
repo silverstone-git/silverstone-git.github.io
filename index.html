@@ -7,6 +7,60 @@
     <link rel="stylesheet" href="./styles/output.css" />
   </head>
   <body class="bg-[#011627] w-full overflow-x-hidden">
+    <script>
+      function showImpressum() {
+        impressumScreen = document.getElementById("impressum-screen");
+        impressumScreen.style.display = "flex";
+      }
+      function hideImpressum() {
+        impressumScreen = document.getElementById("impressum-screen");
+        impressumScreen.style.display = "none";
+      }
+    </script>
+    <div
+      id="impressum-screen"
+      class="h-screen w-screen bg-black bg-opacity-20 hidden justify-center items-center fixed top-0 left-0 z-10"
+      onclick="hideImpressum()"
+    >
+      <div class="h-[30%] w-[50%] bg-white rounded-3xl p-4 flex flex-col gap-3">
+        <div>
+          1. Android Photo by
+          <a
+            href="https://unsplash.com/@rami_alzayat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Rami Al-zayat</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/w33-zg-dNL4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </div>
+        <div>
+          2. Web Photo by
+          <a
+            href="https://unsplash.com/@cifilter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Shannon Potter</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/bHlZX1D4I8g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </div>
+        <div>
+          3. Linux Photo by
+          <a
+            href="https://unsplash.com/@lukash?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Lukas</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/NLSXFjl_nhc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </div>
+      </div>
+    </div>
     <div
       class="bg-[#011627] text-white font-instrument w-full min-h-screen flex flex-col items-center"
     >
@@ -38,7 +92,7 @@
         </section>
 
         <!-- box intro section -->
-        <section class="flex flex-col py-24 gap-6 w-full">
+        <section class="flex flex-col pt-12 pb-24 gap-6 w-full">
           <div
             class="flex flex-col md:flex-row w-full justify-evenly items-center h-screen md:h-[30vh]"
           >
@@ -122,38 +176,93 @@
           class="py-[10vh] flex flex-col md:flex-wrap items-center md:flex-row gap-8"
         >
           <div
-            class="h-[80vw] md:h-[20vw] w-[90%] md:w-[30%] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
+            class="h-[80vw] md:h-[25vw] w-[90%] md:w-[30%] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
           >
-            <div class="h-[60%] w-[90%] rounded-3xl bg-white self-center"></div>
+            <div
+              class="h-[60%] w-[90%] rounded-3xl bg-black self-center flex flex-col justify-center object-cover overflow-hidden"
+            >
+              <a
+                data-flickr-embed="true"
+                href="https://www.flickr.com/photos/199168667@N07/53197239533/in/dateposted-public/"
+                title="rami-al-zayat-w33-zg-dNL4-unsplash"
+                ><img
+                  src="https://live.staticflickr.com/65535/53197239533_bf2fc2dc45_h.jpg"
+                  width="1600"
+                  height="1067"
+                  alt="rami-al-zayat-w33-zg-dNL4-unsplash"
+              /></a>
+              <script
+                async
+                src="//embedr.flickr.com/assets/client-code.js"
+                charset="utf-8"
+              ></script>
+            </div>
             <div class="h-[20%] px-8 flex flex-col gap-1">
-              <p class="font-bold text-lg">Flutter</p>
+              <p class="font-bold text-lg">App development</p>
               <p class="md:text-sm">
-                The development experience has been awesome, pub.dev is a major
-                plus
+                I use flutter to make cross platform apps, Kotlin for Native
+                apps, and I happen to know my way around firebase
               </p>
             </div>
           </div>
           <div
-            class="h-[80vw] md:h-[20vw] w-[90%] md:w-[30%] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
+            class="h-[80vw] md:h-[25vw] w-[90%] md:w-[30%] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
           >
-            <div class="h-[60%] w-[90%] rounded-3xl bg-white self-center"></div>
+            <div
+              class="h-[60%] w-[90%] rounded-3xl self-center flex flex-col justify-center overflow-hidden"
+            >
+              <a
+                data-flickr-embed="true"
+                href="https://www.flickr.com/photos/199168667@N07/53196884786/in/dateposted-public/"
+                title="shannon-potter-bHlZX1D4I8g-unsplash"
+                ><img
+                  src="https://live.staticflickr.com/65535/53196884786_097eb3b643_h.jpg"
+                  width="1600"
+                  height="1067"
+                  class="rounded-3xl object-cover"
+                  alt="shannon-potter-bHlZX1D4I8g-unsplash"
+              /></a>
+              <script
+                async
+                src="//embedr.flickr.com/assets/client-code.js"
+                charset="utf-8"
+              ></script>
+            </div>
             <div class="h-[20%] px-8 flex flex-col gap-1">
-              <p class="font-bold text-lg">Javascript</p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Eveniet
+              <p class="font-bold text-lg">Web Development</p>
+              <p class="md:text-sm">
+                I tend to use React or Vue, with Tailwindcss, Node for server,
+                and TS for anything with >100 lines of code
               </p>
             </div>
           </div>
           <div
-            class="h-[80vw] md:h-[20vw] w-[90%] md:w-[30%] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
+            class="h-[80vw] md:h-[25vw] w-[90%] md:w-[30%] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
           >
-            <div class="h-[60%] w-[90%] rounded-3xl bg-white self-center"></div>
+            <div
+              class="h-[60%] w-[90%] rounded-3xl bg-black self-center flex flex-col justify-center object-cover overflow-hidden"
+            >
+              <a
+                data-flickr-embed="true"
+                href="https://www.flickr.com/photos/199168667@N07/53197256888/in/dateposted-public/"
+                title="lukas-NLSXFjl_nhc-unsplash"
+                ><img
+                  src="https://live.staticflickr.com/65535/53197256888_1830fd8131_h.jpg"
+                  width="1600"
+                  height="1067"
+                  alt="lukas-NLSXFjl_nhc-unsplash"
+              /></a>
+              <script
+                async
+                src="//embedr.flickr.com/assets/client-code.js"
+                charset="utf-8"
+              ></script>
+            </div>
             <div class="h-[20%] px-8 flex flex-col gap-1">
-              <p class="font-bold text-lg">Python</p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Eveniet
+              <p class="font-bold text-lg">Scripting</p>
+              <p class="md:text-sm">
+                Mostly using python that I learned in school, and the Linux
+                experience I have since middle school
               </p>
             </div>
           </div>
@@ -293,9 +402,15 @@
             >
           </div>
           <div
-            class="translate-y-96 md:translate-y-0 flex justify-center text-blue-300"
+            class="translate-y-96 md:translate-y-0 flex flex-col justify-center items-center text-blue-300"
           >
-            all rights reserved, aryan sidhwani 2023
+            <button
+              class="hover:text-blue-100 transition-colors pb-2"
+              onclick="showImpressum()"
+            >
+              impressum
+            </button>
+            <div>all rights reserved, aryan sidhwani 2023</div>
           </div>
         </section>
       </div>
