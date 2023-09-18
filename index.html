@@ -6,7 +6,7 @@
     <title>~ cyto</title>
     <link rel="stylesheet" href="./styles/output.css" />
   </head>
-  <body class="bg-[#011627]">
+  <body class="bg-[#011627] w-full overflow-x-hidden">
     <div
       class="bg-[#011627] text-white font-instrument w-full min-h-screen flex flex-col items-center"
     >
@@ -19,11 +19,11 @@
           <div>Contact</div>
         </div>
       </div>
-      <div class="w-[60%]">
+      <div class="w-[95%] sm:w-[80%] md:w-[70%] lg:w-[60%]">
         <!-- name section -->
         <section class="p-8 w-full flex flex-col items-center gap-4">
           <div
-            class="border rounded-3xl flex justify-center items-center w-full py-7 sm:text-8xl md:text-[200px] font-syne"
+            class="border rounded-3xl flex justify-center items-center w-full py-7 text-[75px] md:text-[125px] font-syne"
           >
             <div>
               <img
@@ -39,9 +39,11 @@
 
         <!-- box intro section -->
         <section class="flex flex-col py-24 gap-6 w-full">
-          <div class="flex w-full justify-evenly h-[30vh]">
+          <div
+            class="flex flex-col md:flex-row w-full justify-evenly items-center h-screen md:h-[30vh]"
+          >
             <div
-              class="z-10 bg-[#626262] h-full w-[60%] rounded-l-[100px] rounded-br-[100px] flex flex-col justify-center items-center"
+              class="z-10 bg-[#626262] h-1/2 w-[90%] md:h-full md:w-[60%] rounded-l-[100px] rounded-br-[100px] flex flex-col justify-center items-center"
             >
               <div class="mt-12 flex flex-col px-16 gap-4">
                 <hr class="w-[10%]" />
@@ -53,23 +55,25 @@
               </div>
             </div>
             <div
-              class="z-10 bg-[#626262] h-full w-[30%] rounded-bl-[100px] rounded-tr-[100px]"
+              class="z-10 bg-[#626262] h-1/2 md:h-full my-10 md:my-0 w-[90%] md:w-[30%] rounded-bl-[100px] rounded-tr-[100px]"
             ></div>
           </div>
           <div class="w-full flex items-center justify-end">
             <img
-              class="absolute z-0 h-[70vh] right-[10vw]"
+              class="absolute z-0 h-[70vh] left-[30vh] md:left-auto md:right-0"
               src="./assets/bifoil-vertical-alt.svg"
               alt=""
               srcset=""
             />
           </div>
-          <div class="flex w-full justify-evenly h-[20vh]">
+          <div
+            class="flex flex-col md:flex-row w-full justify-evenly items-center h-screen md:h-[30vh]"
+          >
             <div
-              class="z-10 bg-[#626262] h-full w-[30%] rounded-t-[100px] rounded-br-[100px]"
+              class="z-10 bg-[#626262] h-full w-[90%] md:w-[30%] rounded-t-[100px] rounded-br-[100px]"
             ></div>
             <div
-              class="z-10 bg-[#626262] h-full w-[60%] rounded-[100px] flex justify-center items-center"
+              class="z-10 bg-[#626262] h-full w-[90%] md:w-[60%] rounded-[100px] my-10 md:my-0 flex justify-center items-center"
             >
               <img
                 class="h-20"
@@ -82,21 +86,23 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="py-[10vh] flex gap-8">
+        <section
+          class="py-[10vh] flex flex-col md:flex-wrap items-center md:flex-row gap-8"
+        >
           <div
-            class="h-[20vw] w-[20vw] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
+            class="h-[80vw] md:h-[20vw] w-[90%] md:w-[30%] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
           >
             <div class="h-[60%] w-[90%] rounded-3xl bg-white self-center"></div>
             <div class="h-[20%] px-8 flex flex-col gap-1">
               <p class="font-bold text-lg">Flutter</p>
-              <p>
+              <p class="md:text-sm">
                 The development experience has been awesome, pub.dev is a major
                 plus
               </p>
             </div>
           </div>
           <div
-            class="h-[20vw] w-[20vw] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
+            class="h-[80vw] md:h-[20vw] w-[90%] md:w-[30%] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
           >
             <div class="h-[60%] w-[90%] rounded-3xl bg-white self-center"></div>
             <div class="h-[20%] px-8 flex flex-col gap-1">
@@ -108,7 +114,7 @@
             </div>
           </div>
           <div
-            class="h-[20vw] w-[20vw] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
+            class="h-[80vw] md:h-[20vw] w-[90%] md:w-[30%] rounded-3xl bg-[#022440] flex flex-col justify-evenly"
           >
             <div class="h-[60%] w-[90%] rounded-3xl bg-white self-center"></div>
             <div class="h-[20%] px-8 flex flex-col gap-1">
