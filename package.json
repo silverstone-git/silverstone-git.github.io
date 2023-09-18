@@ -4,6 +4,7 @@
   "description": "a single web page as a portfolio showcase",
   "main": "index.js",
   "scripts": {
+    "tailwindcss-start": "npx tailwindcss -i styles/input.css -o styles/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
