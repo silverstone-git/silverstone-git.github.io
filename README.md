@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+# Astronomy Themed Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a stunning, single-page portfolio website with a captivating astronomy theme. Built with React, Vite, and Tailwind CSS, it showcases projects and skills in a narrative-driven, visually rich experience. The UI is dynamic and interactive, with animations and effects that respond to user scrolling.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+-   **Visually Rich Design:** A dark, space/astronomy theme with beautiful gradients, celestial objects, and a "glassmorphism" effect.
+-   **Interactive Experience:** Animations and effects that respond to user scrolling, creating a dynamic and engaging journey.
+-   **Narrative-Driven Content:** The portfolio is structured as a story, guiding visitors through the developer's journey, skills, and projects.
+-   **Component-Based Architecture:** Built with a clean and maintainable component-based architecture, following the principles of **shadcn/ui**.
+-   **Responsive Design:** The website is fully responsive and looks great on all devices.
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-   **Core Framework:** [React](https://react.dev/) (v18) with [Vite](https://vitejs.dev/) as the build tool.
+-   **Language:** [TypeScript](https://www.typescriptlang.org/) for type-safe code.
+-   **Styling:** [Tailwind CSS](https://tailwindcss.com/) for utility-first styling.
+-   **UI Components:**
+    -   [Radix UI Primitives](https://www.radix-ui.com/): Headless, accessible components.
+    -   [class-variance-authority (CVA)](https://cva.style/docs): For creating variant-based component styles.
+    -   [tailwind-merge](https://github.com/dcastil/tailwind-merge) and [clsx](https://github.com/lukeed/clsx): For conditional and clean class name management.
+-   **Animation:** [Framer Motion](https://www.framer.com/motion/) for component animations.
+-   **Icons:** [Lucide React](https://lucide.dev/) for a beautiful and consistent icon set.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+The codebase is well-organized, following standard conventions for a React project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+/
+├─── src/
+│   ├─── components/
+│   │   ├─── ui/         # Base UI components (shadcn/ui style)
+│   │   ├─── figma/      # Components potentially designed in Figma
+│   │   ├─── Footer.tsx
+│   │   ├─── Hero.tsx      # The main hero section
+│   │   ├─── ProjectCard.tsx # Reusable card for projects
+│   │   ├─── StarField.tsx # Animated background component
+│   │   └─── StorySection.tsx # Wrapper for narrative sections
+│   ├─── styles/
+│   │   └─── globals.css # Global styles and Tailwind directives
+│   ├─── App.tsx         # Main application component, layout composition
+│   ├─── main.tsx        # Application entry point
+│   └─── index.css       # Main CSS file with color palette
+├─── vite.config.ts      # Vite build and development configuration
+└─── package.json        # Project dependencies and scripts
+```
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get a local copy up and running, follow these simple steps.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   [Node.js](https://nodejs.org/) (v18 or higher)
+-   [Bun](https://bun.sh/) (or npm/yarn)
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/your_username/your_project_name.git
+    ```
+2.  Install dependencies
+    ```sh
+    bun install
+    ```
+3.  Start the development server
+    ```sh
+    bun run dev
+    ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application will be available at `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Deployment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The project is deployed using [GitHub Pages](https://pages.github.com/). The `deploy` script in `package.json` handles the build and deployment process.
 
-## Learn More
+To deploy the application, run:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```sh
+bun run deploy
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will build the application and push the contents of the `build` directory to the `gh-pages` branch of your repository.
+
+## Attributions
+
+The beautiful celestial objects used in this project are from [Unsplash](https://unsplash.com/). A big thank you to the talented photographers who made their work available. Please see the `src/Attributions.md` file for a complete list of attributions.
+
+---
+
+*This README was generated with the help of the Gemini CLI.*
