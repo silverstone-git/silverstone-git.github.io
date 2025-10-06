@@ -1,14 +1,15 @@
+
 # Astronomy Themed Portfolio Website
 
-This is a stunning, single-page portfolio website with a captivating astronomy theme. Built with React, Vite, and Tailwind CSS, it showcases projects and skills in a narrative-driven, visually rich experience. The UI is dynamic and interactive, with animations and effects that respond to user scrolling.
+This is a single-page portfolio website built with React, Vite, and Tailwind CSS. It features an astronomy-themed design and a narrative structure to showcase projects and skills. The user interface includes scroll-based animations and effects.
 
 ## Features
 
--   **Visually Rich Design:** A dark, space/astronomy theme with beautiful gradients, celestial objects, and a "glassmorphism" effect.
--   **Interactive Experience:** Animations and effects that respond to user scrolling, creating a dynamic and engaging journey.
--   **Narrative-Driven Content:** The portfolio is structured as a story, guiding visitors through the developer's journey, skills, and projects.
--   **Component-Based Architecture:** Built with a clean and maintainable component-based architecture, following the principles of **shadcn/ui**.
--   **Responsive Design:** The website is fully responsive and looks great on all devices.
+-   **Design:** A dark, space/astronomy theme with gradients, celestial objects, and a "glassmorphism" effect.
+-   **User Experience:** Scroll-based animations and effects.
+-   **Content:** The portfolio is structured to guide visitors through the developer's journey, skills, and projects.
+-   **Architecture:** A component-based architecture, following the principles of **shadcn/ui**.
+-   **Responsiveness:** The website is designed to be responsive across different devices.
 
 ## Technology Stack
 
@@ -20,11 +21,11 @@ This is a stunning, single-page portfolio website with a captivating astronomy t
     -   [class-variance-authority (CVA)](https://cva.style/docs): For creating variant-based component styles.
     -   [tailwind-merge](https://github.com/dcastil/tailwind-merge) and [clsx](https://github.com/lukeed/clsx): For conditional and clean class name management.
 -   **Animation:** [Framer Motion](https://www.framer.com/motion/) for component animations.
--   **Icons:** [Lucide React](https://lucide.dev/) for a beautiful and consistent icon set.
+-   **Icons:** [Lucide React](https://lucide.dev/) for icons.
 
 ## Project Structure
 
-The codebase is well-organized, following standard conventions for a React project.
+The codebase is organized following standard conventions for a React project.
 
 ```
 /
@@ -48,7 +49,7 @@ The codebase is well-organized, following standard conventions for a React proje
 
 ## Getting Started
 
-To get a local copy up and running, follow these simple steps.
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
@@ -86,8 +87,4 @@ This will build the application and push the contents of the `build` directory t
 
 ## Attributions
 
-The beautiful celestial objects used in this project are from [Unsplash](https://unsplash.com/). A big thank you to the talented photographers who made their work available. Please see the `src/Attributions.md` file for a complete list of attributions.
-
----
-
-*This README was generated with the help of the Gemini CLI.*
+The celestial objects used in this project are from [Unsplash](https://unsplash.com/). Please see the `src/Attributions.md` file for a complete list of attributions.
