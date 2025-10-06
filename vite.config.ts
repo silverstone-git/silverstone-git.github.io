@@ -6,7 +6,6 @@
 
   export default defineConfig({
     plugins: [react(), tailwindcss()],
-    base: "/silverstone-git.github.io/",
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
