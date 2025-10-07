@@ -10,10 +10,10 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
         >
-          <h1 className="text-6xl md:text-8xl mb-6 bg-gradient-to-b from-white via-blue-100 to-blue-300 bg-clip-text text-transparent">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl py-2 mb-6 bg-gradient-to-b from-white via-blue-100 to-blue-300 bg-clip-text text-transparent">
             Aryan Sidhwani
           </h1>
-          <p className="text-xl md:text-2xl text-blue-200 mb-8">
+          <p className="text-lg md:text-2xl text-blue-200 mb-8">
             AI Engineer • Physics Fanatic • Linux Lunatic
           </p>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
@@ -21,7 +21,7 @@ export function Hero() {
             I draw my happiness from the moments when I make things work
           </p>
           
-          <div className="flex gap-6 justify-center items-center flex-wrap">
+          <div className="bg-gradient-to-br from-yellow-950/5 to-orange-950/5 backdrop-blur-sm md:p-6 px-8 py-6 rounded-xl md:rounded-full border border-yellow-500/30 flex gap-6 justify-center md:items-center items-left md:flex-row md:flex-wrap flex-col">
             <a 
               href="mailto:iam@aryan.cfd"
               className="flex items-center gap-2 text-blue-300 hover:text-white transition-colors"

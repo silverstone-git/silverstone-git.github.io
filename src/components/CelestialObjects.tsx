@@ -75,7 +75,7 @@ export const CelestialObjects: React.FC<CelestialObjectsProps> = ({ scrollY }) =
 	height="200px"
         className="absolute opacity-80"
         style={{ 
-          top: '80%', 
+          top: '60%', 
           left: '40%',
           transform: `translateY(-${scrollY * 0.04}px)`
         }}

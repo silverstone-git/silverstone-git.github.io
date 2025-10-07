@@ -22,11 +22,11 @@ export default function App() {
   return (
     // bg-gradient-to-b from-black via-sky-500 to-indigo-700
     // bg-linear-to-b from-black via-sky-500 to-indigo-700 
-    <div className="min-h-screen w-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-[300vh] w-full bg-black text-white overflow-x-hidden">
       <StarField scrollY={scrollY} />
       <CelestialObjects scrollY={scrollY} />
 
-      <div className="relative z-10">
+      <div className="relative z-10 font-roboto">
         <Hero />
 
         <StorySection title="The Awakening">
@@ -69,12 +69,14 @@ export default function App() {
           </p>
 
           <div className="space-y-6">
+
+
             <ProjectCard
               title="CTIX Analyzer"
               date="July 2025"
               story="What if an AI could understand the stock market like a seasoned analyst? I built an agent that researches NSE stocks using ICICI Breeze and Zerodha Kite APIs. It doesn't just crunch numbers—it listens. Using Whisper for speech recognition, you can literally talk to it. Built with Smolagents and OpenAI's agentic frameworks, it features a Brave Search tool for real-time market intelligence. Gradio provides the interface where human intuition meets machine precision."
               technologies="Smolagents • OpenAI Agents • Gradio • Whisper • ICICI Breeze API • Zerodha Kite API • Brave API • BeautifulSoup"
-              githubUrl="https://github.com/silverstone-git"
+              githubUrl="https://github.com/silverstone-git/ctix-analysis"
             />
 
             <ProjectCard
@@ -82,14 +84,23 @@ export default function App() {
               date="February 2025"
               story="Information trapped in blog posts is information lost. I created a RAG pipeline for the 'Please Explain Me' blog that makes knowledge searchable and conversational. Using Gemini's text embedding API with MongoDB Vector Search, I turned static articles into a queryable knowledge base. The bot scrapes Gartner's business trends with Selenium, chunks the data intelligently, and responds using gemini-2.0-flash. It's like giving a blog a brain."
               technologies="RAG Pipeline • Gemini API • MongoDB Vector Search • Selenium • gemini-2.0-flash"
-              githubUrl="https://github.com/silverstone-git"
+              githubUrl="https://github.com/silverstone-git/pem-rag-chatbot"
+            />
+
+            <ProjectCard
+              title="Coldwheels"
+              date="February 2025"
+              story="Being a car enthusiast, I always felt the need to have a collection of them, but since its not practical to buy all these gas-guzzling beasts, I present a way to add these custom models yourself and marvel at all the other car models at the Coldwheels platform. The website is powered by Vue.js, and the backend server is made using Go programming language and Gin Web Server, containerized using Docker (cyt0/gowheels on Docker Hub)"
+              technologies="Vue.js • Go • Gin • GORM • PostgreSQL • Docker • Pinia State Management • Daisy UI"
+              githubUrl="https://github.com/silverstone-git/coldwheels-backend"
+              liveUrl="https://coldwheels.aryan.cfd"
             />
 
             <ProjectCard
               title="Outstagram"
               date="December 2024"
               story="Before diving deep into AI, I needed to master the fundamentals of building robust Full Stack applications. Outstagram is a complete full stack application—not a toy project, but production-ready infrastructure. Built with FastAPI and Vite/React/TS, it handles everything: user authentication with argon2-cffi, session management, media uploads, likes, comments, friendships, and follow requests. Powered by SQLAlchemy ORM and PostgreSQL, containerized with Docker (cyt0/outstagram on Docker Hub), it features pagination and feed algorithms. This taught me that AI without solid engineering is just a demo."
-              technologies="FastAPI • SQLAlchemy • PostgreSQL • Docker • argon2-cffi • Session Management"
+              technologies="FastAPI • SQLAlchemy • React.js • Typescript • Bun • PostgreSQL • Docker • Session Management"
               githubUrl="https://github.com/silverstone-git/outstagram"
               liveUrl="https://outstagram.aryan.cfd"
             />

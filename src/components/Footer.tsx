@@ -4,7 +4,7 @@ import EarthSurface from '../assets/earth.png';
 
 export function Footer() {
   return (
-    <footer className="relative min-h-[150vh] flex items-center justify-center overflow-hidden">
+    <footer className="relative min-h-[130vh] flex items-center justify-center overflow-hidden">
       {/* Atmosphere gradient */}
       <div 
         className="absolute inset-0 bg-gradient-to-b from-indigo-900/80 via-sky-700/80 to-sky-400" 
@@ -34,13 +34,11 @@ export function Footer() {
             Back on Earth, Ready to Build the Future
           </p>
           <p className="text-lg text-gray-200 mb-12 drop-shadow-md">
-            From the vastness of space to the innovations on our planet, the journey continues.
+            In the rock that we live in, I keep trying to make sense of things and make things to prove its not merely a pale blue dot.
           </p>
           
           <div className="flex flex-wrap gap-6 justify-center text-gray-300 mb-8 drop-shadow-md">
             <span>New Delhi, India</span>
-            <span>•</span>
-            <span>+91 9971504957</span>
             <span>•</span>
             <a href="mailto:iam@aryan.cfd" className="hover:text-white transition-colors">
               iam@aryan.cfd
